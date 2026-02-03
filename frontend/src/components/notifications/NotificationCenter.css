@@ -1,0 +1,157 @@
+.notification-center-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: -10px;
+    /* Aligned with bell */
+    width: 360px;
+    background: var(--bg-color);
+    /* Opaque for readability */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow: hidden;
+    transform-origin: top right;
+    animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.nc-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.nc-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nc-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nc-action-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.nc-action-btn:hover {
+    color: var(--text-primary);
+    background: var(--card-bg);
+}
+
+.nc-list {
+    overflow-y: auto;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nc-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.75rem;
+    transition: background 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+
+.nc-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.nc-item.unread {
+    background: rgba(134, 188, 37, 0.05);
+    /* Slight green tint for unread */
+}
+
+.nc-item.unread::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--deloitte-green);
+    border-radius: 50%;
+}
+
+.nc-icon {
+    margin-top: 2px;
+}
+
+.nc-icon.success {
+    color: var(--deloitte-green);
+}
+
+.nc-icon.error {
+    color: #ef4444;
+}
+
+.nc-icon.info {
+    color: #3b82f6;
+}
+
+.nc-icon.warning {
+    color: #f59e0b;
+}
+
+.nc-content {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.nc-message {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+.nc-description {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.nc-time {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.nc-empty {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}

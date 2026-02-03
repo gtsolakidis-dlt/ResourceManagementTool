@@ -1,0 +1,106 @@
+.cmd-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 14vh;
+    animation: fadeIn 0.15s ease-out;
+}
+
+.cmd-container {
+    background: var(--card-bg);
+    width: 600px;
+    max-width: 90vw;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #1e1e1e;
+    /* Force dark background for palette usually looks better */
+    /* Or use variable if consistent */
+    background: var(--bg-color);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(10px) scale(0.98);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.cmd-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cmd-input {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    width: 100%;
+    outline: none;
+    margin-left: 0.75rem;
+}
+
+.cmd-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.cmd-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.1s;
+}
+
+.cmd-item.selected,
+.cmd-item:hover {
+    background: var(--deloitte-green);
+    /* Or a subtle variant */
+    background: rgba(134, 188, 37, 0.15);
+    color: var(--text-primary);
+}
+
+.cmd-item.selected .cmd-icon,
+.cmd-item:hover .cmd-icon {
+    color: var(--deloitte-green);
+}
+
+.cmd-icon {
+    color: var(--text-muted);
+}
+
+.cmd-shortcut {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.cmd-empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+}

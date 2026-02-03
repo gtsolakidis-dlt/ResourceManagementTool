@@ -1,0 +1,15 @@
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\bin\Debug\net9.0\ResourceManagement.Domain.deps.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\bin\Debug\net9.0\ResourceManagement.Domain.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\bin\Debug\net9.0\ResourceManagement.Domain.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\bin\Debug\net9.0\ResourceManagement.Contracts.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\bin\Debug\net9.0\ResourceManagement.Contracts.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.AssemblyInfo.cs
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\Resource.566C381A.Up2Date
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\refint\ResourceManagement.Domain.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ref\ResourceManagement.Domain.dll

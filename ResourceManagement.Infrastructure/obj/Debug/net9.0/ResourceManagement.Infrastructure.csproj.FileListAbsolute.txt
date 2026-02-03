@@ -1,0 +1,17 @@
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Infrastructure.deps.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Infrastructure.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Infrastructure.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Contracts.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Domain.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Domain.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Contracts.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.AssemblyInfo.cs
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\Resource.8C934F5B.Up2Date
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\refint\ResourceManagement.Infrastructure.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ResourceManagement.Infrastructure.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\obj\Debug\net9.0\ref\ResourceManagement.Infrastructure.dll

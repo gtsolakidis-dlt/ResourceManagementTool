@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jPtZVprnSJc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gtsolakidis\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.10\\microsoft.netcore.app.ref.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

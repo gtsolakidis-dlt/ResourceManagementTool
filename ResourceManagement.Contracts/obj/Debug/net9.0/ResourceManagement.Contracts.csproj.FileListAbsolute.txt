@@ -1,0 +1,11 @@
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\bin\Debug\net9.0\ResourceManagement.Contracts.deps.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\bin\Debug\net9.0\ResourceManagement.Contracts.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\bin\Debug\net9.0\ResourceManagement.Contracts.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.AssemblyInfoInputs.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.AssemblyInfo.cs
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\refint\ResourceManagement.Contracts.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.pdb
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ref\ResourceManagement.Contracts.dll

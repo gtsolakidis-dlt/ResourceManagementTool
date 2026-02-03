@@ -1,0 +1,155 @@
+.status-capsule {
+    background: #000000;
+    /* Solid black for Dynamic Island feel */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    font-size: 0.95rem;
+    font-weight: 500;
+    pointer-events: auto;
+    min-width: 40px;
+    /* Prevent collapsing too much */
+    transform-origin: top center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.status-capsule.animate-enter {
+    opacity: 0;
+    /* Start hidden for delay */
+    animation: dynamicIslandEnterSequence 1.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.1s;
+    /* Requested delay */
+}
+
+.status-capsule.animate-leave {
+    animation: dynamicIslandExitSequence 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes dynamicIslandEnterSequence {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px) scale(0.8);
+        max-width: 48px;
+        padding: 0.75rem;
+        border-radius: 50px;
+    }
+
+    /* Arrival: Drop complete (approx 0.35s) */
+    25% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        max-width: 48px;
+        padding: 0.75rem;
+    }
+
+    /* Wait: Extended pause (approx 0.4s duration) */
+    55% {
+        max-width: 48px;
+        padding: 0.75rem;
+    }
+
+    /* Expand: Reveal full width */
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        max-width: 600px;
+        /* Expands to fit content */
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+    }
+}
+
+@keyframes dynamicIslandExitSequence {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        max-width: 600px;
+    }
+
+    /* Contract: Shrink to circle */
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+        max-width: 48px;
+        padding: 0.75rem;
+        border-radius: 50px;
+    }
+
+    /* Wait briefly */
+    55% {
+        transform: translateY(0);
+        max-width: 48px;
+        padding: 0.75rem;
+        opacity: 1;
+    }
+
+    /* Rise: Fly up */
+    100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(0.9);
+        max-width: 48px;
+        padding: 0.75rem;
+    }
+}
+
+/* Theme overrides - Dynamic Island usually stays dark even in light mode, but let's offer a high contrast option if requested. For now, enforcing dark for the 'Island' feel. */
+
+.status-capsule-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* Prevent icon shrinking */
+}
+
+/* ... existing icon colors ... */
+
+.status-capsule-content {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: contentFadeIn 0.4s ease-out 0.8s forwards;
+    /* Delay text appearance until expansion starts */
+    white-space: nowrap;
+    padding-left: 0.25rem;
+}
+
+@keyframes contentFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.status-capsule-icon.success {
+    color: var(--deloitte-green);
+}
+
+.status-capsule-icon.error {
+    color: #ef4444;
+}
+
+.status-capsule-icon.info {
+    color: #3b82f6;
+}
+
+.status-capsule-icon.warning {
+    color: #f59e0b;
+}
+
+.status-capsule-title {
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.status-capsule-message {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2px;
+}

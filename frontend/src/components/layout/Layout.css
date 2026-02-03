@@ -1,0 +1,392 @@
+.layout-root {
+  display: flex;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+.sidebar-premium {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(10, 10, 10, 0.95);
+  /* Slightly darker for contrast */
+  backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-header {
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-name {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--deloitte-green);
+  border-radius: 50%;
+  margin-top: 8px;
+  box-shadow: 0 0 10px var(--deloitte-green);
+  /* Neon glow */
+}
+
+.nav-section {
+  padding-top: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-label {
+  padding: 0.5rem 2rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-link-premium {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 2rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-right: 3px solid transparent;
+  /* Indicator on right? Or Left. Left is standard */
+}
+
+.nav-link-premium:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.03);
+  padding-left: 2.25rem;
+  /* Subtle shift */
+}
+
+.nav-link-premium.active {
+  color: var(--deloitte-green);
+  background: linear-gradient(to right, rgba(134, 188, 37, 0.08), transparent);
+  border-right-color: var(--deloitte-green);
+  /* Activity Indicator */
+}
+
+.nav-link-premium.active svg {
+  filter: drop-shadow(0 0 5px rgba(134, 188, 37, 0.4));
+}
+
+/* Sidebar Sub-Menu (Dynamic) */
+.sub-nav-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideOpen 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideOpen {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
+.sub-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 1rem 0.65rem 3.5rem;
+  /* Indented */
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.sub-nav-link::before {
+  content: '';
+  position: absolute;
+  left: 2.25rem;
+  top: 50%;
+  width: 6px;
+  height: 1px;
+  background: var(--text-muted);
+  opacity: 0.3;
+}
+
+.sub-nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.sub-nav-link.active {
+  color: var(--deloitte-green);
+  background: rgba(134, 188, 37, 0.05);
+}
+
+.sub-nav-link.active::before {
+  background: var(--deloitte-green);
+  opacity: 1;
+  width: 12px;
+  /* Grow line */
+}
+
+.main-premium {
+  flex: 1;
+  margin-left: 280px;
+  padding: var(--spacing-container);
+  max-width: calc(100vw - 280px);
+}
+
+.top-bar-premium {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb-segment {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-segment.link:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--deloitte-green);
+  text-underline-offset: 4px;
+}
+
+.breadcrumb-segment.active {
+  color: var(--deloitte-green);
+  font-weight: 600;
+}
+
+.page-transition {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.btn-premium,
+.btn-outline-premium {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 1rem !important;
+}
+
+.sidebar-footer {
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.sidebar-footer-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow: hidden;
+}
+
+/* Responsiveness */
+@media (max-width: 1280px) {
+  .sidebar-premium {
+    width: 80px;
+  }
+
+  .main-premium {
+    margin-left: 80px;
+    max-width: calc(100vw - 80px);
+  }
+
+  .brand-name,
+  .nav-label,
+  .nav-link-premium span,
+  .sub-nav-container,
+  .sidebar-footer-text,
+  .brand-dot,
+  .nav-chevron {
+    display: none;
+  }
+
+  .sidebar-footer {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Sub-Nav Header & Hierarchy */
+.sub-nav-header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem 0.5rem 2.25rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.sub-nav-header:hover {
+  color: var(--deloitte-green);
+}
+
+.sub-nav-header.active {
+  color: var(--deloitte-green);
+}
+
+.sub-nav-container {
+  position: relative;
+}
+
+.sub-nav-container::before {
+  content: '';
+  position: absolute;
+  left: 2.75rem;
+  top: 2.5rem;
+  bottom: 1rem;
+  width: 1px;
+  background: var(--border-color);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Refined Hierarchy & Indicators */
+.sub-nav-container::before {
+  left: 2.25rem;
+  background: var(--border-color);
+  opacity: 0.5;
+  width: 1px;
+}
+
+.sub-nav-link {
+  padding-left: 3.5rem;
+  position: relative;
+}
+
+/* Hide old horizontal connector if present */
+.sub-nav-link::before {
+  display: none;
+}
+
+/* New Active Indicator on Vertical Line */
+.sub-nav-link::after {
+  content: '';
+  position: absolute;
+  left: 2.2rem;
+  /* Center on the 1px line */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.sub-nav-link.active::after {
+  background: var(--deloitte-green);
+  box-shadow: 0 0 10px rgba(134, 188, 37, 0.5);
+  top: 15%;
+  bottom: 15%;
+  border-radius: 4px;
+}
+
+/* Traveling Indicator & Cleanup */
+.sub-nav-link.active::after,
+.sub-nav-link::after {
+  display: none !important;
+}
+
+.traveling-indicator {
+  position: absolute;
+  left: 2.22rem;
+  width: 3px;
+  background: var(--deloitte-green);
+  box-shadow: 0 0 12px rgba(134, 188, 37, 0.8);
+  transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s ease, opacity 0.2s;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sidebar-toggle-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: scale(1.1);
+  color: white !important;
+}
+
+/* Accordion Animation */
+.sub-nav-children-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sub-nav-children-wrapper.expanded {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fix Vertical Line and Indicator scope */
+.sub-nav-container::before {
+  display: none !important;
+}
+
+.sub-nav-children-wrapper {
+  position: relative;
+}
+
+.sub-nav-children-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 2.22rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: var(--border-color);
+  opacity: 0.5;
+}

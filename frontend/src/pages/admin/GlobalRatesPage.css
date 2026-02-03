@@ -1,0 +1,414 @@
+/* GlobalRatesPage.css - Premium Theme */
+
+.globalrates-premium-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    color: var(--text-primary);
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Header */
+.globalrates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.globalrates-header-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.globalrates-header-content h1 .header-icon {
+    color: var(--deloitte-green);
+}
+
+.globalrates-header-content p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Stats Cards Row */
+.stats-cards-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--deloitte-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px rgba(134, 188, 37, 0.15);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(134, 188, 37, 0.15), rgba(134, 188, 37, 0.05));
+    color: var(--deloitte-green);
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+/* Table Container */
+.rates-table-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.rates-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.rates-table-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rates-table-header h3 svg {
+    color: var(--deloitte-green);
+}
+
+/* Premium Table */
+.rates-premium-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.rates-premium-table th {
+    background: var(--bg-color);
+    padding: 1rem 1.25rem !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.rates-premium-table th:last-child {
+    text-align: right;
+}
+
+.rates-premium-table td {
+    padding: 1rem 1.25rem !important;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    vertical-align: middle;
+    transition: background 0.15s;
+}
+
+.rates-premium-table tr:hover td {
+    background: rgba(134, 188, 37, 0.05);
+}
+
+.rates-premium-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Level Cell - contains badge and full name */
+.level-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.level-full-name {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Responsive: Hide full name on smaller screens */
+@media (max-width: 1024px) {
+    .level-full-name {
+        display: none;
+    }
+}
+
+/* Level Badge - Base */
+.level-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Level Badge - Entry Level (BA - Business Analyst) */
+.level-badge.ba {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Level Badge - Consultant (C) */
+.level-badge.consultant {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Level Badge - Senior Consultant (SC) */
+.level-badge.senior {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Level Badge - Assistant Manager (AM) */
+.level-badge.am {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(20, 184, 166, 0.05));
+    color: #2dd4bf;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+/* Level Badge - Manager (M) */
+.level-badge.manager {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(249, 115, 22, 0.05));
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Level Badge - Senior Manager (SM) */
+.level-badge.sm {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(236, 72, 153, 0.05));
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Level Badge - Principal/Director (D) */
+.level-badge.director {
+    background: linear-gradient(135deg, rgba(134, 188, 37, 0.15), rgba(134, 188, 37, 0.05));
+    color: var(--deloitte-green);
+    border: 1px solid rgba(134, 188, 37, 0.3);
+}
+
+/* Level Badge - Partner (P) */
+.level-badge.partner {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 191, 36, 0.05));
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+/* Rate Value */
+.rate-value {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.rate-currency {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.rate-per-day {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 0.25rem;
+}
+
+/* Updated Date */
+.updated-date {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.btn-action {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action:hover {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+    color: var(--deloitte-green);
+}
+
+.btn-action.delete:hover {
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Add Rate Button */
+.btn-add-rate {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: none;
+    background: var(--deloitte-green);
+    color: black;
+    box-shadow: 0 4px 12px -2px rgba(134, 188, 37, 0.35);
+    transition: all 0.2s;
+}
+
+.btn-add-rate:hover {
+    background: var(--deloitte-green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px -2px rgba(134, 188, 37, 0.45);
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.empty-state-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(134, 188, 37, 0.15), rgba(134, 188, 37, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--deloitte-green);
+}
+
+.empty-state h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.empty-state p {
+    margin: 0 0 1.5rem 0;
+    color: var(--text-muted);
+    max-width: 320px;
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: var(--text-muted);
+    gap: 1rem;
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    color: var(--deloitte-green);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

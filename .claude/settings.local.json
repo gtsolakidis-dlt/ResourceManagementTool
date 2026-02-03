@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir)",
+      "Bash(dir \"C:\\\\Users\\\\gtsolakidis\\\\.gemini\\\\antigravity\\\\scratch\\\\ResourceManagementTool\" /A)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet test:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

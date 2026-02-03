@@ -1,0 +1,10 @@
+{
+    "Name": "API Validation Project",
+    "Wbs": "API.001",
+    "StartDate": "2026-01-01",
+    "EndDate": "2026-12-31",
+    "ActualBudget": 100000,
+    "Discount": 20,
+    "Recoverability": 90,
+    "TargetMargin": 25
+}

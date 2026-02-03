@@ -1,0 +1,1392 @@
+2026-02-03 16:11:12.884 +02:00 [INF] Now listening on: http://localhost:5212
+2026-02-03 16:11:12.928 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-03 16:11:12.930 +02:00 [INF] Hosting environment: Development
+2026-02-03 16:11:12.931 +02:00 [INF] Content root path: C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api
+2026-02-03 16:11:19.331 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 609.6075 ms
+2026-02-03 16:11:19.353 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 13.6734 ms
+2026-02-03 16:11:19.421 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-03 16:11:19.612 +02:00 [INF] HTTP GET /api/roster responded 200 in 213.6441 ms
+2026-02-03 16:11:19.612 +02:00 [INF] HTTP GET /api/projects responded 200 in 213.6231 ms
+2026-02-03 16:11:19.625 +02:00 [INF] HTTP GET /api/projects responded 200 in 7.8441 ms
+2026-02-03 16:11:19.628 +02:00 [INF] HTTP GET /api/roster responded 200 in 11.8408 ms
+2026-02-03 16:11:19.699 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 59.6767 ms
+2026-02-03 16:11:19.699 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 56.6727 ms
+2026-02-03 16:11:19.699 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 56.7726 ms
+2026-02-03 16:11:19.699 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 63.0220 ms
+2026-02-03 16:11:19.699 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 57.3720 ms
+2026-02-03 16:11:19.699 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 57.8913 ms
+2026-02-03 16:11:19.712 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 3.5701 ms
+2026-02-03 16:11:19.720 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 8.0762 ms
+2026-02-03 16:11:19.726 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 22.0400 ms
+2026-02-03 16:11:19.729 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 4.0521 ms
+2026-02-03 16:11:19.729 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 4.8365 ms
+2026-02-03 16:11:19.729 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 3.6879 ms
+2026-02-03 16:11:19.730 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 4.6589 ms
+2026-02-03 16:11:19.735 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 3.0578 ms
+2026-02-03 16:11:19.737 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 2.1803 ms
+2026-02-03 16:11:19.741 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 2.6167 ms
+2026-02-03 16:11:19.744 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 2.0271 ms
+2026-02-03 16:11:19.749 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 4.0837 ms
+2026-02-03 16:11:19.751 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 2.3846 ms
+2026-02-03 16:11:19.753 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 2.1094 ms
+2026-02-03 16:11:19.757 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 2.5696 ms
+2026-02-03 16:11:19.760 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 2.6612 ms
+2026-02-03 16:11:19.765 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 4.0506 ms
+2026-02-03 16:11:19.769 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 3.4550 ms
+2026-02-03 16:11:19.771 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 2.4098 ms
+2026-02-03 16:11:19.775 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 3.1665 ms
+2026-02-03 16:11:19.777 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 2.4828 ms
+2026-02-03 16:11:19.781 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 3.1891 ms
+2026-02-03 16:11:19.784 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 2.6177 ms
+2026-02-03 16:11:19.787 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 2.3370 ms
+2026-02-03 16:11:19.790 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 2.3012 ms
+2026-02-03 16:11:19.794 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 2.6579 ms
+2026-02-03 16:11:19.796 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 2.1467 ms
+2026-02-03 16:11:19.801 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 3.3852 ms
+2026-02-03 16:11:19.841 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 27.6771 ms
+2026-02-03 16:11:19.847 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.0014 ms
+2026-02-03 16:11:19.854 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 5.3718 ms
+2026-02-03 16:11:19.858 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.2126 ms
+2026-02-03 16:11:19.862 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.9850 ms
+2026-02-03 16:11:19.862 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.1305 ms
+2026-02-03 16:11:19.862 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.2297 ms
+2026-02-03 16:11:19.872 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.2155 ms
+2026-02-03 16:11:19.862 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.5663 ms
+2026-02-03 16:11:19.867 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.5892 ms
+2026-02-03 16:11:19.870 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.8140 ms
+2026-02-03 16:11:19.862 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.0872 ms
+2026-02-03 16:11:19.876 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.9501 ms
+2026-02-03 16:11:19.881 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.8248 ms
+2026-02-03 16:11:19.883 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3128 ms
+2026-02-03 16:11:19.887 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.5909 ms
+2026-02-03 16:11:19.889 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.2067 ms
+2026-02-03 16:11:19.893 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.5895 ms
+2026-02-03 16:11:19.897 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.5782 ms
+2026-02-03 16:11:19.901 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.7987 ms
+2026-02-03 16:11:19.903 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.8148 ms
+2026-02-03 16:11:19.907 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3255 ms
+2026-02-03 16:11:19.910 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3371 ms
+2026-02-03 16:11:19.914 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.6990 ms
+2026-02-03 16:11:19.917 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.8218 ms
+2026-02-03 16:11:19.919 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.2715 ms
+2026-02-03 16:11:19.923 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.1388 ms
+2026-02-03 16:11:19.925 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.0484 ms
+2026-02-03 16:11:19.929 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.6005 ms
+2026-02-03 16:11:19.933 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.5399 ms
+2026-02-03 16:11:19.936 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.7195 ms
+2026-02-03 16:11:19.939 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.2856 ms
+2026-02-03 16:11:19.941 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.4061 ms
+2026-02-03 16:11:19.944 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3928 ms
+2026-02-03 16:11:25.654 +02:00 [INF] HTTP GET /api/projects responded 200 in 36.3249 ms
+2026-02-03 16:11:25.668 +02:00 [INF] HTTP GET /api/projects responded 200 in 8.4345 ms
+2026-02-03 16:11:25.691 +02:00 [INF] HTTP GET /api/roster responded 200 in 74.0378 ms
+2026-02-03 16:11:25.702 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 84.2988 ms
+2026-02-03 16:11:25.712 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 8.6994 ms
+2026-02-03 16:11:25.713 +02:00 [INF] HTTP GET /api/roster responded 200 in 19.7137 ms
+2026-02-03 16:11:27.699 +02:00 [INF] HTTP GET /api/projects responded 200 in 19.3656 ms
+2026-02-03 16:11:27.710 +02:00 [INF] HTTP GET /api/projects responded 200 in 8.0575 ms
+2026-02-03 16:11:27.712 +02:00 [INF] HTTP GET /api/roster responded 200 in 32.0189 ms
+2026-02-03 16:11:27.761 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 37.1172 ms
+2026-02-03 16:11:27.773 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 48.9264 ms
+2026-02-03 16:11:27.773 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 49.4214 ms
+2026-02-03 16:11:27.774 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 49.5119 ms
+2026-02-03 16:11:27.783 +02:00 [INF] HTTP GET /api/roster responded 200 in 69.4184 ms
+2026-02-03 16:11:27.796 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 7.6935 ms
+2026-02-03 16:11:27.796 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 3.5247 ms
+2026-02-03 16:11:27.796 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 63.7114 ms
+2026-02-03 16:11:27.797 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 5.6214 ms
+2026-02-03 16:11:27.797 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 2.1054 ms
+2026-02-03 16:11:27.803 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 2.9363 ms
+2026-02-03 16:11:27.805 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 2.6029 ms
+2026-02-03 16:11:27.809 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 2.9503 ms
+2026-02-03 16:11:27.814 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 3.7658 ms
+2026-02-03 16:11:27.817 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 2.0280 ms
+2026-02-03 16:11:27.820 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 2.0766 ms
+2026-02-03 16:11:27.822 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 1.8534 ms
+2026-02-03 16:11:27.826 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 2.2793 ms
+2026-02-03 16:11:27.831 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 2.9241 ms
+2026-02-03 16:11:27.835 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 3.4904 ms
+2026-02-03 16:11:27.837 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 2.4351 ms
+2026-02-03 16:11:27.840 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 2.3722 ms
+2026-02-03 16:11:27.845 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 4.2328 ms
+2026-02-03 16:11:27.848 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 3.4158 ms
+2026-02-03 16:11:27.852 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 3.0386 ms
+2026-02-03 16:11:27.855 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 2.4964 ms
+2026-02-03 16:11:27.860 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 3.6058 ms
+2026-02-03 16:11:27.864 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 4.0533 ms
+2026-02-03 16:11:27.865 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 2.3652 ms
+2026-02-03 16:11:27.868 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 2.0196 ms
+2026-02-03 16:11:27.871 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 1.8024 ms
+2026-02-03 16:11:27.875 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 2.3956 ms
+2026-02-03 16:11:27.880 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 3.6782 ms
+2026-02-03 16:11:27.882 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 2.4317 ms
+2026-02-03 16:11:27.884 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 1.8616 ms
+2026-02-03 16:11:27.904 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 6.0041 ms
+2026-02-03 16:11:27.913 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 6.5623 ms
+2026-02-03 16:11:27.919 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.6265 ms
+2026-02-03 16:11:27.923 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.6244 ms
+2026-02-03 16:11:27.927 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.4456 ms
+2026-02-03 16:11:27.931 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.4337 ms
+2026-02-03 16:11:27.936 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.0229 ms
+2026-02-03 16:11:27.940 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3884 ms
+2026-02-03 16:11:27.945 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.5302 ms
+2026-02-03 16:11:27.949 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.4044 ms
+2026-02-03 16:11:27.955 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.1310 ms
+2026-02-03 16:11:27.955 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.8444 ms
+2026-02-03 16:11:27.955 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.1292 ms
+2026-02-03 16:11:27.955 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.1095 ms
+2026-02-03 16:11:27.955 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.0303 ms
+2026-02-03 16:11:27.956 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.7495 ms
+2026-02-03 16:11:27.964 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.8756 ms
+2026-02-03 16:11:27.966 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.0959 ms
+2026-02-03 16:11:27.971 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.9984 ms
+2026-02-03 16:11:27.973 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.1735 ms
+2026-02-03 16:11:27.976 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3044 ms
+2026-02-03 16:11:27.981 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.8221 ms
+2026-02-03 16:11:27.983 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.4163 ms
+2026-02-03 16:11:27.986 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.4184 ms
+2026-02-03 16:11:27.990 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.1165 ms
+2026-02-03 16:11:27.993 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.5227 ms
+2026-02-03 16:11:27.998 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.8571 ms
+2026-02-03 16:11:28.000 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.9850 ms
+2026-02-03 16:11:28.002 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.4022 ms
+2026-02-03 16:11:28.007 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.3406 ms
+2026-02-03 16:11:28.008 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.0755 ms
+2026-02-03 16:11:28.015 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 4.6195 ms
+2026-02-03 16:11:28.017 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 3.9161 ms
+2026-02-03 16:11:28.020 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.9879 ms
+2026-02-03 16:34:01.254 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 208.4693 ms
+2026-02-03 16:34:01.254 +02:00 [INF] HTTP GET /api/projects responded 200 in 208.5479 ms
+2026-02-03 16:34:01.257 +02:00 [INF] HTTP GET /api/projects responded 200 in 2.0448 ms
+2026-02-03 16:34:01.264 +02:00 [INF] HTTP GET /api/roster responded 200 in 219.5066 ms
+2026-02-03 16:34:01.267 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 11.4859 ms
+2026-02-03 16:34:01.269 +02:00 [INF] HTTP GET /api/roster responded 200 in 3.9221 ms
+2026-02-03 16:34:09.271 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 18.2437 ms
+2026-02-03 16:34:09.320 +02:00 [INF] HTTP GET /api/projects responded 200 in 13.3796 ms
+2026-02-03 16:34:09.322 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 14.4071 ms
+2026-02-03 16:34:09.324 +02:00 [INF] HTTP GET /api/projects responded 200 in 2.8381 ms
+2026-02-03 16:34:09.328 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 4.9196 ms
+2026-02-03 16:34:09.334 +02:00 [INF] HTTP GET /api/roster responded 200 in 28.0736 ms
+2026-02-03 16:34:09.341 +02:00 [INF] HTTP GET /api/roster responded 200 in 5.1179 ms
+2026-02-03 16:35:24.233 +02:00 [INF] HTTP GET /api/projects responded 200 in 20.0869 ms
+2026-02-03 16:35:24.238 +02:00 [INF] HTTP GET /api/projects responded 200 in 3.3301 ms
+2026-02-03 16:35:26.211 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 60.9278 ms
+2026-02-03 16:35:26.216 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 2.9423 ms
+2026-02-03 16:35:26.256 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 25.3432 ms
+2026-02-03 16:35:26.260 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 2.9403 ms
+2026-02-03 16:35:26.281 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 2.4532 ms
+2026-02-03 16:35:26.285 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 2.3083 ms
+2026-02-03 16:35:26.294 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 15.2338 ms
+2026-02-03 16:35:26.297 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 2.3186 ms
+2026-02-03 16:35:27.930 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 8.6498 ms
+2026-02-03 16:35:27.930 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 8.7616 ms
+2026-02-03 16:35:27.935 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 1.2963 ms
+2026-02-03 16:35:27.934 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 1.2728 ms
+2026-02-03 16:35:27.943 +02:00 [INF] HTTP GET /api/roster responded 200 in 20.9227 ms
+2026-02-03 16:35:27.947 +02:00 [INF] HTTP GET /api/roster responded 200 in 3.3931 ms
+2026-02-03 16:35:27.976 +02:00 [INF] HTTP GET /api/forecasts/allocations/25 responded 200 in 5.0141 ms
+2026-02-03 16:35:40.251 +02:00 [INF] HTTP POST /api/forecasts/allocations responded 200 in 307.2193 ms
+2026-02-03 16:35:40.960 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 1.4363 ms
+2026-02-03 16:35:40.963 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 1.4952 ms
+2026-02-03 16:35:40.968 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 2.6443 ms
+2026-02-03 16:35:40.977 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 1.4455 ms
+2026-02-03 16:35:40.986 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 1.1946 ms
+2026-02-03 16:35:40.987 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 1.9223 ms
+2026-02-03 16:35:40.987 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 0.8001 ms
+2026-02-03 16:35:40.989 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 1.4886 ms
+2026-02-03 16:35:42.279 +02:00 [INF] HTTP GET /api/projects responded 200 in 6.8522 ms
+2026-02-03 16:35:42.282 +02:00 [INF] HTTP GET /api/projects responded 200 in 1.5712 ms
+2026-02-03 16:35:43.763 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 3.3694 ms
+2026-02-03 16:35:43.766 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 1.4604 ms
+2026-02-03 16:35:43.773 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 3.3731 ms
+2026-02-03 16:35:43.781 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 1.5366 ms
+2026-02-03 16:35:43.792 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 1.1795 ms
+2026-02-03 16:35:43.794 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 1.0489 ms
+2026-02-03 16:35:43.798 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 6.9796 ms
+2026-02-03 16:35:43.800 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 1.5550 ms
+2026-02-03 16:35:45.003 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 6.8902 ms
+2026-02-03 16:35:45.003 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 7.1610 ms
+2026-02-03 16:35:45.006 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 1.4629 ms
+2026-02-03 16:35:45.006 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 1.4509 ms
+2026-02-03 16:35:45.012 +02:00 [INF] HTTP GET /api/roster responded 200 in 15.7866 ms
+2026-02-03 16:35:45.018 +02:00 [INF] HTTP GET /api/roster responded 200 in 4.8487 ms
+2026-02-03 16:35:45.029 +02:00 [INF] HTTP GET /api/forecasts/allocations/9 responded 200 in 2.6686 ms
+2026-02-03 16:35:59.345 +02:00 [INF] HTTP POST /api/forecasts/allocations responded 200 in 241.8366 ms
+2026-02-03 16:36:02.504 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 9.0267 ms
+2026-02-03 16:36:02.514 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 8.8034 ms
+2026-02-03 16:36:02.518 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 5.8493 ms
+2026-02-03 16:36:02.533 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 5.9168 ms
+2026-02-03 16:36:02.540 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 3.9064 ms
+2026-02-03 16:36:02.542 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 5.4706 ms
+2026-02-03 16:36:02.543 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 1.4365 ms
+2026-02-03 16:36:02.545 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 1.5833 ms
+2026-02-03 16:36:04.130 +02:00 [INF] HTTP GET /api/projects responded 200 in 7.5922 ms
+2026-02-03 16:36:04.135 +02:00 [INF] HTTP GET /api/projects responded 200 in 3.7110 ms
+2026-02-03 16:36:04.137 +02:00 [INF] HTTP GET /api/roster responded 200 in 14.6450 ms
+2026-02-03 16:36:04.154 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 9.0552 ms
+2026-02-03 16:36:04.155 +02:00 [INF] HTTP GET /api/roster responded 200 in 16.9422 ms
+2026-02-03 16:36:04.158 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 12.6583 ms
+2026-02-03 16:36:04.174 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 15.3633 ms
+2026-02-03 16:36:04.174 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 12.7010 ms
+2026-02-03 16:36:04.174 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 23.6425 ms
+2026-02-03 16:36:04.174 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 10.6167 ms
+2026-02-03 16:36:04.177 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 26.4191 ms
+2026-02-03 16:36:04.182 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 3.0498 ms
+2026-02-03 16:36:04.184 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 32.7134 ms
+2026-02-03 16:36:04.185 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 1.0354 ms
+2026-02-03 16:36:04.186 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 1.1078 ms
+2026-02-03 16:36:04.194 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 1.5433 ms
+2026-02-03 16:36:04.191 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 2.5109 ms
+2026-02-03 16:36:04.191 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 1.9448 ms
+2026-02-03 16:36:04.191 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 2.8258 ms
+2026-02-03 16:36:04.191 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 3.0594 ms
+2026-02-03 16:36:04.198 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 3.0483 ms
+2026-02-03 16:36:04.199 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 1.2907 ms
+2026-02-03 16:36:04.202 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 2.8905 ms
+2026-02-03 16:36:04.204 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 2.2391 ms
+2026-02-03 16:36:04.204 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 1.0645 ms
+2026-02-03 16:36:04.208 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 2.1466 ms
+2026-02-03 16:36:04.209 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 1.3713 ms
+2026-02-03 16:36:04.212 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 1.6830 ms
+2026-02-03 16:36:04.216 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 2.9913 ms
+2026-02-03 16:36:04.216 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 1.5779 ms
+2026-02-03 16:36:04.218 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 1.1434 ms
+2026-02-03 16:36:04.219 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 1.0710 ms
+2026-02-03 16:36:04.221 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 1.0515 ms
+2026-02-03 16:36:04.224 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 1.1089 ms
+2026-02-03 16:36:04.226 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 1.8303 ms
+2026-02-03 16:36:04.228 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 1.7329 ms
+2026-02-03 16:36:04.231 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 2.0580 ms
+2026-02-03 16:36:04.233 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 1.9583 ms
+2026-02-03 16:36:04.243 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 5.8417 ms
+2026-02-03 16:36:04.247 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3844 ms
+2026-02-03 16:36:04.251 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.1866 ms
+2026-02-03 16:36:04.253 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.7490 ms
+2026-02-03 16:36:04.255 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.0398 ms
+2026-02-03 16:36:04.257 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.4124 ms
+2026-02-03 16:36:04.259 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.3235 ms
+2026-02-03 16:36:04.263 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 2.3580 ms
+2026-02-03 16:36:04.265 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.3225 ms
+2026-02-03 16:36:04.267 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.0034 ms
+2026-02-03 16:36:04.269 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.1846 ms
+2026-02-03 16:36:04.272 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.4060 ms
+2026-02-03 16:36:04.273 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 0.9718 ms
+2026-02-03 16:36:04.276 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.7431 ms
+2026-02-03 16:36:04.276 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.5632 ms
+2026-02-03 16:36:04.276 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.8708 ms
+2026-02-03 16:36:04.276 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.9710 ms
+2026-02-03 16:36:04.277 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.7863 ms
+2026-02-03 16:36:04.286 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.0933 ms
+2026-02-03 16:36:04.281 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.7998 ms
+2026-02-03 16:36:04.282 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 0.9320 ms
+2026-02-03 16:36:04.284 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 0.9223 ms
+2026-02-03 16:36:04.277 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.5256 ms
+2026-02-03 16:36:04.288 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.0340 ms
+2026-02-03 16:36:04.289 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 0.9658 ms
+2026-02-03 16:36:04.292 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.8147 ms
+2026-02-03 16:36:04.293 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.2248 ms
+2026-02-03 16:36:04.296 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.5202 ms
+2026-02-03 16:36:04.297 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.5822 ms
+2026-02-03 16:36:04.306 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.1354 ms
+2026-02-03 16:36:04.301 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.4216 ms
+2026-02-03 16:36:04.302 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.0180 ms
+2026-02-03 16:36:04.305 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.7300 ms
+2026-02-03 16:36:04.299 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 1.1875 ms
+2026-02-03 16:36:05.154 +02:00 [INF] Application is shutting down...
+2026-02-03 16:36:31.204 +02:00 [INF] Now listening on: http://localhost:5212
+2026-02-03 16:36:31.258 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-03 16:36:31.260 +02:00 [INF] Hosting environment: Development
+2026-02-03 16:36:31.261 +02:00 [INF] Content root path: C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api
+2026-02-03 16:36:51.413 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:36:51.413 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:36:51.413 +02:00 [INF] Request started: GET /api/audits/recent by admin (Admin)
+2026-02-03 16:36:51.440 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-03 16:36:51.571 +02:00 [INF] Request started: GET /api/audits/recent by admin (Admin)
+2026-02-03 16:36:51.573 +02:00 [INF] Request completed: GET /api/audits/recent - 200 in 163ms
+2026-02-03 16:36:51.575 +02:00 [INF] Request completed: GET /api/projects - 200 in 175ms
+2026-02-03 16:36:51.579 +02:00 [INF] Request completed: GET /api/audits/recent - 200 in 8ms
+2026-02-03 16:36:51.581 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 638.0158 ms
+2026-02-03 16:36:51.581 +02:00 [INF] HTTP GET /api/projects responded 200 in 638.0084 ms
+2026-02-03 16:36:51.582 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 19.3039 ms
+2026-02-03 16:36:51.591 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:36:51.592 +02:00 [INF] Request completed: GET /api/roster - 200 in 193ms
+2026-02-03 16:36:51.595 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:36:51.601 +02:00 [INF] HTTP GET /api/roster responded 200 in 660.4373 ms
+2026-02-03 16:36:51.604 +02:00 [INF] Request completed: GET /api/projects - 200 in 13ms
+2026-02-03 16:36:51.607 +02:00 [INF] HTTP GET /api/projects responded 200 in 31.0337 ms
+2026-02-03 16:36:51.622 +02:00 [INF] Request completed: GET /api/roster - 200 in 27ms
+2026-02-03 16:36:51.624 +02:00 [INF] HTTP GET /api/roster responded 200 in 30.5190 ms
+2026-02-03 16:36:52.120 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:36:52.128 +02:00 [INF] Request completed: GET /api/roster - 200 in 7ms
+2026-02-03 16:36:52.131 +02:00 [INF] HTTP GET /api/roster responded 200 in 11.5518 ms
+2026-02-03 16:39:04.779 +02:00 [INF] Application is shutting down...
+2026-02-03 16:39:18.529 +02:00 [INF] Now listening on: http://localhost:5212
+2026-02-03 16:39:18.575 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-03 16:39:18.577 +02:00 [INF] Hosting environment: Development
+2026-02-03 16:39:18.578 +02:00 [INF] Content root path: C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api
+2026-02-03 16:39:44.005 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-03 16:39:44.110 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 97ms
+2026-02-03 16:39:44.117 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 431.2014 ms
+2026-02-03 16:39:44.127 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-03 16:39:44.134 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 6ms
+2026-02-03 16:39:44.137 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 29.3774 ms
+2026-02-03 16:39:44.204 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:39:44.219 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-03 16:39:44.347 +02:00 [INF] Request completed: GET /api/projects - 200 in 141ms
+2026-02-03 16:39:44.350 +02:00 [INF] HTTP GET /api/projects responded 200 in 158.9806 ms
+2026-02-03 16:39:44.353 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:39:44.363 +02:00 [INF] Request completed: GET /api/projects - 200 in 8ms
+2026-02-03 16:39:44.365 +02:00 [INF] HTTP GET /api/projects responded 200 in 15.9539 ms
+2026-02-03 16:39:46.555 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:39:46.581 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 25ms
+2026-02-03 16:39:46.583 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 35.2444 ms
+2026-02-03 16:39:46.586 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:39:46.593 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 16:39:46.594 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 7ms
+2026-02-03 16:39:46.598 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 15.7419 ms
+2026-02-03 16:39:46.614 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 19ms
+2026-02-03 16:39:46.616 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 25.9773 ms
+2026-02-03 16:39:46.619 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 16:39:46.626 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 6ms
+2026-02-03 16:39:46.628 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 13.5430 ms
+2026-02-03 16:39:46.648 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 16:39:46.649 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:39:46.658 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 9ms
+2026-02-03 16:39:46.661 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 18.0771 ms
+2026-02-03 16:39:46.673 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:39:46.681 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 6ms
+2026-02-03 16:39:46.683 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 22.7392 ms
+2026-02-03 16:39:46.687 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 38ms
+2026-02-03 16:39:46.690 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 44.8978 ms
+2026-02-03 16:39:46.692 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 16:39:46.702 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 9ms
+2026-02-03 16:39:46.704 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 15.9422 ms
+2026-02-03 16:39:48.674 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:39:48.674 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:39:48.674 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 16:39:48.680 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 6ms
+2026-02-03 16:39:48.682 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:39:48.683 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 14.9265 ms
+2026-02-03 16:39:48.686 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 3ms
+2026-02-03 16:39:48.683 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 9ms
+2026-02-03 16:39:48.686 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 16:39:48.688 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 6.7973 ms
+2026-02-03 16:39:48.689 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 21.7023 ms
+2026-02-03 16:39:48.693 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 6ms
+2026-02-03 16:39:48.696 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 10.8399 ms
+2026-02-03 16:39:48.726 +02:00 [INF] Request completed: GET /api/roster - 200 in 49ms
+2026-02-03 16:39:48.726 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:39:48.728 +02:00 [INF] HTTP GET /api/roster responded 200 in 58.5374 ms
+2026-02-03 16:39:48.746 +02:00 [INF] Request started: GET /api/forecasts/allocations/6 by admin (Admin)
+2026-02-03 16:39:48.746 +02:00 [INF] Request completed: GET /api/roster - 200 in 18ms
+2026-02-03 16:39:48.749 +02:00 [INF] HTTP GET /api/roster responded 200 in 24.5898 ms
+2026-02-03 16:39:48.763 +02:00 [INF] Request completed: GET /api/forecasts/allocations/6 - 200 in 16ms
+2026-02-03 16:39:48.765 +02:00 [INF] HTTP GET /api/forecasts/allocations/6 responded 200 in 20.0709 ms
+2026-02-03 16:40:03.883 +02:00 [INF] Request started: POST /api/forecasts/allocations by admin (Admin)
+2026-02-03 16:40:04.059 +02:00 [INF] Request completed: POST /api/forecasts/allocations - 200 in 180ms
+2026-02-03 16:40:04.061 +02:00 [INF] HTTP POST /api/forecasts/allocations responded 200 in 187.0615 ms
+2026-02-03 16:40:05.692 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:40:05.695 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 2ms
+2026-02-03 16:40:05.697 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:40:05.697 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 6.0258 ms
+2026-02-03 16:40:05.700 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 2ms
+2026-02-03 16:40:05.702 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 5.5009 ms
+2026-02-03 16:40:05.705 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 16:40:05.711 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 4ms
+2026-02-03 16:40:05.713 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 8.3799 ms
+2026-02-03 16:40:05.717 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 16:40:05.720 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 2ms
+2026-02-03 16:40:05.721 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 5.9547 ms
+2026-02-03 16:40:05.726 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:40:05.726 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 16:40:05.729 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 2ms
+2026-02-03 16:40:05.730 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 5.9225 ms
+2026-02-03 16:40:05.731 +02:00 [INF] Request started: GET /api/projects/4 by admin (Admin)
+2026-02-03 16:40:05.731 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 4ms
+2026-02-03 16:40:05.733 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 16:40:05.735 +02:00 [INF] Request completed: GET /api/projects/4 - 200 in 3ms
+2026-02-03 16:40:05.735 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 9.1844 ms
+2026-02-03 16:40:05.738 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 3ms
+2026-02-03 16:40:05.738 +02:00 [INF] HTTP GET /api/projects/4 responded 200 in 7.8266 ms
+2026-02-03 16:40:05.741 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 7.8864 ms
+2026-02-03 16:40:07.380 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:40:07.387 +02:00 [INF] Request completed: GET /api/projects - 200 in 6ms
+2026-02-03 16:40:07.389 +02:00 [INF] HTTP GET /api/projects responded 200 in 11.0575 ms
+2026-02-03 16:40:07.389 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:40:07.393 +02:00 [INF] Request completed: GET /api/projects - 200 in 3ms
+2026-02-03 16:40:07.395 +02:00 [INF] HTTP GET /api/projects responded 200 in 6.8153 ms
+2026-02-03 16:40:11.025 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:11.032 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 6ms
+2026-02-03 16:40:11.035 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 16.2507 ms
+2026-02-03 16:40:11.036 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:11.042 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 6ms
+2026-02-03 16:40:11.044 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 16:40:11.046 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 11.8210 ms
+2026-02-03 16:40:11.052 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 8ms
+2026-02-03 16:40:11.055 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 12.3210 ms
+2026-02-03 16:40:11.064 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 16:40:11.069 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 5ms
+2026-02-03 16:40:11.072 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 10.1086 ms
+2026-02-03 16:40:11.085 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 16:40:11.085 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:11.092 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 6ms
+2026-02-03 16:40:11.095 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:11.096 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 11.9729 ms
+2026-02-03 16:40:11.098 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 12ms
+2026-02-03 16:40:11.099 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 3ms
+2026-02-03 16:40:11.102 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 16:40:11.103 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 18.3656 ms
+2026-02-03 16:40:11.104 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 10.2267 ms
+2026-02-03 16:40:11.109 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 7ms
+2026-02-03 16:40:11.114 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 13.3789 ms
+2026-02-03 16:40:12.507 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:40:12.507 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:12.507 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 16:40:12.514 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 6ms
+2026-02-03 16:40:12.514 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 7ms
+2026-02-03 16:40:12.516 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 13.1172 ms
+2026-02-03 16:40:12.517 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 14.8935 ms
+2026-02-03 16:40:12.522 +02:00 [INF] Request completed: GET /api/roster - 200 in 14ms
+2026-02-03 16:40:12.524 +02:00 [INF] HTTP GET /api/roster responded 200 in 21.4201 ms
+2026-02-03 16:40:12.527 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 16:40:12.527 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:40:12.527 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:12.533 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 5ms
+2026-02-03 16:40:12.535 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 19.0658 ms
+2026-02-03 16:40:12.536 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 8ms
+2026-02-03 16:40:12.539 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 24.1452 ms
+2026-02-03 16:40:12.545 +02:00 [INF] Request completed: GET /api/roster - 200 in 18ms
+2026-02-03 16:40:12.547 +02:00 [INF] HTTP GET /api/roster responded 200 in 24.2025 ms
+2026-02-03 16:40:12.549 +02:00 [INF] Request started: GET /api/forecasts/allocations/14 by admin (Admin)
+2026-02-03 16:40:12.557 +02:00 [INF] Request completed: GET /api/forecasts/allocations/14 - 200 in 7ms
+2026-02-03 16:40:12.559 +02:00 [INF] HTTP GET /api/forecasts/allocations/14 responded 200 in 15.4826 ms
+2026-02-03 16:40:28.288 +02:00 [INF] Request started: POST /api/forecasts/allocations by admin (Admin)
+2026-02-03 16:40:28.349 +02:00 [INF] Request completed: POST /api/forecasts/allocations - 200 in 61ms
+2026-02-03 16:40:28.350 +02:00 [INF] HTTP POST /api/forecasts/allocations responded 200 in 66.5927 ms
+2026-02-03 16:40:30.183 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:30.186 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 2ms
+2026-02-03 16:40:30.187 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:30.187 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 5.4996 ms
+2026-02-03 16:40:30.190 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 2ms
+2026-02-03 16:40:30.193 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 6.3826 ms
+2026-02-03 16:40:30.196 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 16:40:30.201 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 4ms
+2026-02-03 16:40:30.203 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 8.3092 ms
+2026-02-03 16:40:30.209 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 16:40:30.212 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 2ms
+2026-02-03 16:40:30.214 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 5.6970 ms
+2026-02-03 16:40:30.224 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 16:40:30.224 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:30.228 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 3ms
+2026-02-03 16:40:30.229 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 4ms
+2026-02-03 16:40:30.230 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 16:40:30.230 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 6.5997 ms
+2026-02-03 16:40:30.231 +02:00 [INF] Request started: GET /api/projects/12 by admin (Admin)
+2026-02-03 16:40:30.232 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 7.9833 ms
+2026-02-03 16:40:30.234 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 4ms
+2026-02-03 16:40:30.237 +02:00 [INF] Request completed: GET /api/projects/12 - 200 in 6ms
+2026-02-03 16:40:30.239 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 10.3491 ms
+2026-02-03 16:40:30.241 +02:00 [INF] HTTP GET /api/projects/12 responded 200 in 10.6364 ms
+2026-02-03 16:40:32.265 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:40:32.265 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:40:32.271 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 16:40:32.273 +02:00 [INF] HTTP GET /api/projects responded 200 in 8.9072 ms
+2026-02-03 16:40:32.273 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 16:40:32.279 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 16:40:32.279 +02:00 [INF] Request completed: GET /api/roster - 200 in 13ms
+2026-02-03 16:40:32.281 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 16:40:32.281 +02:00 [INF] HTTP GET /api/projects responded 200 in 8.3422 ms
+2026-02-03 16:40:32.283 +02:00 [INF] HTTP GET /api/roster responded 200 in 18.3036 ms
+2026-02-03 16:40:32.291 +02:00 [INF] Request completed: GET /api/roster - 200 in 10ms
+2026-02-03 16:40:32.293 +02:00 [INF] HTTP GET /api/roster responded 200 in 12.9461 ms
+2026-02-03 16:40:32.295 +02:00 [INF] Request started: GET /api/financials/6/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.295 +02:00 [INF] Request started: GET /api/financials/16/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.296 +02:00 [INF] Request started: GET /api/financials/7/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.297 +02:00 [INF] Request started: GET /api/financials/15/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.297 +02:00 [INF] Request started: GET /api/financials/5/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.298 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/1 - 200 in 2ms
+2026-02-03 16:40:32.298 +02:00 [INF] Request started: GET /api/financials/4/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.300 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/1 - 200 in 4ms
+2026-02-03 16:40:32.302 +02:00 [INF] Request completed: GET /api/financials/7/snapshots/1 - 200 in 5ms
+2026-02-03 16:40:32.305 +02:00 [INF] Request completed: GET /api/financials/15/snapshots/1 - 200 in 8ms
+2026-02-03 16:40:32.308 +02:00 [INF] Request completed: GET /api/financials/5/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.308 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 14.2475 ms
+2026-02-03 16:40:32.312 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/1 - 200 in 13ms
+2026-02-03 16:40:32.312 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 18.2455 ms
+2026-02-03 16:40:32.314 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 18.7969 ms
+2026-02-03 16:40:32.316 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 20.0200 ms
+2026-02-03 16:40:32.318 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 21.3403 ms
+2026-02-03 16:40:32.322 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 23.7308 ms
+2026-02-03 16:40:32.322 +02:00 [INF] Request started: GET /api/financials/1/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.327 +02:00 [INF] Request started: GET /api/financials/2/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.330 +02:00 [INF] Request started: GET /api/financials/16/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.330 +02:00 [INF] Request started: GET /api/financials/6/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.330 +02:00 [INF] Request started: GET /api/financials/7/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.335 +02:00 [INF] Request started: GET /api/financials/15/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.335 +02:00 [INF] Request completed: GET /api/financials/1/snapshots/1 - 200 in 13ms
+2026-02-03 16:40:32.337 +02:00 [INF] Request completed: GET /api/financials/2/snapshots/1 - 200 in 9ms
+2026-02-03 16:40:32.339 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/1 - 200 in 8ms
+2026-02-03 16:40:32.341 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.343 +02:00 [INF] Request completed: GET /api/financials/7/snapshots/1 - 200 in 11ms
+2026-02-03 16:40:32.345 +02:00 [INF] Request completed: GET /api/financials/15/snapshots/1 - 200 in 9ms
+2026-02-03 16:40:32.345 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 24.1509 ms
+2026-02-03 16:40:32.347 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 20.6970 ms
+2026-02-03 16:40:32.348 +02:00 [INF] HTTP GET /api/financials/16/snapshots/1 responded 200 in 18.8931 ms
+2026-02-03 16:40:32.350 +02:00 [INF] HTTP GET /api/financials/6/snapshots/1 responded 200 in 20.0446 ms
+2026-02-03 16:40:32.351 +02:00 [INF] HTTP GET /api/financials/7/snapshots/1 responded 200 in 21.4798 ms
+2026-02-03 16:40:32.353 +02:00 [INF] HTTP GET /api/financials/15/snapshots/1 responded 200 in 19.0890 ms
+2026-02-03 16:40:32.360 +02:00 [INF] Request started: GET /api/financials/5/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.360 +02:00 [INF] Request started: GET /api/financials/4/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.361 +02:00 [INF] Request started: GET /api/financials/3/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.361 +02:00 [INF] Request started: GET /api/financials/14/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.364 +02:00 [INF] Request started: GET /api/financials/13/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.366 +02:00 [INF] Request started: GET /api/financials/8/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.367 +02:00 [INF] Request completed: GET /api/financials/5/snapshots/1 - 200 in 6ms
+2026-02-03 16:40:32.369 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/1 - 200 in 8ms
+2026-02-03 16:40:32.371 +02:00 [INF] Request completed: GET /api/financials/3/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.373 +02:00 [INF] Request completed: GET /api/financials/14/snapshots/1 - 200 in 11ms
+2026-02-03 16:40:32.375 +02:00 [INF] Request completed: GET /api/financials/13/snapshots/1 - 200 in 11ms
+2026-02-03 16:40:32.377 +02:00 [INF] Request completed: GET /api/financials/8/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.377 +02:00 [INF] HTTP GET /api/financials/5/snapshots/1 responded 200 in 18.0837 ms
+2026-02-03 16:40:32.379 +02:00 [INF] HTTP GET /api/financials/4/snapshots/1 responded 200 in 19.8620 ms
+2026-02-03 16:40:32.381 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 21.3044 ms
+2026-02-03 16:40:32.383 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 22.6539 ms
+2026-02-03 16:40:32.385 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 22.1040 ms
+2026-02-03 16:40:32.387 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 22.0473 ms
+2026-02-03 16:40:32.390 +02:00 [INF] Request started: GET /api/financials/12/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.392 +02:00 [INF] Request started: GET /api/financials/10/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.394 +02:00 [INF] Request started: GET /api/financials/11/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.396 +02:00 [INF] Request started: GET /api/financials/9/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.398 +02:00 [INF] Request started: GET /api/financials/17/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.399 +02:00 [INF] Request started: GET /api/financials/1/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.401 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.403 +02:00 [INF] Request completed: GET /api/financials/10/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.405 +02:00 [INF] Request completed: GET /api/financials/11/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.406 +02:00 [INF] Request completed: GET /api/financials/9/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.408 +02:00 [INF] Request completed: GET /api/financials/17/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.410 +02:00 [INF] Request completed: GET /api/financials/1/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.411 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 21.6860 ms
+2026-02-03 16:40:32.413 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 21.3901 ms
+2026-02-03 16:40:32.414 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 21.1401 ms
+2026-02-03 16:40:32.416 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 21.1895 ms
+2026-02-03 16:40:32.418 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 20.6568 ms
+2026-02-03 16:40:32.420 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 20.8620 ms
+2026-02-03 16:40:32.423 +02:00 [INF] Request started: GET /api/financials/2/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.425 +02:00 [INF] Request started: GET /api/financials/3/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.427 +02:00 [INF] Request started: GET /api/financials/14/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.429 +02:00 [INF] Request started: GET /api/financials/13/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.430 +02:00 [INF] Request started: GET /api/financials/8/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.432 +02:00 [INF] Request started: GET /api/financials/12/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.434 +02:00 [INF] Request completed: GET /api/financials/2/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.436 +02:00 [INF] Request completed: GET /api/financials/3/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.438 +02:00 [INF] Request completed: GET /api/financials/14/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.440 +02:00 [INF] Request completed: GET /api/financials/13/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.442 +02:00 [INF] Request completed: GET /api/financials/8/snapshots/1 - 200 in 11ms
+2026-02-03 16:40:32.445 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/1 - 200 in 12ms
+2026-02-03 16:40:32.446 +02:00 [INF] HTTP GET /api/financials/2/snapshots/1 responded 200 in 23.3945 ms
+2026-02-03 16:40:32.447 +02:00 [INF] HTTP GET /api/financials/3/snapshots/1 responded 200 in 23.1702 ms
+2026-02-03 16:40:32.449 +02:00 [INF] HTTP GET /api/financials/14/snapshots/1 responded 200 in 22.5725 ms
+2026-02-03 16:40:32.450 +02:00 [INF] HTTP GET /api/financials/13/snapshots/1 responded 200 in 21.9866 ms
+2026-02-03 16:40:32.452 +02:00 [INF] HTTP GET /api/financials/8/snapshots/1 responded 200 in 22.1609 ms
+2026-02-03 16:40:32.453 +02:00 [INF] HTTP GET /api/financials/12/snapshots/1 responded 200 in 21.6190 ms
+2026-02-03 16:40:32.456 +02:00 [INF] Request started: GET /api/financials/10/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.457 +02:00 [INF] Request started: GET /api/financials/11/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.460 +02:00 [INF] Request started: GET /api/financials/9/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.462 +02:00 [INF] Request started: GET /api/financials/17/snapshots/1 by admin (Admin)
+2026-02-03 16:40:32.467 +02:00 [INF] Request completed: GET /api/financials/10/snapshots/1 - 200 in 9ms
+2026-02-03 16:40:32.468 +02:00 [INF] Request completed: GET /api/financials/11/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.470 +02:00 [INF] Request completed: GET /api/financials/9/snapshots/1 - 200 in 10ms
+2026-02-03 16:40:32.472 +02:00 [INF] Request completed: GET /api/financials/17/snapshots/1 - 200 in 9ms
+2026-02-03 16:40:32.472 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.473 +02:00 [INF] HTTP GET /api/financials/10/snapshots/1 responded 200 in 17.0287 ms
+2026-02-03 16:40:32.475 +02:00 [INF] HTTP GET /api/financials/11/snapshots/1 responded 200 in 18.1494 ms
+2026-02-03 16:40:32.477 +02:00 [INF] HTTP GET /api/financials/9/snapshots/1 responded 200 in 17.7194 ms
+2026-02-03 16:40:32.478 +02:00 [INF] HTTP GET /api/financials/17/snapshots/1 responded 200 in 17.0885 ms
+2026-02-03 16:40:32.483 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.485 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.491 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 19.6626 ms
+2026-02-03 16:40:32.494 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 9ms
+2026-02-03 16:40:32.497 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.497 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.497 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.497 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.497 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.498 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 13.9011 ms
+2026-02-03 16:40:32.502 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 4ms
+2026-02-03 16:40:32.503 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 6ms
+2026-02-03 16:40:32.506 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 8ms
+2026-02-03 16:40:32.508 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.510 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 12ms
+2026-02-03 16:40:32.512 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.513 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 16.5504 ms
+2026-02-03 16:40:32.514 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 18.2757 ms
+2026-02-03 16:40:32.516 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 19.7447 ms
+2026-02-03 16:40:32.518 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.0456 ms
+2026-02-03 16:40:32.520 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.3697 ms
+2026-02-03 16:40:32.523 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.526 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.527 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.529 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.531 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.533 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.534 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.1155 ms
+2026-02-03 16:40:32.537 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.539 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.541 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.542 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.544 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.547 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.547 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.0287 ms
+2026-02-03 16:40:32.549 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 21.7184 ms
+2026-02-03 16:40:32.551 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.2940 ms
+2026-02-03 16:40:32.552 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.3021 ms
+2026-02-03 16:40:32.555 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.7556 ms
+2026-02-03 16:40:32.558 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.560 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.562 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.564 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.566 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.569 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.570 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.5853 ms
+2026-02-03 16:40:32.573 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 12ms
+2026-02-03 16:40:32.574 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.577 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 12ms
+2026-02-03 16:40:32.578 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.580 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.583 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.583 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.9140 ms
+2026-02-03 16:40:32.586 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 24.0673 ms
+2026-02-03 16:40:32.587 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.6764 ms
+2026-02-03 16:40:32.589 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.1377 ms
+2026-02-03 16:40:32.590 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.3291 ms
+2026-02-03 16:40:32.593 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 9ms
+2026-02-03 16:40:32.595 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.597 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.599 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.601 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.603 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.603 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 20.9336 ms
+2026-02-03 16:40:32.606 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.607 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.609 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.611 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 9ms
+2026-02-03 16:40:32.613 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 10ms
+2026-02-03 16:40:32.615 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.616 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 21.5747 ms
+2026-02-03 16:40:32.617 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 21.1866 ms
+2026-02-03 16:40:32.619 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 21.1943 ms
+2026-02-03 16:40:32.622 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.1151 ms
+2026-02-03 16:40:32.624 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.1064 ms
+2026-02-03 16:40:32.627 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 12ms
+2026-02-03 16:40:32.630 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.631 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.634 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.636 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.638 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.638 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.9143 ms
+2026-02-03 16:40:32.641 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.643 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.646 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.648 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.650 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.653 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.653 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 24.1628 ms
+2026-02-03 16:40:32.654 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.7968 ms
+2026-02-03 16:40:32.656 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 23.5853 ms
+2026-02-03 16:40:32.658 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.8871 ms
+2026-02-03 16:40:32.659 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 21.9629 ms
+2026-02-03 16:40:32.663 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 9ms
+2026-02-03 16:40:32.665 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.674 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 22.0167 ms
+2026-02-03 16:40:32.677 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 11ms
+2026-02-03 16:40:32.679 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 16:40:32.680 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 15.3143 ms
+2026-02-03 16:40:32.683 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 3ms
+2026-02-03 16:40:32.685 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 6.3664 ms
+2026-02-03 17:00:14.338 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-03 17:00:14.389 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 49ms
+2026-02-03 17:00:14.394 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 218.0934 ms
+2026-02-03 17:00:14.413 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-03 17:00:14.418 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 4ms
+2026-02-03 17:00:14.422 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 26.9125 ms
+2026-02-03 17:00:14.486 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 17:00:14.488 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 17:00:14.522 +02:00 [INF] Request completed: GET /api/projects - 200 in 33ms
+2026-02-03 17:00:14.526 +02:00 [INF] HTTP GET /api/projects responded 200 in 46.4689 ms
+2026-02-03 17:00:14.531 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 17:00:14.539 +02:00 [INF] Request completed: GET /api/projects - 200 in 7ms
+2026-02-03 17:00:14.542 +02:00 [INF] HTTP GET /api/projects responded 200 in 16.3624 ms
+2026-02-03 17:00:14.566 +02:00 [INF] Request completed: GET /api/roster - 200 in 78ms
+2026-02-03 17:00:14.567 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 17:00:14.569 +02:00 [INF] HTTP GET /api/roster responded 200 in 89.9771 ms
+2026-02-03 17:00:14.577 +02:00 [INF] Request completed: GET /api/roster - 200 in 9ms
+2026-02-03 17:00:14.580 +02:00 [INF] HTTP GET /api/roster responded 200 in 14.2657 ms
+2026-02-03 17:00:14.585 +02:00 [INF] Request started: GET /api/forecasts/16/versions by admin (Admin)
+2026-02-03 17:00:14.585 +02:00 [INF] Request started: GET /api/forecasts/7/versions by admin (Admin)
+2026-02-03 17:00:14.586 +02:00 [INF] Request started: GET /api/forecasts/5/versions by admin (Admin)
+2026-02-03 17:00:14.588 +02:00 [INF] Request started: GET /api/forecasts/15/versions by admin (Admin)
+2026-02-03 17:00:14.588 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-03 17:00:14.588 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 17:00:14.602 +02:00 [INF] Request completed: GET /api/forecasts/5/versions - 200 in 14ms
+2026-02-03 17:00:14.604 +02:00 [INF] Request completed: GET /api/forecasts/7/versions - 200 in 19ms
+2026-02-03 17:00:14.608 +02:00 [INF] HTTP GET /api/forecasts/5/versions responded 200 in 22.9007 ms
+2026-02-03 17:00:14.609 +02:00 [INF] Request completed: GET /api/forecasts/16/versions - 200 in 20ms
+2026-02-03 17:00:14.610 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 20ms
+2026-02-03 17:00:14.613 +02:00 [INF] HTTP GET /api/forecasts/7/versions responded 200 in 29.5955 ms
+2026-02-03 17:00:14.618 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 34.7118 ms
+2026-02-03 17:00:14.619 +02:00 [INF] Request completed: GET /api/forecasts/15/versions - 200 in 30ms
+2026-02-03 17:00:14.619 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 30ms
+2026-02-03 17:00:14.622 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 35.7981 ms
+2026-02-03 17:00:14.632 +02:00 [INF] HTTP GET /api/forecasts/15/versions responded 200 in 45.9970 ms
+2026-02-03 17:00:14.635 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 49.0792 ms
+2026-02-03 17:00:14.640 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 17:00:14.640 +02:00 [INF] Request started: GET /api/forecasts/7/versions by admin (Admin)
+2026-02-03 17:00:14.640 +02:00 [INF] Request started: GET /api/forecasts/5/versions by admin (Admin)
+2026-02-03 17:00:14.640 +02:00 [INF] Request started: GET /api/forecasts/16/versions by admin (Admin)
+2026-02-03 17:00:14.644 +02:00 [INF] Request started: GET /api/forecasts/1/versions by admin (Admin)
+2026-02-03 17:00:14.645 +02:00 [INF] Request started: GET /api/forecasts/2/versions by admin (Admin)
+2026-02-03 17:00:14.650 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 9ms
+2026-02-03 17:00:14.652 +02:00 [INF] Request completed: GET /api/forecasts/7/versions - 200 in 11ms
+2026-02-03 17:00:14.655 +02:00 [INF] Request completed: GET /api/forecasts/5/versions - 200 in 15ms
+2026-02-03 17:00:14.658 +02:00 [INF] Request completed: GET /api/forecasts/16/versions - 200 in 18ms
+2026-02-03 17:00:14.661 +02:00 [INF] Request completed: GET /api/forecasts/1/versions - 200 in 17ms
+2026-02-03 17:00:14.666 +02:00 [INF] Request completed: GET /api/forecasts/2/versions - 200 in 19ms
+2026-02-03 17:00:14.667 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 27.6123 ms
+2026-02-03 17:00:14.669 +02:00 [INF] HTTP GET /api/forecasts/7/versions responded 200 in 31.8257 ms
+2026-02-03 17:00:14.673 +02:00 [INF] HTTP GET /api/forecasts/5/versions responded 200 in 34.9964 ms
+2026-02-03 17:00:14.675 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 37.4720 ms
+2026-02-03 17:00:14.679 +02:00 [INF] HTTP GET /api/forecasts/1/versions responded 200 in 35.9635 ms
+2026-02-03 17:00:14.682 +02:00 [INF] HTTP GET /api/forecasts/2/versions responded 200 in 37.2238 ms
+2026-02-03 17:00:14.687 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-03 17:00:14.690 +02:00 [INF] Request started: GET /api/forecasts/15/versions by admin (Admin)
+2026-02-03 17:00:14.693 +02:00 [INF] Request started: GET /api/forecasts/14/versions by admin (Admin)
+2026-02-03 17:00:14.696 +02:00 [INF] Request started: GET /api/forecasts/3/versions by admin (Admin)
+2026-02-03 17:00:14.700 +02:00 [INF] Request started: GET /api/forecasts/13/versions by admin (Admin)
+2026-02-03 17:00:14.702 +02:00 [INF] Request started: GET /api/forecasts/8/versions by admin (Admin)
+2026-02-03 17:00:14.706 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 18ms
+2026-02-03 17:00:14.709 +02:00 [INF] Request completed: GET /api/forecasts/15/versions - 200 in 18ms
+2026-02-03 17:00:14.712 +02:00 [INF] Request completed: GET /api/forecasts/14/versions - 200 in 17ms
+2026-02-03 17:00:14.714 +02:00 [INF] Request completed: GET /api/forecasts/3/versions - 200 in 17ms
+2026-02-03 17:00:14.718 +02:00 [INF] Request completed: GET /api/forecasts/13/versions - 200 in 17ms
+2026-02-03 17:00:14.720 +02:00 [INF] Request completed: GET /api/forecasts/8/versions - 200 in 17ms
+2026-02-03 17:00:14.722 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 36.4516 ms
+2026-02-03 17:00:14.726 +02:00 [INF] HTTP GET /api/forecasts/15/versions responded 200 in 36.9195 ms
+2026-02-03 17:00:14.729 +02:00 [INF] HTTP GET /api/forecasts/14/versions responded 200 in 37.2526 ms
+2026-02-03 17:00:14.733 +02:00 [INF] HTTP GET /api/forecasts/3/versions responded 200 in 37.9975 ms
+2026-02-03 17:00:14.736 +02:00 [INF] HTTP GET /api/forecasts/13/versions responded 200 in 37.4644 ms
+2026-02-03 17:00:14.739 +02:00 [INF] HTTP GET /api/forecasts/8/versions responded 200 in 37.9508 ms
+2026-02-03 17:00:14.745 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 17:00:14.748 +02:00 [INF] Request started: GET /api/forecasts/10/versions by admin (Admin)
+2026-02-03 17:00:14.751 +02:00 [INF] Request started: GET /api/forecasts/11/versions by admin (Admin)
+2026-02-03 17:00:14.754 +02:00 [INF] Request started: GET /api/forecasts/9/versions by admin (Admin)
+2026-02-03 17:00:14.783 +02:00 [INF] Request started: GET /api/forecasts/17/versions by admin (Admin)
+2026-02-03 17:00:14.786 +02:00 [INF] Request started: GET /api/forecasts/1/versions by admin (Admin)
+2026-02-03 17:00:14.791 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 46ms
+2026-02-03 17:00:14.792 +02:00 [INF] Request completed: GET /api/forecasts/10/versions - 200 in 44ms
+2026-02-03 17:00:14.794 +02:00 [INF] Request completed: GET /api/forecasts/11/versions - 200 in 42ms
+2026-02-03 17:00:14.796 +02:00 [INF] Request completed: GET /api/forecasts/9/versions - 200 in 42ms
+2026-02-03 17:00:14.799 +02:00 [INF] Request completed: GET /api/forecasts/17/versions - 200 in 15ms
+2026-02-03 17:00:14.802 +02:00 [INF] Request completed: GET /api/forecasts/1/versions - 200 in 15ms
+2026-02-03 17:00:14.804 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 60.0977 ms
+2026-02-03 17:00:14.806 +02:00 [INF] HTTP GET /api/forecasts/10/versions responded 200 in 59.2747 ms
+2026-02-03 17:00:14.808 +02:00 [INF] HTTP GET /api/forecasts/11/versions responded 200 in 58.7443 ms
+2026-02-03 17:00:14.811 +02:00 [INF] HTTP GET /api/forecasts/9/versions responded 200 in 58.4941 ms
+2026-02-03 17:00:14.814 +02:00 [INF] HTTP GET /api/forecasts/17/versions responded 200 in 58.2781 ms
+2026-02-03 17:00:14.817 +02:00 [INF] HTTP GET /api/forecasts/1/versions responded 200 in 31.6282 ms
+2026-02-03 17:00:14.822 +02:00 [INF] Request started: GET /api/forecasts/2/versions by admin (Admin)
+2026-02-03 17:00:14.824 +02:00 [INF] Request started: GET /api/forecasts/14/versions by admin (Admin)
+2026-02-03 17:00:14.827 +02:00 [INF] Request started: GET /api/forecasts/3/versions by admin (Admin)
+2026-02-03 17:00:14.830 +02:00 [INF] Request started: GET /api/forecasts/13/versions by admin (Admin)
+2026-02-03 17:00:14.832 +02:00 [INF] Request started: GET /api/forecasts/8/versions by admin (Admin)
+2026-02-03 17:00:14.835 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 17:00:14.837 +02:00 [INF] Request completed: GET /api/forecasts/2/versions - 200 in 15ms
+2026-02-03 17:00:14.840 +02:00 [INF] Request completed: GET /api/forecasts/14/versions - 200 in 15ms
+2026-02-03 17:00:14.843 +02:00 [INF] Request completed: GET /api/forecasts/3/versions - 200 in 14ms
+2026-02-03 17:00:14.846 +02:00 [INF] Request completed: GET /api/forecasts/13/versions - 200 in 15ms
+2026-02-03 17:00:14.849 +02:00 [INF] Request completed: GET /api/forecasts/8/versions - 200 in 16ms
+2026-02-03 17:00:14.852 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 16ms
+2026-02-03 17:00:14.854 +02:00 [INF] HTTP GET /api/forecasts/2/versions responded 200 in 33.0286 ms
+2026-02-03 17:00:14.857 +02:00 [INF] HTTP GET /api/forecasts/14/versions responded 200 in 33.3617 ms
+2026-02-03 17:00:14.859 +02:00 [INF] HTTP GET /api/forecasts/3/versions responded 200 in 33.1389 ms
+2026-02-03 17:00:14.862 +02:00 [INF] HTTP GET /api/forecasts/13/versions responded 200 in 33.5544 ms
+2026-02-03 17:00:14.866 +02:00 [INF] HTTP GET /api/forecasts/8/versions responded 200 in 34.2159 ms
+2026-02-03 17:00:14.868 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 34.3021 ms
+2026-02-03 17:00:14.874 +02:00 [INF] Request started: GET /api/forecasts/10/versions by admin (Admin)
+2026-02-03 17:00:14.877 +02:00 [INF] Request started: GET /api/forecasts/11/versions by admin (Admin)
+2026-02-03 17:00:14.883 +02:00 [INF] Request started: GET /api/forecasts/9/versions by admin (Admin)
+2026-02-03 17:00:14.892 +02:00 [INF] Request started: GET /api/forecasts/17/versions by admin (Admin)
+2026-02-03 17:00:14.924 +02:00 [INF] Request started: GET /api/financials/16/snapshots/25 by admin (Admin)
+2026-02-03 17:00:14.936 +02:00 [INF] Request started: GET /api/financials/7/snapshots/11 by admin (Admin)
+2026-02-03 17:00:14.946 +02:00 [INF] Request completed: GET /api/forecasts/10/versions - 200 in 71ms
+2026-02-03 17:00:14.958 +02:00 [INF] Request completed: GET /api/forecasts/11/versions - 200 in 81ms
+2026-02-03 17:00:14.959 +02:00 [INF] Request completed: GET /api/forecasts/9/versions - 200 in 75ms
+2026-02-03 17:00:14.964 +02:00 [INF] Request completed: GET /api/forecasts/17/versions - 200 in 72ms
+2026-02-03 17:00:14.974 +02:00 [INF] HTTP GET /api/forecasts/10/versions responded 200 in 101.2548 ms
+2026-02-03 17:00:14.977 +02:00 [INF] HTTP GET /api/forecasts/11/versions responded 200 in 101.1785 ms
+2026-02-03 17:00:14.982 +02:00 [INF] HTTP GET /api/forecasts/9/versions responded 200 in 103.0651 ms
+2026-02-03 17:00:14.986 +02:00 [INF] HTTP GET /api/forecasts/17/versions responded 200 in 95.0826 ms
+2026-02-03 17:00:14.988 +02:00 [INF] Request completed: GET /api/financials/7/snapshots/11 - 200 in 51ms
+2026-02-03 17:00:14.988 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/25 - 200 in 63ms
+2026-02-03 17:00:15.000 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-03 17:00:15.002 +02:00 [INF] Request started: GET /api/financials/5/snapshots/8 by admin (Admin)
+2026-02-03 17:00:15.002 +02:00 [INF] Request started: GET /api/financials/15/snapshots/24 by admin (Admin)
+2026-02-03 17:00:15.006 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 17:00:15.007 +02:00 [INF] HTTP GET /api/financials/7/snapshots/11 responded 200 in 74.2186 ms
+2026-02-03 17:00:15.010 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 88.9949 ms
+2026-02-03 17:00:15.017 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 15ms
+2026-02-03 17:00:15.018 +02:00 [INF] Request completed: GET /api/financials/5/snapshots/8 - 200 in 15ms
+2026-02-03 17:00:15.024 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 17ms
+2026-02-03 17:00:15.033 +02:00 [INF] Request completed: GET /api/financials/15/snapshots/24 - 200 in 30ms
+2026-02-03 17:00:15.033 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 38.1921 ms
+2026-02-03 17:00:15.034 +02:00 [INF] Request started: GET /api/financials/2/snapshots/5 by admin (Admin)
+2026-02-03 17:00:15.034 +02:00 [INF] Request started: GET /api/financials/1/snapshots/1 by admin (Admin)
+2026-02-03 17:00:15.036 +02:00 [INF] HTTP GET /api/financials/5/snapshots/8 responded 200 in 37.6430 ms
+2026-02-03 17:00:15.039 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 34.6829 ms
+2026-02-03 17:00:15.042 +02:00 [INF] HTTP GET /api/financials/15/snapshots/24 responded 200 in 40.4561 ms
+2026-02-03 17:00:15.051 +02:00 [INF] Request started: GET /api/financials/3/snapshots/3 by admin (Admin)
+2026-02-03 17:00:15.052 +02:00 [INF] Request completed: GET /api/financials/1/snapshots/1 - 200 in 18ms
+2026-02-03 17:00:15.054 +02:00 [INF] Request completed: GET /api/financials/2/snapshots/5 - 200 in 19ms
+2026-02-03 17:00:15.056 +02:00 [INF] Request started: GET /api/financials/14/snapshots/16 by admin (Admin)
+2026-02-03 17:00:15.058 +02:00 [INF] Request started: GET /api/financials/13/snapshots/15 by admin (Admin)
+2026-02-03 17:00:15.062 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 17:00:15.064 +02:00 [INF] Request completed: GET /api/financials/3/snapshots/3 - 200 in 12ms
+2026-02-03 17:00:15.065 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 38.5913 ms
+2026-02-03 17:00:15.068 +02:00 [INF] HTTP GET /api/financials/2/snapshots/5 responded 200 in 36.9195 ms
+2026-02-03 17:00:15.072 +02:00 [INF] Request completed: GET /api/financials/14/snapshots/16 - 200 in 15ms
+2026-02-03 17:00:15.074 +02:00 [INF] Request completed: GET /api/financials/13/snapshots/15 - 200 in 15ms
+2026-02-03 17:00:15.077 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 14ms
+2026-02-03 17:00:15.079 +02:00 [INF] HTTP GET /api/financials/3/snapshots/3 responded 200 in 32.3024 ms
+2026-02-03 17:00:15.083 +02:00 [INF] Request started: GET /api/financials/10/snapshots/13 by admin (Admin)
+2026-02-03 17:00:15.085 +02:00 [INF] Request started: GET /api/financials/9/snapshots/12 by admin (Admin)
+2026-02-03 17:00:15.086 +02:00 [INF] HTTP GET /api/financials/14/snapshots/16 responded 200 in 31.0651 ms
+2026-02-03 17:00:15.088 +02:00 [INF] HTTP GET /api/financials/13/snapshots/15 responded 200 in 30.9140 ms
+2026-02-03 17:00:15.091 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 29.8844 ms
+2026-02-03 17:00:15.095 +02:00 [INF] Request started: GET /api/financials/17/snapshots/26 by admin (Admin)
+2026-02-03 17:00:15.100 +02:00 [INF] Request completed: GET /api/financials/10/snapshots/13 - 200 in 15ms
+2026-02-03 17:00:15.113 +02:00 [INF] HTTP GET /api/financials/10/snapshots/13 responded 200 in 31.0551 ms
+2026-02-03 17:00:15.113 +02:00 [INF] Request completed: GET /api/financials/9/snapshots/12 - 200 in 27ms
+2026-02-03 17:00:15.118 +02:00 [INF] Request started: GET /api/financials/5/snapshots/8 by admin (Admin)
+2026-02-03 17:00:15.119 +02:00 [INF] HTTP GET /api/financials/9/snapshots/12 responded 200 in 34.2676 ms
+2026-02-03 17:00:15.121 +02:00 [INF] Request started: GET /api/financials/7/snapshots/11 by admin (Admin)
+2026-02-03 17:00:15.121 +02:00 [INF] Request started: GET /api/financials/16/snapshots/25 by admin (Admin)
+2026-02-03 17:00:15.121 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-03 17:00:15.122 +02:00 [INF] Request completed: GET /api/financials/17/snapshots/26 - 200 in 25ms
+2026-02-03 17:00:15.123 +02:00 [INF] Request completed: GET /api/financials/5/snapshots/8 - 200 in 4ms
+2026-02-03 17:00:15.126 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 17:00:15.129 +02:00 [INF] Request completed: GET /api/financials/7/snapshots/11 - 200 in 8ms
+2026-02-03 17:00:15.132 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/25 - 200 in 10ms
+2026-02-03 17:00:15.135 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 13ms
+2026-02-03 17:00:15.136 +02:00 [INF] HTTP GET /api/financials/17/snapshots/26 responded 200 in 41.6244 ms
+2026-02-03 17:00:15.139 +02:00 [INF] HTTP GET /api/financials/5/snapshots/8 responded 200 in 21.7248 ms
+2026-02-03 17:00:15.143 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 16ms
+2026-02-03 17:00:15.144 +02:00 [INF] HTTP GET /api/financials/7/snapshots/11 responded 200 in 38.3087 ms
+2026-02-03 17:00:15.147 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 44.1668 ms
+2026-02-03 17:00:15.149 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 40.9111 ms
+2026-02-03 17:00:15.154 +02:00 [INF] Request started: GET /api/financials/15/snapshots/24 by admin (Admin)
+2026-02-03 17:00:15.156 +02:00 [INF] Request started: GET /api/financials/1/snapshots/1 by admin (Admin)
+2026-02-03 17:00:15.157 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 31.8663 ms
+2026-02-03 17:00:15.162 +02:00 [INF] Request started: GET /api/financials/2/snapshots/5 by admin (Admin)
+2026-02-03 17:00:15.165 +02:00 [INF] Request started: GET /api/financials/3/snapshots/3 by admin (Admin)
+2026-02-03 17:00:15.168 +02:00 [INF] Request started: GET /api/financials/14/snapshots/16 by admin (Admin)
+2026-02-03 17:00:15.170 +02:00 [INF] Request completed: GET /api/financials/15/snapshots/24 - 200 in 15ms
+2026-02-03 17:00:15.172 +02:00 [INF] Request completed: GET /api/financials/1/snapshots/1 - 200 in 14ms
+2026-02-03 17:00:15.176 +02:00 [INF] Request started: GET /api/financials/13/snapshots/15 by admin (Admin)
+2026-02-03 17:00:15.178 +02:00 [INF] Request completed: GET /api/financials/2/snapshots/5 - 200 in 15ms
+2026-02-03 17:00:15.183 +02:00 [INF] Request completed: GET /api/financials/3/snapshots/3 - 200 in 17ms
+2026-02-03 17:00:15.184 +02:00 [INF] Request completed: GET /api/financials/14/snapshots/16 - 200 in 16ms
+2026-02-03 17:00:15.186 +02:00 [INF] HTTP GET /api/financials/15/snapshots/24 responded 200 in 33.1619 ms
+2026-02-03 17:00:15.188 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 32.8427 ms
+2026-02-03 17:00:15.194 +02:00 [INF] HTTP GET /api/financials/2/snapshots/5 responded 200 in 33.1735 ms
+2026-02-03 17:00:15.195 +02:00 [INF] Request completed: GET /api/financials/13/snapshots/15 - 200 in 18ms
+2026-02-03 17:00:15.198 +02:00 [INF] HTTP GET /api/financials/3/snapshots/3 responded 200 in 34.0432 ms
+2026-02-03 17:00:15.202 +02:00 [INF] HTTP GET /api/financials/14/snapshots/16 responded 200 in 34.8687 ms
+2026-02-03 17:00:15.207 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 17:00:15.209 +02:00 [INF] Request started: GET /api/financials/10/snapshots/13 by admin (Admin)
+2026-02-03 17:00:15.213 +02:00 [INF] Request started: GET /api/financials/9/snapshots/12 by admin (Admin)
+2026-02-03 17:00:15.214 +02:00 [INF] HTTP GET /api/financials/13/snapshots/15 responded 200 in 39.0605 ms
+2026-02-03 17:00:15.219 +02:00 [INF] Request started: GET /api/financials/17/snapshots/26 by admin (Admin)
+2026-02-03 17:00:15.225 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 17ms
+2026-02-03 17:00:15.229 +02:00 [INF] Request completed: GET /api/financials/10/snapshots/13 - 200 in 18ms
+2026-02-03 17:00:15.230 +02:00 [INF] Request completed: GET /api/financials/9/snapshots/12 - 200 in 17ms
+2026-02-03 17:00:15.236 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 17:00:15.236 +02:00 [INF] Request started: GET /api/forecasts/allocations/5 by admin (Admin)
+2026-02-03 17:00:15.238 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 32.1184 ms
+2026-02-03 17:00:15.238 +02:00 [INF] Request completed: GET /api/financials/17/snapshots/26 - 200 in 18ms
+2026-02-03 17:00:15.241 +02:00 [INF] HTTP GET /api/financials/10/snapshots/13 responded 200 in 32.6857 ms
+2026-02-03 17:00:15.244 +02:00 [INF] HTTP GET /api/financials/9/snapshots/12 responded 200 in 32.9447 ms
+2026-02-03 17:00:15.255 +02:00 [INF] Request started: GET /api/forecasts/allocations/3 by admin (Admin)
+2026-02-03 17:00:15.256 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 20ms
+2026-02-03 17:00:15.256 +02:00 [INF] HTTP GET /api/financials/17/snapshots/26 responded 200 in 38.6952 ms
+2026-02-03 17:00:15.257 +02:00 [INF] Request completed: GET /api/forecasts/allocations/5 - 200 in 19ms
+2026-02-03 17:00:15.262 +02:00 [INF] Request started: GET /api/forecasts/allocations/6 by admin (Admin)
+2026-02-03 17:00:15.265 +02:00 [INF] Request started: GET /api/forecasts/allocations/8 by admin (Admin)
+2026-02-03 17:00:15.269 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 34.4383 ms
+2026-02-03 17:00:15.270 +02:00 [INF] Request completed: GET /api/forecasts/allocations/3 - 200 in 14ms
+2026-02-03 17:00:15.274 +02:00 [INF] Request started: GET /api/forecasts/allocations/9 by admin (Admin)
+2026-02-03 17:00:15.275 +02:00 [INF] HTTP GET /api/forecasts/allocations/5 responded 200 in 40.0992 ms
+2026-02-03 17:00:15.284 +02:00 [INF] Request completed: GET /api/forecasts/allocations/6 - 200 in 21ms
+2026-02-03 17:00:15.285 +02:00 [INF] Request completed: GET /api/forecasts/allocations/8 - 200 in 19ms
+2026-02-03 17:00:15.287 +02:00 [INF] Request started: GET /api/forecasts/allocations/11 by admin (Admin)
+2026-02-03 17:00:15.288 +02:00 [INF] HTTP GET /api/forecasts/allocations/3 responded 200 in 33.0065 ms
+2026-02-03 17:00:15.295 +02:00 [INF] Request completed: GET /api/forecasts/allocations/9 - 200 in 20ms
+2026-02-03 17:00:15.296 +02:00 [INF] Request started: GET /api/forecasts/allocations/12 by admin (Admin)
+2026-02-03 17:00:15.297 +02:00 [INF] HTTP GET /api/forecasts/allocations/6 responded 200 in 36.2273 ms
+2026-02-03 17:00:15.300 +02:00 [INF] HTTP GET /api/forecasts/allocations/8 responded 200 in 35.8989 ms
+2026-02-03 17:00:15.304 +02:00 [INF] Request completed: GET /api/forecasts/allocations/11 - 200 in 17ms
+2026-02-03 17:00:15.307 +02:00 [INF] Request started: GET /api/forecasts/allocations/13 by admin (Admin)
+2026-02-03 17:00:15.308 +02:00 [INF] HTTP GET /api/forecasts/allocations/9 responded 200 in 34.7474 ms
+2026-02-03 17:00:15.312 +02:00 [INF] Request completed: GET /api/forecasts/allocations/12 - 200 in 15ms
+2026-02-03 17:00:15.316 +02:00 [INF] Request started: GET /api/forecasts/allocations/14 by admin (Admin)
+2026-02-03 17:00:15.318 +02:00 [INF] Request started: GET /api/forecasts/allocations/15 by admin (Admin)
+2026-02-03 17:00:15.319 +02:00 [INF] HTTP GET /api/forecasts/allocations/11 responded 200 in 32.8954 ms
+2026-02-03 17:00:15.322 +02:00 [INF] Request completed: GET /api/forecasts/allocations/13 - 200 in 14ms
+2026-02-03 17:00:15.331 +02:00 [INF] Request started: GET /api/forecasts/allocations/16 by admin (Admin)
+2026-02-03 17:00:15.336 +02:00 [INF] HTTP GET /api/forecasts/allocations/12 responded 200 in 40.7446 ms
+2026-02-03 17:00:15.343 +02:00 [INF] Request completed: GET /api/forecasts/allocations/14 - 200 in 27ms
+2026-02-03 17:00:15.348 +02:00 [INF] Request completed: GET /api/forecasts/allocations/15 - 200 in 29ms
+2026-02-03 17:00:15.353 +02:00 [INF] HTTP GET /api/forecasts/allocations/13 responded 200 in 46.8788 ms
+2026-02-03 17:00:15.355 +02:00 [INF] Request started: GET /api/forecasts/allocations/24 by admin (Admin)
+2026-02-03 17:00:15.359 +02:00 [INF] Request completed: GET /api/forecasts/allocations/16 - 200 in 27ms
+2026-02-03 17:00:15.374 +02:00 [INF] Request started: GET /api/forecasts/allocations/25 by admin (Admin)
+2026-02-03 17:00:15.374 +02:00 [INF] HTTP GET /api/forecasts/allocations/14 responded 200 in 59.9221 ms
+2026-02-03 17:00:15.389 +02:00 [INF] HTTP GET /api/forecasts/allocations/15 responded 200 in 72.5590 ms
+2026-02-03 17:00:15.396 +02:00 [INF] Request started: GET /api/forecasts/allocations/26 by admin (Admin)
+2026-02-03 17:00:15.412 +02:00 [INF] HTTP GET /api/forecasts/allocations/16 responded 200 in 84.1382 ms
+2026-02-03 17:00:15.414 +02:00 [INF] Request completed: GET /api/forecasts/allocations/24 - 200 in 58ms
+2026-02-03 17:00:15.437 +02:00 [INF] Request completed: GET /api/forecasts/allocations/25 - 200 in 62ms
+2026-02-03 17:00:15.438 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 17:00:15.442 +02:00 [INF] Request started: GET /api/forecasts/allocations/5 by admin (Admin)
+2026-02-03 17:00:15.443 +02:00 [INF] Request completed: GET /api/forecasts/allocations/26 - 200 in 47ms
+2026-02-03 17:00:15.447 +02:00 [INF] Request started: GET /api/forecasts/allocations/3 by admin (Admin)
+2026-02-03 17:00:15.448 +02:00 [INF] HTTP GET /api/forecasts/allocations/24 responded 200 in 96.1303 ms
+2026-02-03 17:00:15.452 +02:00 [INF] HTTP GET /api/forecasts/allocations/25 responded 200 in 82.6243 ms
+2026-02-03 17:00:15.457 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 17ms
+2026-02-03 17:00:15.459 +02:00 [INF] Request completed: GET /api/forecasts/allocations/5 - 200 in 16ms
+2026-02-03 17:00:15.460 +02:00 [INF] HTTP GET /api/forecasts/allocations/26 responded 200 in 66.0794 ms
+2026-02-03 17:00:15.466 +02:00 [INF] Request completed: GET /api/forecasts/allocations/3 - 200 in 18ms
+2026-02-03 17:00:15.470 +02:00 [INF] Request started: GET /api/forecasts/allocations/6 by admin (Admin)
+2026-02-03 17:00:15.470 +02:00 [INF] Request started: GET /api/forecasts/allocations/8 by admin (Admin)
+2026-02-03 17:00:15.472 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 35.0310 ms
+2026-02-03 17:00:15.475 +02:00 [INF] HTTP GET /api/forecasts/allocations/5 responded 200 in 34.4341 ms
+2026-02-03 17:00:15.481 +02:00 [INF] Request started: GET /api/forecasts/allocations/9 by admin (Admin)
+2026-02-03 17:00:15.481 +02:00 [INF] HTTP GET /api/forecasts/allocations/3 responded 200 in 35.1741 ms
+2026-02-03 17:00:15.486 +02:00 [INF] Request completed: GET /api/forecasts/allocations/6 - 200 in 15ms
+2026-02-03 17:00:15.489 +02:00 [INF] Request completed: GET /api/forecasts/allocations/8 - 200 in 18ms
+2026-02-03 17:00:15.506 +02:00 [INF] HTTP GET /api/forecasts/allocations/8 responded 200 in 36.8659 ms
+2026-02-03 17:00:15.496 +02:00 [INF] Request started: GET /api/forecasts/allocations/12 by admin (Admin)
+2026-02-03 17:00:15.499 +02:00 [INF] Request completed: GET /api/forecasts/allocations/9 - 200 in 17ms
+2026-02-03 17:00:15.502 +02:00 [INF] Request started: GET /api/forecasts/allocations/13 by admin (Admin)
+2026-02-03 17:00:15.502 +02:00 [INF] HTTP GET /api/forecasts/allocations/6 responded 200 in 34.0958 ms
+2026-02-03 17:00:15.494 +02:00 [INF] Request started: GET /api/forecasts/allocations/11 by admin (Admin)
+2026-02-03 17:00:15.513 +02:00 [INF] Request started: GET /api/forecasts/allocations/14 by admin (Admin)
+2026-02-03 17:00:15.516 +02:00 [INF] Request completed: GET /api/forecasts/allocations/12 - 200 in 19ms
+2026-02-03 17:00:15.534 +02:00 [INF] HTTP GET /api/forecasts/allocations/12 responded 200 in 39.2716 ms
+2026-02-03 17:00:15.523 +02:00 [INF] Request completed: GET /api/forecasts/allocations/13 - 200 in 20ms
+2026-02-03 17:00:15.526 +02:00 [INF] Request started: GET /api/forecasts/allocations/15 by admin (Admin)
+2026-02-03 17:00:15.530 +02:00 [INF] Request completed: GET /api/forecasts/allocations/11 - 200 in 35ms
+2026-02-03 17:00:15.518 +02:00 [INF] HTTP GET /api/forecasts/allocations/9 responded 200 in 38.7275 ms
+2026-02-03 17:00:15.535 +02:00 [INF] Request completed: GET /api/forecasts/allocations/14 - 200 in 20ms
+2026-02-03 17:00:15.540 +02:00 [INF] HTTP GET /api/forecasts/allocations/13 responded 200 in 39.7253 ms
+2026-02-03 17:00:15.541 +02:00 [INF] Request started: GET /api/forecasts/allocations/16 by admin (Admin)
+2026-02-03 17:00:15.545 +02:00 [INF] Request completed: GET /api/forecasts/allocations/15 - 200 in 19ms
+2026-02-03 17:00:15.547 +02:00 [INF] HTTP GET /api/forecasts/allocations/11 responded 200 in 54.9664 ms
+2026-02-03 17:00:15.553 +02:00 [INF] Request started: GET /api/forecasts/allocations/24 by admin (Admin)
+2026-02-03 17:00:15.555 +02:00 [INF] HTTP GET /api/forecasts/allocations/14 responded 200 in 43.6318 ms
+2026-02-03 17:00:15.560 +02:00 [INF] Request started: GET /api/forecasts/allocations/25 by admin (Admin)
+2026-02-03 17:00:15.562 +02:00 [INF] Request completed: GET /api/forecasts/allocations/16 - 200 in 20ms
+2026-02-03 17:00:15.565 +02:00 [INF] HTTP GET /api/forecasts/allocations/15 responded 200 in 39.8987 ms
+2026-02-03 17:00:15.571 +02:00 [INF] Request started: GET /api/forecasts/allocations/26 by admin (Admin)
+2026-02-03 17:00:15.573 +02:00 [INF] Request completed: GET /api/forecasts/allocations/24 - 200 in 19ms
+2026-02-03 17:00:15.580 +02:00 [INF] Request completed: GET /api/forecasts/allocations/25 - 200 in 19ms
+2026-02-03 17:00:15.582 +02:00 [INF] HTTP GET /api/forecasts/allocations/16 responded 200 in 42.7486 ms
+2026-02-03 17:00:15.590 +02:00 [INF] Request completed: GET /api/forecasts/allocations/26 - 200 in 19ms
+2026-02-03 17:00:15.592 +02:00 [INF] HTTP GET /api/forecasts/allocations/24 responded 200 in 40.1561 ms
+2026-02-03 17:00:15.595 +02:00 [INF] HTTP GET /api/forecasts/allocations/25 responded 200 in 35.8808 ms
+2026-02-03 17:00:15.602 +02:00 [INF] HTTP GET /api/forecasts/allocations/26 responded 200 in 32.2133 ms
+2026-02-03 20:38:34.111 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-03 20:38:34.165 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 55ms
+2026-02-03 20:38:34.170 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 259.5199 ms
+2026-02-03 20:38:34.193 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-03 20:38:34.199 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 5ms
+2026-02-03 20:38:34.202 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 26.9826 ms
+2026-02-03 20:38:34.240 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:38:34.240 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:38:34.287 +02:00 [INF] Request completed: GET /api/projects - 200 in 46ms
+2026-02-03 20:38:34.289 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:38:34.290 +02:00 [INF] HTTP GET /api/projects responded 200 in 56.5712 ms
+2026-02-03 20:38:34.295 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 20:38:34.298 +02:00 [INF] HTTP GET /api/projects responded 200 in 9.0469 ms
+2026-02-03 20:38:34.337 +02:00 [INF] Request completed: GET /api/roster - 200 in 96ms
+2026-02-03 20:38:34.340 +02:00 [INF] HTTP GET /api/roster responded 200 in 106.8904 ms
+2026-02-03 20:38:34.343 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:38:34.355 +02:00 [INF] Request started: GET /api/forecasts/16/versions by admin (Admin)
+2026-02-03 20:38:34.356 +02:00 [INF] Request started: GET /api/forecasts/15/versions by admin (Admin)
+2026-02-03 20:38:34.357 +02:00 [INF] Request started: GET /api/forecasts/5/versions by admin (Admin)
+2026-02-03 20:38:34.357 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-03 20:38:34.363 +02:00 [INF] Request started: GET /api/forecasts/7/versions by admin (Admin)
+2026-02-03 20:38:34.369 +02:00 [INF] Request completed: GET /api/roster - 200 in 26ms
+2026-02-03 20:38:34.370 +02:00 [INF] Request completed: GET /api/forecasts/15/versions - 200 in 13ms
+2026-02-03 20:38:34.370 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 12ms
+2026-02-03 20:38:34.370 +02:00 [INF] Request completed: GET /api/forecasts/16/versions - 200 in 15ms
+2026-02-03 20:38:34.373 +02:00 [INF] Request completed: GET /api/forecasts/5/versions - 200 in 14ms
+2026-02-03 20:38:34.373 +02:00 [INF] HTTP GET /api/roster responded 200 in 34.7115 ms
+2026-02-03 20:38:34.375 +02:00 [INF] HTTP GET /api/forecasts/15/versions responded 200 in 20.3683 ms
+2026-02-03 20:38:34.376 +02:00 [INF] Request completed: GET /api/forecasts/7/versions - 200 in 12ms
+2026-02-03 20:38:34.378 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 25.6982 ms
+2026-02-03 20:38:34.381 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 30.5411 ms
+2026-02-03 20:38:34.383 +02:00 [INF] HTTP GET /api/forecasts/5/versions responded 200 in 30.1591 ms
+2026-02-03 20:38:34.391 +02:00 [INF] HTTP GET /api/forecasts/7/versions responded 200 in 39.3180 ms
+2026-02-03 20:38:34.392 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 20:38:34.401 +02:00 [INF] Request started: GET /api/forecasts/7/versions by admin (Admin)
+2026-02-03 20:38:34.402 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-03 20:38:34.402 +02:00 [INF] Request started: GET /api/forecasts/5/versions by admin (Admin)
+2026-02-03 20:38:34.403 +02:00 [INF] Request started: GET /api/forecasts/15/versions by admin (Admin)
+2026-02-03 20:38:34.403 +02:00 [INF] Request started: GET /api/forecasts/16/versions by admin (Admin)
+2026-02-03 20:38:34.407 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 14ms
+2026-02-03 20:38:34.406 +02:00 [INF] Request completed: GET /api/forecasts/7/versions - 200 in 4ms
+2026-02-03 20:38:34.409 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 6ms
+2026-02-03 20:38:34.412 +02:00 [INF] Request completed: GET /api/forecasts/5/versions - 200 in 8ms
+2026-02-03 20:38:34.414 +02:00 [INF] Request completed: GET /api/forecasts/15/versions - 200 in 11ms
+2026-02-03 20:38:34.417 +02:00 [INF] Request completed: GET /api/forecasts/16/versions - 200 in 14ms
+2026-02-03 20:38:34.418 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 31.8603 ms
+2026-02-03 20:38:34.421 +02:00 [INF] HTTP GET /api/forecasts/7/versions responded 200 in 24.1063 ms
+2026-02-03 20:38:34.424 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 27.4748 ms
+2026-02-03 20:38:34.427 +02:00 [INF] HTTP GET /api/forecasts/5/versions responded 200 in 28.1806 ms
+2026-02-03 20:38:34.430 +02:00 [INF] HTTP GET /api/forecasts/15/versions responded 200 in 28.3973 ms
+2026-02-03 20:38:34.433 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 37.0915 ms
+2026-02-03 20:38:34.443 +02:00 [INF] Request started: GET /api/forecasts/1/versions by admin (Admin)
+2026-02-03 20:38:34.443 +02:00 [INF] Request started: GET /api/forecasts/2/versions by admin (Admin)
+2026-02-03 20:38:34.445 +02:00 [INF] Request started: GET /api/forecasts/3/versions by admin (Admin)
+2026-02-03 20:38:34.446 +02:00 [INF] Request started: GET /api/forecasts/14/versions by admin (Admin)
+2026-02-03 20:38:34.450 +02:00 [INF] Request started: GET /api/forecasts/13/versions by admin (Admin)
+2026-02-03 20:38:34.506 +02:00 [INF] Request started: GET /api/forecasts/8/versions by admin (Admin)
+2026-02-03 20:38:34.507 +02:00 [INF] Request completed: GET /api/forecasts/1/versions - 200 in 64ms
+2026-02-03 20:38:34.510 +02:00 [INF] Request completed: GET /api/forecasts/8/versions - 200 in 3ms
+2026-02-03 20:38:34.511 +02:00 [INF] HTTP GET /api/forecasts/1/versions responded 200 in 72.1506 ms
+2026-02-03 20:38:34.513 +02:00 [INF] HTTP GET /api/forecasts/8/versions responded 200 in 63.6965 ms
+2026-02-03 20:38:34.568 +02:00 [INF] Request completed: GET /api/forecasts/3/versions - 200 in 73ms
+2026-02-03 20:38:34.569 +02:00 [INF] HTTP GET /api/forecasts/3/versions responded 200 in 124.9684 ms
+2026-02-03 20:38:34.629 +02:00 [INF] Request completed: GET /api/forecasts/14/versions - 200 in 72ms
+2026-02-03 20:38:34.632 +02:00 [INF] HTTP GET /api/forecasts/14/versions responded 200 in 186.9909 ms
+2026-02-03 20:38:34.637 +02:00 [INF] Request started: GET /api/forecasts/9/versions by admin (Admin)
+2026-02-03 20:38:34.638 +02:00 [INF] Request started: GET /api/forecasts/11/versions by admin (Admin)
+2026-02-03 20:38:34.638 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 20:38:34.638 +02:00 [INF] Request started: GET /api/forecasts/10/versions by admin (Admin)
+2026-02-03 20:38:34.644 +02:00 [INF] Request completed: GET /api/forecasts/2/versions - 200 in 200ms
+2026-02-03 20:38:34.645 +02:00 [INF] Request completed: GET /api/forecasts/9/versions - 200 in 6ms
+2026-02-03 20:38:34.648 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 9ms
+2026-02-03 20:38:34.650 +02:00 [INF] Request completed: GET /api/forecasts/10/versions - 200 in 12ms
+2026-02-03 20:38:34.652 +02:00 [INF] HTTP GET /api/forecasts/2/versions responded 200 in 211.3493 ms
+2026-02-03 20:38:34.655 +02:00 [INF] HTTP GET /api/forecasts/9/versions responded 200 in 17.9932 ms
+2026-02-03 20:38:34.658 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 24.7057 ms
+2026-02-03 20:38:34.658 +02:00 [INF] Request completed: GET /api/forecasts/13/versions - 200 in 69ms
+2026-02-03 20:38:34.658 +02:00 [INF] Request completed: GET /api/forecasts/11/versions - 200 in 6ms
+2026-02-03 20:38:34.661 +02:00 [INF] HTTP GET /api/forecasts/10/versions responded 200 in 26.9076 ms
+2026-02-03 20:38:34.668 +02:00 [INF] Request started: GET /api/forecasts/17/versions by admin (Admin)
+2026-02-03 20:38:34.668 +02:00 [INF] Request started: GET /api/forecasts/4/versions by admin (Admin)
+2026-02-03 20:38:34.670 +02:00 [INF] Request started: GET /api/forecasts/1/versions by admin (Admin)
+2026-02-03 20:38:34.671 +02:00 [INF] HTTP GET /api/forecasts/13/versions responded 200 in 222.6176 ms
+2026-02-03 20:38:34.674 +02:00 [INF] HTTP GET /api/forecasts/11/versions responded 200 in 41.2994 ms
+2026-02-03 20:38:34.678 +02:00 [INF] Request started: GET /api/forecasts/8/versions by admin (Admin)
+2026-02-03 20:38:34.683 +02:00 [INF] Request completed: GET /api/forecasts/17/versions - 200 in 14ms
+2026-02-03 20:38:34.683 +02:00 [INF] Request completed: GET /api/forecasts/4/versions - 200 in 15ms
+2026-02-03 20:38:34.687 +02:00 [INF] Request completed: GET /api/forecasts/1/versions - 200 in 15ms
+2026-02-03 20:38:34.689 +02:00 [INF] Request started: GET /api/forecasts/3/versions by admin (Admin)
+2026-02-03 20:38:34.691 +02:00 [INF] Request started: GET /api/forecasts/14/versions by admin (Admin)
+2026-02-03 20:38:34.694 +02:00 [INF] Request completed: GET /api/forecasts/8/versions - 200 in 15ms
+2026-02-03 20:38:34.695 +02:00 [INF] HTTP GET /api/forecasts/17/versions responded 200 in 30.9483 ms
+2026-02-03 20:38:34.697 +02:00 [INF] HTTP GET /api/forecasts/4/versions responded 200 in 30.3515 ms
+2026-02-03 20:38:34.699 +02:00 [INF] HTTP GET /api/forecasts/1/versions responded 200 in 30.0782 ms
+2026-02-03 20:38:34.730 +02:00 [INF] Request completed: GET /api/forecasts/3/versions - 200 in 15ms
+2026-02-03 20:38:34.732 +02:00 [INF] Request completed: GET /api/forecasts/14/versions - 200 in 40ms
+2026-02-03 20:38:34.733 +02:00 [INF] HTTP GET /api/forecasts/8/versions responded 200 in 55.4756 ms
+2026-02-03 20:38:34.741 +02:00 [INF] Request started: GET /api/forecasts/2/versions by admin (Admin)
+2026-02-03 20:38:34.741 +02:00 [INF] Request started: GET /api/forecasts/13/versions by admin (Admin)
+2026-02-03 20:38:34.741 +02:00 [INF] Request started: GET /api/forecasts/9/versions by admin (Admin)
+2026-02-03 20:38:34.742 +02:00 [INF] HTTP GET /api/forecasts/3/versions responded 200 in 54.1487 ms
+2026-02-03 20:38:34.745 +02:00 [INF] HTTP GET /api/forecasts/14/versions responded 200 in 54.4389 ms
+2026-02-03 20:38:34.749 +02:00 [INF] Request started: GET /api/forecasts/11/versions by admin (Admin)
+2026-02-03 20:38:34.750 +02:00 [INF] Request completed: GET /api/forecasts/2/versions - 200 in 8ms
+2026-02-03 20:38:34.753 +02:00 [INF] Request completed: GET /api/forecasts/13/versions - 200 in 11ms
+2026-02-03 20:38:34.754 +02:00 [INF] Request completed: GET /api/forecasts/9/versions - 200 in 12ms
+2026-02-03 20:38:34.757 +02:00 [INF] Request started: GET /api/forecasts/12/versions by admin (Admin)
+2026-02-03 20:38:34.760 +02:00 [INF] Request started: GET /api/forecasts/10/versions by admin (Admin)
+2026-02-03 20:38:34.761 +02:00 [INF] Request completed: GET /api/forecasts/11/versions - 200 in 12ms
+2026-02-03 20:38:34.763 +02:00 [INF] HTTP GET /api/forecasts/2/versions responded 200 in 24.9872 ms
+2026-02-03 20:38:34.765 +02:00 [INF] HTTP GET /api/forecasts/13/versions responded 200 in 29.3742 ms
+2026-02-03 20:38:34.768 +02:00 [INF] HTTP GET /api/forecasts/9/versions responded 200 in 26.9019 ms
+2026-02-03 20:38:34.771 +02:00 [INF] Request completed: GET /api/forecasts/12/versions - 200 in 13ms
+2026-02-03 20:38:34.773 +02:00 [INF] Request completed: GET /api/forecasts/10/versions - 200 in 12ms
+2026-02-03 20:38:34.774 +02:00 [INF] HTTP GET /api/forecasts/11/versions responded 200 in 26.7012 ms
+2026-02-03 20:38:34.779 +02:00 [INF] Request started: GET /api/forecasts/17/versions by admin (Admin)
+2026-02-03 20:38:34.784 +02:00 [INF] HTTP GET /api/forecasts/12/versions responded 200 in 27.5641 ms
+2026-02-03 20:38:34.786 +02:00 [INF] HTTP GET /api/forecasts/10/versions responded 200 in 27.0577 ms
+2026-02-03 20:38:34.788 +02:00 [INF] Request started: GET /api/financials/16/snapshots/25 by admin (Admin)
+2026-02-03 20:38:34.788 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-03 20:38:34.789 +02:00 [INF] Request started: GET /api/financials/7/snapshots/11 by admin (Admin)
+2026-02-03 20:38:34.791 +02:00 [INF] Request completed: GET /api/forecasts/17/versions - 200 in 12ms
+2026-02-03 20:38:34.794 +02:00 [INF] Request started: GET /api/financials/5/snapshots/8 by admin (Admin)
+2026-02-03 20:38:34.796 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 20:38:34.805 +02:00 [INF] HTTP GET /api/forecasts/17/versions responded 200 in 26.7499 ms
+2026-02-03 20:38:34.812 +02:00 [INF] Request completed: GET /api/financials/7/snapshots/11 - 200 in 22ms
+2026-02-03 20:38:34.812 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 16ms
+2026-02-03 20:38:34.812 +02:00 [INF] Request completed: GET /api/financials/5/snapshots/8 - 200 in 18ms
+2026-02-03 20:38:34.812 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 23ms
+2026-02-03 20:38:34.812 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/25 - 200 in 23ms
+2026-02-03 20:38:34.815 +02:00 [INF] Request started: GET /api/financials/15/snapshots/24 by admin (Admin)
+2026-02-03 20:38:34.816 +02:00 [INF] HTTP GET /api/financials/7/snapshots/11 responded 200 in 26.9113 ms
+2026-02-03 20:38:34.818 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 22.9098 ms
+2026-02-03 20:38:34.821 +02:00 [INF] HTTP GET /api/financials/5/snapshots/8 responded 200 in 27.4219 ms
+2026-02-03 20:38:34.823 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 35.7732 ms
+2026-02-03 20:38:34.825 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 38.3650 ms
+2026-02-03 20:38:34.829 +02:00 [INF] Request completed: GET /api/financials/15/snapshots/24 - 200 in 14ms
+2026-02-03 20:38:34.833 +02:00 [INF] Request started: GET /api/financials/1/snapshots/1 by admin (Admin)
+2026-02-03 20:38:34.835 +02:00 [INF] Request started: GET /api/financials/2/snapshots/5 by admin (Admin)
+2026-02-03 20:38:34.837 +02:00 [INF] Request started: GET /api/financials/3/snapshots/3 by admin (Admin)
+2026-02-03 20:38:34.840 +02:00 [INF] Request started: GET /api/financials/14/snapshots/16 by admin (Admin)
+2026-02-03 20:38:34.842 +02:00 [INF] Request started: GET /api/financials/13/snapshots/15 by admin (Admin)
+2026-02-03 20:38:34.843 +02:00 [INF] HTTP GET /api/financials/15/snapshots/24 responded 200 in 29.4447 ms
+2026-02-03 20:38:34.848 +02:00 [INF] Request completed: GET /api/financials/1/snapshots/1 - 200 in 14ms
+2026-02-03 20:38:34.851 +02:00 [INF] Request completed: GET /api/financials/2/snapshots/5 - 200 in 15ms
+2026-02-03 20:38:34.852 +02:00 [INF] Request completed: GET /api/financials/3/snapshots/3 - 200 in 14ms
+2026-02-03 20:38:34.857 +02:00 [INF] Request completed: GET /api/financials/13/snapshots/15 - 200 in 14ms
+2026-02-03 20:38:34.857 +02:00 [INF] Request completed: GET /api/financials/14/snapshots/16 - 200 in 16ms
+2026-02-03 20:38:34.860 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 20:38:34.861 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 29.4046 ms
+2026-02-03 20:38:34.863 +02:00 [INF] HTTP GET /api/financials/2/snapshots/5 responded 200 in 29.2469 ms
+2026-02-03 20:38:34.867 +02:00 [INF] HTTP GET /api/financials/3/snapshots/3 responded 200 in 30.2610 ms
+2026-02-03 20:38:34.870 +02:00 [INF] HTTP GET /api/financials/13/snapshots/15 responded 200 in 28.1463 ms
+2026-02-03 20:38:34.873 +02:00 [INF] HTTP GET /api/financials/14/snapshots/16 responded 200 in 33.2502 ms
+2026-02-03 20:38:34.877 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 16ms
+2026-02-03 20:38:34.880 +02:00 [INF] Request started: GET /api/financials/9/snapshots/12 by admin (Admin)
+2026-02-03 20:38:34.882 +02:00 [INF] Request started: GET /api/financials/10/snapshots/13 by admin (Admin)
+2026-02-03 20:38:34.885 +02:00 [INF] Request started: GET /api/financials/17/snapshots/26 by admin (Admin)
+2026-02-03 20:38:34.887 +02:00 [INF] Request started: GET /api/financials/16/snapshots/25 by admin (Admin)
+2026-02-03 20:38:34.891 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-03 20:38:34.892 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 32.7457 ms
+2026-02-03 20:38:34.896 +02:00 [INF] Request completed: GET /api/financials/9/snapshots/12 - 200 in 16ms
+2026-02-03 20:38:34.899 +02:00 [INF] Request completed: GET /api/financials/10/snapshots/13 - 200 in 16ms
+2026-02-03 20:38:34.901 +02:00 [INF] Request completed: GET /api/financials/17/snapshots/26 - 200 in 16ms
+2026-02-03 20:38:34.903 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/25 - 200 in 15ms
+2026-02-03 20:38:34.906 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 15ms
+2026-02-03 20:38:34.909 +02:00 [INF] Request started: GET /api/financials/5/snapshots/8 by admin (Admin)
+2026-02-03 20:38:34.910 +02:00 [INF] HTTP GET /api/financials/9/snapshots/12 responded 200 in 30.5526 ms
+2026-02-03 20:38:34.912 +02:00 [INF] HTTP GET /api/financials/10/snapshots/13 responded 200 in 30.4754 ms
+2026-02-03 20:38:34.914 +02:00 [INF] HTTP GET /api/financials/17/snapshots/26 responded 200 in 29.9323 ms
+2026-02-03 20:38:34.917 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 30.4171 ms
+2026-02-03 20:38:34.920 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 29.7599 ms
+2026-02-03 20:38:34.924 +02:00 [INF] Request completed: GET /api/financials/5/snapshots/8 - 200 in 14ms
+2026-02-03 20:38:34.927 +02:00 [INF] Request started: GET /api/financials/7/snapshots/11 by admin (Admin)
+2026-02-03 20:38:34.929 +02:00 [INF] Request started: GET /api/financials/4/snapshots/6 by admin (Admin)
+2026-02-03 20:38:34.932 +02:00 [INF] Request started: GET /api/financials/15/snapshots/24 by admin (Admin)
+2026-02-03 20:38:34.934 +02:00 [INF] Request started: GET /api/financials/1/snapshots/1 by admin (Admin)
+2026-02-03 20:38:34.936 +02:00 [INF] Request started: GET /api/financials/2/snapshots/5 by admin (Admin)
+2026-02-03 20:38:34.937 +02:00 [INF] HTTP GET /api/financials/5/snapshots/8 responded 200 in 28.6168 ms
+2026-02-03 20:38:34.940 +02:00 [INF] Request completed: GET /api/financials/7/snapshots/11 - 200 in 13ms
+2026-02-03 20:38:34.942 +02:00 [INF] Request completed: GET /api/financials/4/snapshots/6 - 200 in 13ms
+2026-02-03 20:38:34.946 +02:00 [INF] Request completed: GET /api/financials/15/snapshots/24 - 200 in 13ms
+2026-02-03 20:38:34.948 +02:00 [INF] Request completed: GET /api/financials/1/snapshots/1 - 200 in 13ms
+2026-02-03 20:38:34.950 +02:00 [INF] Request completed: GET /api/financials/2/snapshots/5 - 200 in 13ms
+2026-02-03 20:38:34.953 +02:00 [INF] Request started: GET /api/financials/3/snapshots/3 by admin (Admin)
+2026-02-03 20:38:34.953 +02:00 [INF] HTTP GET /api/financials/7/snapshots/11 responded 200 in 27.5227 ms
+2026-02-03 20:38:34.956 +02:00 [INF] HTTP GET /api/financials/4/snapshots/6 responded 200 in 27.0853 ms
+2026-02-03 20:38:34.958 +02:00 [INF] HTTP GET /api/financials/15/snapshots/24 responded 200 in 26.9921 ms
+2026-02-03 20:38:34.959 +02:00 [INF] HTTP GET /api/financials/1/snapshots/1 responded 200 in 26.4177 ms
+2026-02-03 20:38:34.961 +02:00 [INF] HTTP GET /api/financials/2/snapshots/5 responded 200 in 26.0131 ms
+2026-02-03 20:38:34.966 +02:00 [INF] Request completed: GET /api/financials/3/snapshots/3 - 200 in 11ms
+2026-02-03 20:38:34.968 +02:00 [INF] Request started: GET /api/financials/13/snapshots/15 by admin (Admin)
+2026-02-03 20:38:34.970 +02:00 [INF] Request started: GET /api/financials/14/snapshots/16 by admin (Admin)
+2026-02-03 20:38:34.972 +02:00 [INF] Request started: GET /api/financials/12/snapshots/14 by admin (Admin)
+2026-02-03 20:38:34.974 +02:00 [INF] Request started: GET /api/financials/9/snapshots/12 by admin (Admin)
+2026-02-03 20:38:34.976 +02:00 [INF] Request started: GET /api/financials/10/snapshots/13 by admin (Admin)
+2026-02-03 20:38:34.977 +02:00 [INF] HTTP GET /api/financials/3/snapshots/3 responded 200 in 24.5839 ms
+2026-02-03 20:38:34.981 +02:00 [INF] Request completed: GET /api/financials/13/snapshots/15 - 200 in 12ms
+2026-02-03 20:38:34.983 +02:00 [INF] Request completed: GET /api/financials/14/snapshots/16 - 200 in 12ms
+2026-02-03 20:38:34.985 +02:00 [INF] Request completed: GET /api/financials/12/snapshots/14 - 200 in 13ms
+2026-02-03 20:38:34.990 +02:00 [INF] Request completed: GET /api/financials/10/snapshots/13 - 200 in 14ms
+2026-02-03 20:38:34.992 +02:00 [INF] Request started: GET /api/financials/17/snapshots/26 by admin (Admin)
+2026-02-03 20:38:34.993 +02:00 [INF] HTTP GET /api/financials/13/snapshots/15 responded 200 in 26.1154 ms
+2026-02-03 20:38:34.995 +02:00 [INF] HTTP GET /api/financials/14/snapshots/16 responded 200 in 25.9262 ms
+2026-02-03 20:38:34.997 +02:00 [INF] HTTP GET /api/financials/12/snapshots/14 responded 200 in 25.8502 ms
+2026-02-03 20:38:34.999 +02:00 [INF] HTTP GET /api/financials/10/snapshots/13 responded 200 in 23.7335 ms
+2026-02-03 20:38:35.003 +02:00 [INF] Request completed: GET /api/financials/17/snapshots/26 - 200 in 10ms
+2026-02-03 20:38:35.012 +02:00 [INF] HTTP GET /api/financials/17/snapshots/26 responded 200 in 19.9798 ms
+2026-02-03 20:38:35.035 +02:00 [INF] Request completed: GET /api/financials/9/snapshots/12 - 200 in 60ms
+2026-02-03 20:38:35.037 +02:00 [INF] HTTP GET /api/financials/9/snapshots/12 responded 200 in 63.1751 ms
+2026-02-03 20:38:35.232 +02:00 [INF] Request started: GET /api/forecasts/allocations/8 by admin (Admin)
+2026-02-03 20:38:35.232 +02:00 [INF] Request started: GET /api/forecasts/allocations/9 by admin (Admin)
+2026-02-03 20:38:35.232 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 20:38:35.232 +02:00 [INF] Request started: GET /api/forecasts/allocations/5 by admin (Admin)
+2026-02-03 20:38:35.234 +02:00 [INF] Request started: GET /api/forecasts/allocations/6 by admin (Admin)
+2026-02-03 20:38:35.234 +02:00 [INF] Request started: GET /api/forecasts/allocations/3 by admin (Admin)
+2026-02-03 20:38:35.240 +02:00 [INF] Request completed: GET /api/forecasts/allocations/8 - 200 in 7ms
+2026-02-03 20:38:35.240 +02:00 [INF] Request completed: GET /api/forecasts/allocations/9 - 200 in 8ms
+2026-02-03 20:38:35.241 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 8ms
+2026-02-03 20:38:35.244 +02:00 [INF] Request completed: GET /api/forecasts/allocations/5 - 200 in 11ms
+2026-02-03 20:38:35.246 +02:00 [INF] Request completed: GET /api/forecasts/allocations/6 - 200 in 11ms
+2026-02-03 20:38:35.248 +02:00 [INF] Request completed: GET /api/forecasts/allocations/3 - 200 in 13ms
+2026-02-03 20:38:35.249 +02:00 [INF] HTTP GET /api/forecasts/allocations/8 responded 200 in 22.1956 ms
+2026-02-03 20:38:35.252 +02:00 [INF] HTTP GET /api/forecasts/allocations/9 responded 200 in 24.4785 ms
+2026-02-03 20:38:35.254 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 27.9342 ms
+2026-02-03 20:38:35.257 +02:00 [INF] HTTP GET /api/forecasts/allocations/5 responded 200 in 30.7657 ms
+2026-02-03 20:38:35.260 +02:00 [INF] HTTP GET /api/forecasts/allocations/6 responded 200 in 33.1007 ms
+2026-02-03 20:38:35.262 +02:00 [INF] HTTP GET /api/forecasts/allocations/3 responded 200 in 35.3874 ms
+2026-02-03 20:38:35.269 +02:00 [INF] Request started: GET /api/forecasts/allocations/11 by admin (Admin)
+2026-02-03 20:38:35.269 +02:00 [INF] Request started: GET /api/forecasts/allocations/12 by admin (Admin)
+2026-02-03 20:38:35.270 +02:00 [INF] Request started: GET /api/forecasts/allocations/13 by admin (Admin)
+2026-02-03 20:38:35.271 +02:00 [INF] Request started: GET /api/forecasts/allocations/14 by admin (Admin)
+2026-02-03 20:38:35.274 +02:00 [INF] Request started: GET /api/forecasts/allocations/15 by admin (Admin)
+2026-02-03 20:38:35.276 +02:00 [INF] Request started: GET /api/forecasts/allocations/16 by admin (Admin)
+2026-02-03 20:38:35.278 +02:00 [INF] Request completed: GET /api/forecasts/allocations/11 - 200 in 8ms
+2026-02-03 20:38:35.279 +02:00 [INF] Request completed: GET /api/forecasts/allocations/12 - 200 in 9ms
+2026-02-03 20:38:35.282 +02:00 [INF] Request completed: GET /api/forecasts/allocations/13 - 200 in 11ms
+2026-02-03 20:38:35.284 +02:00 [INF] Request completed: GET /api/forecasts/allocations/14 - 200 in 12ms
+2026-02-03 20:38:35.287 +02:00 [INF] Request completed: GET /api/forecasts/allocations/15 - 200 in 12ms
+2026-02-03 20:38:35.289 +02:00 [INF] Request completed: GET /api/forecasts/allocations/16 - 200 in 12ms
+2026-02-03 20:38:35.290 +02:00 [INF] HTTP GET /api/forecasts/allocations/11 responded 200 in 25.6735 ms
+2026-02-03 20:38:35.293 +02:00 [INF] HTTP GET /api/forecasts/allocations/12 responded 200 in 26.0735 ms
+2026-02-03 20:38:35.294 +02:00 [INF] HTTP GET /api/forecasts/allocations/13 responded 200 in 25.2468 ms
+2026-02-03 20:38:35.296 +02:00 [INF] HTTP GET /api/forecasts/allocations/14 responded 200 in 25.7369 ms
+2026-02-03 20:38:35.299 +02:00 [INF] HTTP GET /api/forecasts/allocations/15 responded 200 in 25.2719 ms
+2026-02-03 20:38:35.301 +02:00 [INF] HTTP GET /api/forecasts/allocations/16 responded 200 in 26.2433 ms
+2026-02-03 20:38:35.305 +02:00 [INF] Request started: GET /api/forecasts/allocations/24 by admin (Admin)
+2026-02-03 20:38:35.308 +02:00 [INF] Request started: GET /api/forecasts/allocations/25 by admin (Admin)
+2026-02-03 20:38:35.309 +02:00 [INF] Request started: GET /api/forecasts/allocations/26 by admin (Admin)
+2026-02-03 20:38:35.312 +02:00 [INF] Request started: GET /api/forecasts/allocations/8 by admin (Admin)
+2026-02-03 20:38:35.314 +02:00 [INF] Request started: GET /api/forecasts/allocations/9 by admin (Admin)
+2026-02-03 20:38:35.316 +02:00 [INF] Request started: GET /api/forecasts/allocations/1 by admin (Admin)
+2026-02-03 20:38:35.319 +02:00 [INF] Request completed: GET /api/forecasts/allocations/24 - 200 in 13ms
+2026-02-03 20:38:35.321 +02:00 [INF] Request completed: GET /api/forecasts/allocations/25 - 200 in 13ms
+2026-02-03 20:38:35.323 +02:00 [INF] Request completed: GET /api/forecasts/allocations/26 - 200 in 13ms
+2026-02-03 20:38:35.325 +02:00 [INF] Request completed: GET /api/forecasts/allocations/8 - 200 in 13ms
+2026-02-03 20:38:35.328 +02:00 [INF] Request completed: GET /api/forecasts/allocations/9 - 200 in 13ms
+2026-02-03 20:38:35.330 +02:00 [INF] Request completed: GET /api/forecasts/allocations/1 - 200 in 13ms
+2026-02-03 20:38:35.332 +02:00 [INF] HTTP GET /api/forecasts/allocations/24 responded 200 in 27.5835 ms
+2026-02-03 20:38:35.334 +02:00 [INF] HTTP GET /api/forecasts/allocations/25 responded 200 in 27.6516 ms
+2026-02-03 20:38:35.337 +02:00 [INF] HTTP GET /api/forecasts/allocations/26 responded 200 in 27.7563 ms
+2026-02-03 20:38:35.339 +02:00 [INF] HTTP GET /api/forecasts/allocations/8 responded 200 in 27.9845 ms
+2026-02-03 20:38:35.358 +02:00 [INF] HTTP GET /api/forecasts/allocations/9 responded 200 in 45.0690 ms
+2026-02-03 20:38:35.361 +02:00 [INF] HTTP GET /api/forecasts/allocations/1 responded 200 in 45.0871 ms
+2026-02-03 20:38:35.366 +02:00 [INF] Request started: GET /api/forecasts/allocations/5 by admin (Admin)
+2026-02-03 20:38:35.368 +02:00 [INF] Request started: GET /api/forecasts/allocations/6 by admin (Admin)
+2026-02-03 20:38:35.371 +02:00 [INF] Request started: GET /api/forecasts/allocations/3 by admin (Admin)
+2026-02-03 20:38:35.373 +02:00 [INF] Request started: GET /api/forecasts/allocations/11 by admin (Admin)
+2026-02-03 20:38:35.375 +02:00 [INF] Request started: GET /api/forecasts/allocations/12 by admin (Admin)
+2026-02-03 20:38:35.378 +02:00 [INF] Request started: GET /api/forecasts/allocations/13 by admin (Admin)
+2026-02-03 20:38:35.384 +02:00 [INF] Request completed: GET /api/forecasts/allocations/5 - 200 in 18ms
+2026-02-03 20:38:35.384 +02:00 [INF] Request completed: GET /api/forecasts/allocations/6 - 200 in 16ms
+2026-02-03 20:38:35.385 +02:00 [INF] Request completed: GET /api/forecasts/allocations/3 - 200 in 13ms
+2026-02-03 20:38:35.386 +02:00 [INF] Request completed: GET /api/forecasts/allocations/11 - 200 in 13ms
+2026-02-03 20:38:35.388 +02:00 [INF] Request completed: GET /api/forecasts/allocations/12 - 200 in 13ms
+2026-02-03 20:38:35.391 +02:00 [INF] Request completed: GET /api/forecasts/allocations/13 - 200 in 13ms
+2026-02-03 20:38:35.392 +02:00 [INF] HTTP GET /api/forecasts/allocations/5 responded 200 in 27.6373 ms
+2026-02-03 20:38:35.394 +02:00 [INF] HTTP GET /api/forecasts/allocations/6 responded 200 in 27.1257 ms
+2026-02-03 20:38:35.396 +02:00 [INF] HTTP GET /api/forecasts/allocations/3 responded 200 in 26.4219 ms
+2026-02-03 20:38:35.399 +02:00 [INF] HTTP GET /api/forecasts/allocations/11 responded 200 in 26.9442 ms
+2026-02-03 20:38:35.401 +02:00 [INF] HTTP GET /api/forecasts/allocations/12 responded 200 in 26.8078 ms
+2026-02-03 20:38:35.404 +02:00 [INF] HTTP GET /api/forecasts/allocations/13 responded 200 in 27.0549 ms
+2026-02-03 20:38:35.408 +02:00 [INF] Request started: GET /api/forecasts/allocations/14 by admin (Admin)
+2026-02-03 20:38:35.410 +02:00 [INF] Request started: GET /api/forecasts/allocations/15 by admin (Admin)
+2026-02-03 20:38:35.413 +02:00 [INF] Request started: GET /api/forecasts/allocations/16 by admin (Admin)
+2026-02-03 20:38:35.416 +02:00 [INF] Request started: GET /api/forecasts/allocations/24 by admin (Admin)
+2026-02-03 20:38:35.418 +02:00 [INF] Request started: GET /api/forecasts/allocations/25 by admin (Admin)
+2026-02-03 20:38:35.421 +02:00 [INF] Request started: GET /api/forecasts/allocations/26 by admin (Admin)
+2026-02-03 20:38:35.428 +02:00 [INF] Request completed: GET /api/forecasts/allocations/14 - 200 in 19ms
+2026-02-03 20:38:35.429 +02:00 [INF] Request completed: GET /api/forecasts/allocations/15 - 200 in 18ms
+2026-02-03 20:38:35.429 +02:00 [INF] Request completed: GET /api/forecasts/allocations/16 - 200 in 16ms
+2026-02-03 20:38:35.432 +02:00 [INF] Request completed: GET /api/forecasts/allocations/24 - 200 in 15ms
+2026-02-03 20:38:35.434 +02:00 [INF] Request completed: GET /api/forecasts/allocations/25 - 200 in 15ms
+2026-02-03 20:38:35.437 +02:00 [INF] Request completed: GET /api/forecasts/allocations/26 - 200 in 15ms
+2026-02-03 20:38:35.438 +02:00 [INF] HTTP GET /api/forecasts/allocations/14 responded 200 in 30.5362 ms
+2026-02-03 20:38:35.440 +02:00 [INF] HTTP GET /api/forecasts/allocations/15 responded 200 in 30.2319 ms
+2026-02-03 20:38:35.442 +02:00 [INF] HTTP GET /api/forecasts/allocations/16 responded 200 in 30.2023 ms
+2026-02-03 20:38:35.445 +02:00 [INF] HTTP GET /api/forecasts/allocations/24 responded 200 in 30.5959 ms
+2026-02-03 20:38:35.447 +02:00 [INF] HTTP GET /api/forecasts/allocations/25 responded 200 in 30.1719 ms
+2026-02-03 20:38:35.450 +02:00 [INF] HTTP GET /api/forecasts/allocations/26 responded 200 in 29.9590 ms
+2026-02-03 20:38:55.039 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:38:55.045 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 20:38:55.048 +02:00 [INF] HTTP GET /api/projects responded 200 in 13.4236 ms
+2026-02-03 20:38:55.049 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:38:55.055 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 20:38:55.058 +02:00 [INF] HTTP GET /api/projects responded 200 in 10.8162 ms
+2026-02-03 20:38:56.515 +02:00 [INF] Request started: GET /api/projects/16 by admin (Admin)
+2026-02-03 20:38:56.523 +02:00 [INF] Request completed: GET /api/projects/16 - 200 in 8ms
+2026-02-03 20:38:56.525 +02:00 [INF] Request started: GET /api/projects/16 by admin (Admin)
+2026-02-03 20:38:56.526 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 11.6266 ms
+2026-02-03 20:38:56.529 +02:00 [INF] Request completed: GET /api/projects/16 - 200 in 3ms
+2026-02-03 20:38:56.533 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 8.9336 ms
+2026-02-03 20:38:56.534 +02:00 [INF] Request started: GET /api/forecasts/16/versions by admin (Admin)
+2026-02-03 20:38:56.541 +02:00 [INF] Request completed: GET /api/forecasts/16/versions - 200 in 6ms
+2026-02-03 20:38:56.543 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 10.2605 ms
+2026-02-03 20:38:56.546 +02:00 [INF] Request started: GET /api/forecasts/16/versions by admin (Admin)
+2026-02-03 20:38:56.550 +02:00 [INF] Request completed: GET /api/forecasts/16/versions - 200 in 3ms
+2026-02-03 20:38:56.551 +02:00 [INF] HTTP GET /api/forecasts/16/versions responded 200 in 5.7229 ms
+2026-02-03 20:38:56.569 +02:00 [INF] Request started: GET /api/financials/16/snapshots/25 by admin (Admin)
+2026-02-03 20:38:56.569 +02:00 [INF] Request started: GET /api/projects/16 by admin (Admin)
+2026-02-03 20:38:56.574 +02:00 [INF] Request completed: GET /api/projects/16 - 200 in 4ms
+2026-02-03 20:38:56.576 +02:00 [INF] Request started: GET /api/projects/16 by admin (Admin)
+2026-02-03 20:38:56.577 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 8.6439 ms
+2026-02-03 20:38:56.579 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/25 - 200 in 9ms
+2026-02-03 20:38:56.580 +02:00 [INF] Request completed: GET /api/projects/16 - 200 in 4ms
+2026-02-03 20:38:56.581 +02:00 [INF] Request started: GET /api/financials/16/snapshots/25 by admin (Admin)
+2026-02-03 20:38:56.585 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 16.3437 ms
+2026-02-03 20:38:56.587 +02:00 [INF] HTTP GET /api/projects/16 responded 200 in 11.5747 ms
+2026-02-03 20:38:56.592 +02:00 [INF] Request completed: GET /api/financials/16/snapshots/25 - 200 in 10ms
+2026-02-03 20:38:56.597 +02:00 [INF] HTTP GET /api/financials/16/snapshots/25 responded 200 in 16.7158 ms
+2026-02-03 20:39:12.358 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:39:12.358 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:39:12.362 +02:00 [INF] Request completed: GET /api/projects - 200 in 3ms
+2026-02-03 20:39:12.365 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:39:12.366 +02:00 [INF] HTTP GET /api/projects responded 200 in 8.7696 ms
+2026-02-03 20:39:12.370 +02:00 [INF] Request started: GET /api/audits/recent by admin (Admin)
+2026-02-03 20:39:12.371 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 20:39:12.375 +02:00 [INF] HTTP GET /api/projects responded 200 in 11.8746 ms
+2026-02-03 20:39:12.380 +02:00 [INF] Request completed: GET /api/roster - 200 in 21ms
+2026-02-03 20:39:12.382 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:39:12.382 +02:00 [INF] HTTP GET /api/roster responded 200 in 24.8730 ms
+2026-02-03 20:39:12.392 +02:00 [INF] Request completed: GET /api/roster - 200 in 9ms
+2026-02-03 20:39:12.395 +02:00 [INF] HTTP GET /api/roster responded 200 in 13.7953 ms
+2026-02-03 20:39:12.571 +02:00 [INF] Request completed: GET /api/audits/recent - 200 in 201ms
+2026-02-03 20:39:12.573 +02:00 [INF] Request started: GET /api/audits/recent by admin (Admin)
+2026-02-03 20:39:12.573 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 211.6871 ms
+2026-02-03 20:39:12.587 +02:00 [INF] Request completed: GET /api/audits/recent - 200 in 13ms
+2026-02-03 20:39:12.589 +02:00 [INF] HTTP GET /api/audits/recent responded 200 in 17.2032 ms
+2026-02-03 20:39:14.015 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:39:14.015 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:39:14.020 +02:00 [INF] Request completed: GET /api/roster - 200 in 5ms
+2026-02-03 20:39:14.020 +02:00 [INF] Request completed: GET /api/projects - 200 in 5ms
+2026-02-03 20:39:14.022 +02:00 [INF] HTTP GET /api/roster responded 200 in 8.6999 ms
+2026-02-03 20:39:14.025 +02:00 [INF] HTTP GET /api/projects responded 200 in 11.4741 ms
+2026-02-03 20:39:18.988 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:39:18.996 +02:00 [INF] Request completed: GET /api/roster - 200 in 7ms
+2026-02-03 20:39:18.999 +02:00 [INF] HTTP GET /api/roster responded 200 in 11.6236 ms
+2026-02-03 20:39:21.259 +02:00 [INF] Request started: GET /api/projects by admin (Admin)
+2026-02-03 20:39:21.259 +02:00 [INF] Request started: GET /api/roster by admin (Admin)
+2026-02-03 20:39:21.263 +02:00 [INF] Request completed: GET /api/projects - 200 in 3ms
+2026-02-03 20:39:21.266 +02:00 [INF] HTTP GET /api/projects responded 200 in 7.4242 ms
+2026-02-03 20:39:21.267 +02:00 [INF] Request completed: GET /api/roster - 200 in 7ms
+2026-02-03 20:39:21.271 +02:00 [INF] HTTP GET /api/roster responded 200 in 12.4616 ms
+2026-02-03 20:39:23.816 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-03 20:39:23.820 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 3ms
+2026-02-03 20:39:23.821 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-03 20:39:23.822 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 7.4044 ms
+2026-02-03 20:39:23.826 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 4ms
+2026-02-03 20:39:23.829 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 8.7304 ms
+2026-02-03 20:39:23.831 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-03 20:39:23.835 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 3ms
+2026-02-03 20:39:23.838 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 7.4727 ms
+2026-02-03 20:39:23.838 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-03 20:39:23.844 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 5ms
+2026-02-03 20:39:23.846 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 8.5651 ms
+2026-02-03 20:39:23.856 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-03 20:39:23.856 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-03 20:39:23.860 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 3ms
+2026-02-03 20:39:23.862 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-03 20:39:23.862 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 5ms
+2026-02-03 20:39:23.864 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 8.0866 ms
+2026-02-03 20:39:23.864 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-03 20:39:23.867 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 5ms
+2026-02-03 20:39:23.868 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 12.8865 ms
+2026-02-03 20:39:23.875 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 10ms
+2026-02-03 20:39:23.876 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 15.2948 ms
+2026-02-03 20:39:23.881 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 18.1215 ms

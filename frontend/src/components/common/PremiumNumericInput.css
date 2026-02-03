@@ -1,0 +1,65 @@
+.premium-numeric-input-container {
+    display: inline-flex;
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.premium-numeric-input-container:focus-within {
+    border-color: var(--deloitte-green);
+    box-shadow: 0 0 0 1px var(--deloitte-green);
+}
+
+.premium-numeric-input-field {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    padding: 0.5rem;
+    width: 80px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    outline: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.premium-numeric-input-field::-webkit-outer-spin-button,
+.premium-numeric-input-field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-control-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: var(--text-secondary);
+    width: 32px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.input-control-btn:hover:not(:disabled) {
+    background: rgba(134, 188, 37, 0.2);
+    color: var(--deloitte-green);
+}
+
+.input-control-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.theme-light .input-control-btn {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .input-control-btn:hover:not(:disabled) {
+    background: rgba(134, 188, 37, 0.1);
+}

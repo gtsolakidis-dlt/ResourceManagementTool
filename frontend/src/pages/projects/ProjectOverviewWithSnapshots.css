@@ -1,0 +1,526 @@
+.snapshot-overview {
+    background: var(--surface-primary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.snapshot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.snapshot-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.snapshot-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.snapshot-loading,
+.snapshot-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: var(--text-muted);
+    gap: 0.75rem;
+}
+
+.snapshot-table-container {
+    overflow-x: auto;
+}
+
+.snapshot-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.snapshot-table th,
+.snapshot-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.snapshot-table th {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    background: var(--surface-secondary);
+}
+
+.snapshot-table th.numeric,
+.snapshot-table td.numeric {
+    text-align: right;
+    font-feature-settings: "tnum" 1;
+}
+
+.snapshot-table th.highlight,
+.snapshot-table td.highlight {
+    color: var(--deloitte-green);
+    font-weight: 600;
+}
+
+/* Ensure consistent font size across the table */
+.snapshot-table th,
+.snapshot-table td {
+    font-size: 0.85rem;
+}
+
+/* Row hover removed to prevent visual confusion in transposed layout */
+.snapshot-table tbody tr:hover {
+    background: transparent;
+}
+
+/* Row states - Deprecated for vertical layout but kept for compatibility or cleanup later */
+/* Column states */
+.snapshot-table th.editable-col,
+.snapshot-table td.editable-col {
+    background: rgba(134, 188, 37, 0.15);
+    /* Increased opacity for better visibility */
+    border-left: 2px solid rgba(134, 188, 37, 0.3);
+    border-right: 2px solid rgba(134, 188, 37, 0.3);
+}
+
+.snapshot-table th.editable-col {
+    border-top: 2px solid rgba(134, 188, 37, 0.3);
+    color: var(--deloitte-green);
+    font-weight: 700;
+}
+
+.snapshot-table td.editable-col:last-child {
+    /* If action row is last */
+    border-bottom: 2px solid rgba(134, 188, 37, 0.3);
+}
+
+/* Premium Override Indicator */
+.override-indicator {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 6px;
+    /* Elegant small size */
+    height: 6px;
+    background-color: var(--deloitte-green);
+    border-radius: 50%;
+    cursor: help;
+    box-shadow: 0 0 0 2px rgba(134, 188, 37, 0.15);
+    /* Subtle ring */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy spring */
+    z-index: 5;
+}
+
+.override-indicator:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 0 4px rgba(134, 188, 37, 0.25);
+    /* Expanded ring on hover */
+    background-color: var(--deloitte-green-dark);
+}
+
+/* Premium Glass Tooltip Styling */
+.tooltip-content {
+    background: rgba(10, 10, 10, 0.95);
+    /* Deep dark background */
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.tooltip-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.95) transparent transparent transparent;
+}
+
+.tooltip-header {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    /* Slate 400 */
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.25rem;
+}
+
+.tooltip-detail {
+    font-size: 0.85rem;
+    color: #f8fafc;
+    /* Slate 50 */
+    font-weight: 500;
+}
+
+.tooltip-highlight {
+    color: var(--deloitte-green);
+    font-weight: 700;
+}
+
+.tooltip-date {
+    font-size: 0.7rem;
+    color: #64748b;
+    /* Slate 500 */
+    font-style: italic;
+    margin-top: 0.1rem;
+}
+
+/* Modal Overlay and Content */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: var(--surface-primary);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+/* Dark Theme: Pending Columns (Striped) */
+.snapshot-table th.pending-col,
+.snapshot-table td.pending-col,
+.snapshot-table tr.summary-row td.pending-col {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    /* Subtle lighter dark */
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.03) 10px, rgba(255, 255, 255, 0.03) 20px);
+    color: var(--text-muted) !important;
+    font-style: italic;
+    border-top: 1px solid var(--border-primary);
+}
+
+
+
+/* Metric Labels (First Column) Styling - Theme Aware */
+.snapshot-table tbody td:first-child {
+    background-color: var(--bg-color) !important;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-right: 2px solid var(--border-primary);
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 30 !important;
+}
+
+/* Ensure the top-left header is also solid and consistent */
+.snapshot-table thead th:first-child {
+    background-color: var(--bg-color) !important;
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 40 !important;
+    border-right: 2px solid var(--border-primary);
+}
+
+/* Ensure highlighted row headers (Margin, NSR) keep their distinct green color */
+.snapshot-table tbody td:first-child.highlight {
+    color: var(--deloitte-green) !important;
+}
+
+/* Hard reset for transitions to fix "sticky hover" feeling */
+.snapshot-table tr,
+.snapshot-table td,
+.snapshot-table th {
+    transition: none !important;
+}
+
+.snapshot-table td.editable-col:last-child {
+    border-bottom: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Status badge */
+.status-badge {
+    font-weight: 500;
+}
+
+/* Legend */
+.snapshot-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-primary);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-color.pending {
+    background: rgba(107, 114, 128, 0.2);
+    border: 1px solid rgba(107, 114, 128, 0.4);
+}
+
+.legend-color.editable {
+    background: rgba(134, 188, 37, 0.2);
+    border: 1px solid rgba(134, 188, 37, 0.4);
+}
+
+.legend-color.confirmed {
+    background: rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(37, 99, 235, 0.4);
+}
+
+.legend-color.overridden {
+    background: var(--deloitte-green);
+    border-radius: 50%;
+}
+
+/* Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+.negative-margin,
+.snapshot-table td.negative-margin {
+    color: #ef4444 !important;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------- */
+/* SHARED VISUAL HIERARCHY (Both Themes) */
+/* --------------------------------------------------------- */
+
+/* --------------------------------------------------------- */
+/* 1. ROW HEADERS (First Column) - STRICTLY NEUTRAL */
+/* --------------------------------------------------------- */
+/* These rules effectively "reset" any color applied by row classes like .highlight or .negative-margin */
+
+/* Standard Lines (Both Themes) */
+.snapshot-table tbody td:first-child {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+}
+
+/* Summary Lines (Both Themes) */
+.snapshot-table tr.summary-row td:first-child {
+    color: var(--text-primary) !important;
+    /* Forces White (Dark) / Black (Light) */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------- */
+/* 2. DATA CELLS (Values) - CONDITIONAL FORMATTING */
+/* --------------------------------------------------------- */
+/* These apply ONLY to columns 2+ (Data), effectively ignoring the header column */
+
+/* DEFAULT HIGHLIGHT (Green) -> For NSR, Positive Margin, etc. */
+.snapshot-table tr.summary-row td.highlight:not(:first-child) {
+    color: var(--deloitte-green);
+}
+
+.theme-light .snapshot-table tr.summary-row td.highlight:not(:first-child) {
+    color: #15803d !important;
+    /* Darker Green for Light Mode contrast */
+}
+
+/* NEGATIVE WARNING (Red) -> STRICTLY OVERRIDES GREEN */
+/* This block uses !important to ensure Red always wins over Green if both apply */
+
+/* --------------------------------------------------------- */
+/* 3. PENDING STATE OVERRIDES (Gray-out) */
+/* --------------------------------------------------------- */
+
+/* Pending Columns (Striped) - Base Styles */
+.snapshot-table th.pending-col,
+.snapshot-table td.pending-col,
+.snapshot-table tr.summary-row td.pending-col {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.03) 10px, rgba(255, 255, 255, 0.03) 20px);
+    color: var(--text-muted) !important;
+    font-style: italic;
+    border-top: 1px solid var(--border-primary);
+}
+
+.theme-light .snapshot-table td.pending-col,
+.theme-light .snapshot-table tr.summary-row td.pending-col {
+    background-color: #f8fafc !important;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.02) 10px, rgba(0, 0, 0, 0.02) 20px);
+    color: #94a3b8 !important;
+    /* Slate 400 */
+}
+
+/* PENDING + HIGHLIGHT FIX: */
+/* Ensure Pending NSR values utilize the muted gray, NOT the green highlight */
+.snapshot-table tr.summary-row td.pending-col.highlight:not(:first-child),
+.theme-light .snapshot-table tr.summary-row td.pending-col.highlight:not(:first-child) {
+    color: inherit !important;
+    /* Fallback to the muted parent color defined above */
+}
+
+/* Light Theme Specific Force for Pending Highlight */
+.theme-light .snapshot-table tr.summary-row td.pending-col.highlight:not(:first-child) {
+    color: #94a3b8 !important;
+    /* Enforce Slate 400 over Green */
+}
+
+
+/* --------------------------------------------------------- */
+/* 4. RED WARNINGS (Top Priority) */
+/* --------------------------------------------------------- */
+/* Changes to margins (Red) should PUNCH THROUGH the pending grayness */
+
+.negative-margin,
+.snapshot-table td.negative-margin,
+.snapshot-table tr.summary-row td.negative-margin:not(:first-child) {
+    color: #ff5252 !important;
+    /* Vibrant Red */
+}
+
+.theme-light .negative-margin,
+.theme-light .snapshot-table td.negative-margin,
+.theme-light .snapshot-table tr.summary-row td.negative-margin:not(:first-child) {
+    color: #dc2626 !important;
+    /* Deep Red */
+}
+
+
+/* --------------------------------------------------------- */
+/* THEME BACKGROUNDS & TOOLTIPS */
+/* --------------------------------------------------------- */
+
+/* Summary Row Backgrounds (Dark) */
+.snapshot-table tr.summary-row td {
+    background-color: #0c0d0f;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Summary Row Backgrounds (Light) */
+.theme-light .snapshot-table tr.summary-row td {
+    background-color: #f1f5f9 !important;
+    border-top: 2px solid #e2e8f0;
+}
+
+/* Light Theme Tooltip Override */
+.theme-light .tooltip-content {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .tooltip-content::after {
+    border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+}
+
+.theme-light .tooltip-header {
+    color: #64748b;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.theme-light .tooltip-detail {
+    color: #0f172a;
+}
+
+.theme-light .tooltip-highlight {
+    color: #15803d;
+    /* Darker green for contrast */
+}
+
+/* Reset Button - Distinct Warning Style */
+.btn-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1.5px solid #f59e0b;
+    background: transparent;
+    color: #f59e0b;
+}
+
+.btn-reset:hover:not(:disabled) {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.btn-reset:active:not(:disabled) {
+    transform: translateY(0);
+    background: rgba(245, 158, 11, 0.2);
+    box-shadow: 0 1px 4px rgba(245, 158, 11, 0.3);
+}
+
+.btn-reset:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: #6b7280;
+    color: #6b7280;
+}
+
+.btn-reset.btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+}

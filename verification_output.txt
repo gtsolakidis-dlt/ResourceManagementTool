@@ -1,0 +1,14 @@
+﻿--- Verifying RosterExport.xlsx against RosterTemplate.xlsx ---
+Template Headers: SapCode, FullNameEn, LegalEntity, FunctionBusinessUnit, CostCenterCode, Level, NewAmendedSalary, EmployerContributions, Cars, TicketRestaurant, Metlife, TopusPerMonth, GrossRevenue, DiscountedRevenue
+Export Headers: SapCode, FullNameEn, LegalEntity, FunctionBusinessUnit, CostCenterCode, Level, NewAmendedSalary, EmployerContributions, Cars, TicketRestaurant, Metlife, TopusPerMonth, GrossRevenue, DiscountedRevenue
+Headers match perfectly!
+Export row count: 3
+Data found in export.
+
+--- Verifying ProjectExport.xlsx against ProjectTemplate.xlsx ---
+Template Headers: Name, Wbs, StartDate, EndDate, Budget, Recoverability, TargetMargin
+Export Headers: Name, Wbs, StartDate, EndDate, Budget, Recoverability, TargetMargin
+Headers match perfectly!
+Export row count: 5
+Data found in export.
+

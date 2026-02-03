@@ -1,0 +1,120 @@
+/* Custom Driver.js Theme for Premium Dark Mode */
+
+/* Popover Container */
+div.driver-popover.driverjs-theme {
+    background-color: rgba(30, 30, 30, 0.95);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+    font-family: 'Inter', system-ui, sans-serif;
+    backdrop-filter: blur(12px);
+    max-width: 400px;
+}
+
+/* Title */
+div.driver-popover.driverjs-theme .driver-popover-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+div.driver-popover.driverjs-theme .driver-popover-title::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 1.2rem;
+    background: var(--deloitte-green, #86bc25);
+    border-radius: 2px;
+}
+
+/* Description */
+div.driver-popover.driverjs-theme .driver-popover-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 24px;
+}
+
+/* Strong text in description for emphasis */
+div.driver-popover.driverjs-theme .driver-popover-description strong {
+    color: var(--deloitte-green, #86bc25);
+    font-weight: 600;
+}
+
+/* Navigation Buttons Container */
+div.driver-popover.driverjs-theme .driver-popover-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 0;
+}
+
+/* Buttons */
+div.driver-popover.driverjs-theme button.driver-popover-btn {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+div.driver-popover.driverjs-theme button.driver-popover-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+div.driver-popover.driverjs-theme button.driver-popover-next-btn {
+    background-color: var(--deloitte-green, #86bc25);
+    color: black;
+    border: 1px solid var(--deloitte-green, #86bc25);
+    font-weight: 600;
+}
+
+div.driver-popover.driverjs-theme button.driver-popover-next-btn:hover {
+    background-color: #9cd435;
+    /* Lighter green */
+    border-color: #9cd435;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(134, 188, 37, 0.3);
+}
+
+div.driver-popover.driverjs-theme button.driver-popover-prev-btn {
+    color: #888;
+    border-color: transparent;
+}
+
+div.driver-popover.driverjs-theme button.driver-popover-prev-btn:hover {
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+}
+
+div.driver-popover.driverjs-theme .driver-popover-close-btn {
+    color: #666;
+    transition: color 0.2s;
+}
+
+div.driver-popover.driverjs-theme .driver-popover-close-btn:hover {
+    color: #fff;
+}
+
+/* Progress Text (e.g. 1 of 5) */
+div.driver-popover.driverjs-theme .driver-popover-progress-text {
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 500;
+}

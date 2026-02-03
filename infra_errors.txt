@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  ResourceManagement.Contracts -> C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\bin\Debug\net9.0\ResourceManagement.Contracts.dll
+  ResourceManagement.Domain -> C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\bin\Debug\net9.0\ResourceManagement.Domain.dll
+  ResourceManagement.Infrastructure -> C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\bin\Debug\net9.0\ResourceManagement.Infrastructure.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.05
+
+Workload updates are available. Run `dotnet workload list` for more information.

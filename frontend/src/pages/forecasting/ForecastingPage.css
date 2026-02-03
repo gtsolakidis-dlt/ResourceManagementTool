@@ -1,0 +1,397 @@
+/* ForecastingPage.css - Refined Adaptive Theme */
+
+/* DARK MODE (Default or explicit) */
+.forecasting-premium {
+    /* Inherit Global Theme Variables */
+
+    /* Component Specific Defaults (Dark) */
+    --table-header-bg: #1e1e1e;
+    --table-stripe: rgba(255, 255, 255, 0.02);
+    /* Calculated solid color approximating bg + 5% white overlay */
+    --sticky-bg-solid: #18191b;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+}
+
+/* LIGHT MODE OVERRIDES - Explicitly cleaner and "elegant" */
+:global(.theme-light) .forecasting-premium {
+    --bg-color: #ffffff;
+    /* pure white */
+    --card-bg: #ffffff;
+    /* Solid cards for cleanliness */
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --border-color: #e2e8f0;
+    /* slate-200 */
+    --text-primary: #1e293b;
+    /* slate-800 */
+    --text-secondary: #475569;
+    /* slate-600 */
+    --text-muted: #64748b;
+    /* slate-500 */
+    --table-header-bg: #f8fafc;
+    /* slate-50 */
+    --table-stripe: #f1f5f9;
+    /* slate-100 */
+    --sticky-bg-solid: #ffffff;
+}
+
+/* Common Layout */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 70vh;
+    color: var(--text-muted);
+}
+
+/* Panels */
+.glass-panel {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    /* Subtle shadow for white theme */
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+/* Buttons */
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: none;
+    background: var(--deloitte-green);
+    color: white !important;
+    /* Force white text */
+    box-shadow: 0 4px 6px -1px rgba(134, 188, 37, 0.4);
+    transition: all 0.2s;
+}
+
+.btn-premium:hover:not(:disabled) {
+    background: var(--deloitte-green-dark);
+    transform: translateY(-1px);
+}
+
+.btn-outline-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    /* Verify this */
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+.btn-outline-premium:hover:not(:disabled) {
+    background: var(--table-stripe);
+    border-color: var(--deloitte-green);
+    color: var(--deloitte-green);
+}
+
+.btn-icon-premium {
+    padding: 0.5rem;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-icon-premium:hover {
+    color: var(--text-primary);
+    background: var(--table-stripe);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    /* Matches theme background */
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    color: var(--text-primary);
+}
+
+.roster-item-selectable {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.roster-item-selectable:hover {
+    border-color: var(--deloitte-green);
+    background: rgba(134, 188, 37, 0.05);
+}
+
+.roster-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.roster-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Table */
+.forecast-matrix-wrapper {
+    flex: 1;
+    overflow: auto;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.premium-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.premium-table th {
+    background: var(--sticky-bg-solid);
+    /* Use solid color for ALL headers to play safe or just sticky */
+    /* If we use sticky-bg-solid for all, headers are opaque. Good. */
+    background: var(--table-header-bg);
+    /* Normally this. Sticky needs override if this is transparent */
+    /* table-header-bg usually solid or close to it. */
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    vertical-align: middle;
+    /* Fix vertical alignment */
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    /* Higher than sticky col */
+}
+
+.premium-table th.sticky-col-header {
+    position: sticky;
+    left: 0;
+    z-index: 30;
+    background: var(--sticky-bg-solid);
+    /* FORCE SOLID */
+    text-align: left;
+    border-right: 1px solid var(--border-color);
+}
+
+.premium-table td {
+    padding: 0.5rem;
+    /* Reduced padding for tighter inputs alignment */
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.premium-table td.sticky-col-cell {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background: var(--sticky-bg-solid);
+    /* FORCE SOLID */
+    border-right: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+:global(.theme-light) .premium-table td.sticky-col-cell {
+    background: var(--sticky-bg-solid);
+}
+
+.premium-table tr:hover td {
+    background: var(--table-stripe);
+}
+
+/* Ensure hovered sticky cells also stay opaque but tinted */
+.premium-table tr:hover td.sticky-col-cell {
+    background: var(--sticky-bg-solid);
+    /* Keep base solid */
+    /* Gradient overlay to simulate stripe? Hard with CSS solid bg. */
+    /* Can use linear-gradient to mix solid + stripe color */
+    background: linear-gradient(var(--table-stripe), var(--table-stripe)), var(--sticky-bg-solid);
+}
+
+.resource-name-link {
+    font-weight: 700;
+    font-size: 0.9rem;
+    /* Slightly smaller for fitting */
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: color 0.15s ease;
+}
+
+.resource-name-link:hover {
+    color: var(--deloitte-green);
+}
+
+/* Animations */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-scale-up {
+    animation: scaleUp 0.3s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.keyboard-focus {
+    outline: 2px solid var(--deloitte-green);
+    outline-offset: -2px;
+}
+
+/* Level Badge - Base */
+.level-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Level Badge - Entry Level (BA - Business Analyst) */
+.level-badge.ba {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));
+    color: #818cf8;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Level Badge - Consultant (C) */
+.level-badge.consultant {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Level Badge - Senior Consultant (SC) */
+.level-badge.senior {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Level Badge - Assistant Manager (AM) */
+.level-badge.am {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(20, 184, 166, 0.05));
+    color: #2dd4bf;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+/* Level Badge - Manager (M) */
+.level-badge.manager {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(249, 115, 22, 0.05));
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Level Badge - Senior Manager (SM) */
+.level-badge.sm {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(236, 72, 153, 0.05));
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Level Badge - Principal/Director (D) */
+.level-badge.director {
+    background: linear-gradient(135deg, rgba(134, 188, 37, 0.15), rgba(134, 188, 37, 0.05));
+    color: var(--deloitte-green);
+    border: 1px solid rgba(134, 188, 37, 0.3);
+}
+
+/* Level Badge - Partner (P) */
+.level-badge.partner {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 191, 36, 0.05));
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}

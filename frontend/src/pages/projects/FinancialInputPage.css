@@ -1,0 +1,34 @@
+.financial-premium-container {
+    padding: var(--spacing-container);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.financial-premium-container .premium-table {
+    margin-top: 2rem;
+}
+
+.financial-premium-container input[type="number"]::-webkit-inner-spin-button,
+.financial-premium-container input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Table Alignment Fix */
+.financial-premium-container .premium-table th:first-child,
+.financial-premium-container .premium-table td:first-child {
+    padding-left: 2.5rem;
+}
+.financial-premium-container .premium-table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem; /* Gap between rows */
+}
+
+/* Fix Header Align */
+.financial-premium-container .premium-table th:first-child {
+    padding-left: 3.5rem;
+}
+
+/* Fix Align Try 2 */
+.financial-premium-container .premium-table th { text-align: left; }
+.financial-premium-container .premium-table th:first-child { padding-left: 2rem !important; }
+.financial-premium-container .premium-table td:first-child { padding-left: 2rem !important; }
