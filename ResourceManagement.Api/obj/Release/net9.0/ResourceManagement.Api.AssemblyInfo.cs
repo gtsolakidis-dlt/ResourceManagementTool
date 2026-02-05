@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8ca5f836-1819-4526-adae-019a635c7045")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResourceManagement.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c094cee0a00096dadb4579fa98e4a1a54ae4171")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d509c75348b0ebe71c7a737978022c265dbe0560")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResourceManagement.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResourceManagement.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -128,3 +128,9 @@ C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\Resource
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\obj\Release\net9.0\ref\ResourceManagement.Api.dll
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\web.config
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\Serilog.Sinks.Seq.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\web.config
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\appsettings.Development.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\appsettings.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\ResourceManagement.Api.deps.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\ResourceManagement.Api.runtimeconfig.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\ResourceManagement.Api.staticwebassets.endpoints.json

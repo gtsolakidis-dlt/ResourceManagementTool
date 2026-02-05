@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectService, forecastService } from '../../api/services';
 import type { Project } from '../../types';
-import { DollarSign, Calculator, Loader2, CreditCard, Receipt, Target, ArrowUpRight } from 'lucide-react';
+import { DollarSign, Calculator, Loader2, CreditCard, Receipt, Target, Settings, Save } from 'lucide-react';
+import Drawer from '../../components/common/Drawer';
 
 import { useNavigation } from '../../context/NavigationContext';
 
@@ -19,8 +20,9 @@ const ProjectDetailsPage: React.FC = () => {
     const [project, setProject] = useState<Project | null>(null);
     const [forecastVersionId, setForecastVersionId] = useState<number | null>(null);
     const [loading, setLoading] = useState(true);
-    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [isEditDrawerOpen, setIsEditDrawerOpen] = useState(false);
     const [editProject, setEditProject] = useState<Partial<Project>>({});
+    const [saving, setSaving] = useState(false);
 
     useEffect(() => {
         if (projectId) loadProjectData();
@@ -43,13 +45,6 @@ const ProjectDetailsPage: React.FC = () => {
                 { label: 'Forecast', path: `/projects/${projectId}/forecast` }
             ]);
         }
-
-        // Cleanup on unmount to reset sidebar? 
-        // Ideally yes, but Layout might persist or other pages overwrite.
-        // For simple flow, next page will overwrite. 
-        return () => {
-            // Optional: setActiveSection('') or similar if leaving projects entirely
-        };
     }, [project]);
 
     const loadProjectData = async () => {
@@ -80,16 +75,19 @@ const ProjectDetailsPage: React.FC = () => {
         }
     };
 
-    const handleUpdateProject = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleUpdateProject = async (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
+        setSaving(true);
         try {
             await projectService.updateProject(projectId, editProject);
             notify.success('Project updated successfully');
-            setIsEditModalOpen(false);
+            setIsEditDrawerOpen(false);
             loadProjectData(); // Reload data
         } catch (error) {
             console.error('Update failed', error);
             notify.error('Failed to update project');
+        } finally {
+            setSaving(false);
         }
     };
 
@@ -103,43 +101,52 @@ const ProjectDetailsPage: React.FC = () => {
                     <div style={{ color: 'var(--deloitte-green)', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>{project.wbs}</div>
                     <h1 style={{ marginBottom: '0.5rem' }}>{project.name}</h1>
                 </div>
-                <div style={{ display: 'flex', gap: '1rem' }}>
-                    <button className="btn-outline-premium" onClick={() => navigate(`/projects/${projectId}/billings`)}>
-                        <CreditCard size={18} />
-                        Billings
-                    </button>
-                    <button className="btn-outline-premium" onClick={() => navigate(`/projects/${projectId}/expenses`)}>
-                        <Receipt size={18} />
-                        Expenses
-                    </button>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <div className="header-actions-group" style={{ display: 'flex', gap: '1rem', borderRight: '1px solid var(--border-color)', paddingRight: '1rem' }}>
+                        <button className="btn-outline-premium" onClick={() => navigate(`/projects/${projectId}/billings`)}>
+                            <CreditCard size={18} />
+                            Billings
+                        </button>
+                        <button className="btn-outline-premium" onClick={() => navigate(`/projects/${projectId}/expenses`)}>
+                            <Receipt size={18} />
+                            Expenses
+                        </button>
+                        <button className="btn-premium" onClick={() => navigate(`/projects/${projectId}/forecast`)}>
+                            <Calculator size={18} />
+                            Resource Forecast
+                        </button>
+                    </div>
+
                     {project.canEdit && (
-                        <button className="btn-outline-premium" onClick={() => {
-                            setEditProject({
-                                ...project,
-                                startDate: project.startDate.toString().split('T')[0],
-                                endDate: project.endDate.toString().split('T')[0]
-                            });
-                            setIsEditModalOpen(true);
-                        }}>
-                            <ArrowUpRight size={18} style={{ transform: 'rotate(45deg)' }} />
-                            Edit
+                        <button
+                            className="btn-icon"
+                            style={{
+                                background: 'transparent',
+                                border: '1px solid var(--border-color)',
+                                borderRadius: '8px',
+                                padding: '0.6rem',
+                                color: 'var(--text-secondary)',
+                                cursor: 'pointer',
+                                transition: 'all 0.2s',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}
+                            title="Project Settings"
+                            onClick={() => {
+                                setEditProject({
+                                    ...project,
+                                    startDate: project.startDate.toString().split('T')[0],
+                                    endDate: project.endDate.toString().split('T')[0]
+                                });
+                                setIsEditDrawerOpen(true);
+                            }}
+                        >
+                            <Settings size={20} />
                         </button>
                     )}
-                    <button className="btn-premium" onClick={() => navigate(`/projects/${projectId}/forecast`)}>
-                        <Calculator size={18} />
-                        Resource Forecast
-                    </button>
                 </div>
             </header>
-
-            {/* Edit Project Handler */}
-            {(() => {
-                // Inline handler definition or move to component body
-                // Moving to component body is better, but doing inline check 
-                // requires us to not use hooks inside conditional, which we aren't.
-                // WE NEED TO DEFINE handleUpdateProject IN COMPONENT BODY
-                return null;
-            })()}
 
             <div className="metrics-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem' }}>
                 <div className="glass-panel" style={{ padding: '2rem' }}>
@@ -156,7 +163,7 @@ const ProjectDetailsPage: React.FC = () => {
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Recoverability</span>
                         <Target size={20} color="var(--deloitte-green)" />
                     </div>
-                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>{(project.recoverability * 100).toFixed(0)}%</div>
+                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>{((1 - (project.discount > 1 ? project.discount / 100 : project.discount)) * 100).toFixed(0)}%</div>
                     <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Budget recovery rate</div>
                 </div>
 
@@ -184,62 +191,121 @@ const ProjectDetailsPage: React.FC = () => {
                     <p style={{ fontSize: '0.875rem' }}>Start by adding resource allocations in the Forecast section.</p>
                 </div>
             )}
-            {/* Modal for Edit Project */}
-            {isEditModalOpen && project && (
-                <div className="modal-overlay" onClick={() => setIsEditModalOpen(false)}>
-                    <div className="modal-content animate-scale-up" onClick={e => e.stopPropagation()}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                            <h2 style={{ margin: 0 }}>Edit Project</h2>
-                            <button
-                                onClick={() => setIsEditModalOpen(false)}
-                                className="btn-close"
-                            >
-                                <ArrowUpRight size={20} style={{ transform: 'rotate(45deg)' }} />
-                            </button>
+
+            {/* Drawer for Edit Project */}
+            <Drawer
+                isOpen={isEditDrawerOpen}
+                onClose={() => setIsEditDrawerOpen(false)}
+                title="Project Settings"
+                width="500px"
+                footer={
+                    <>
+                        <button className="btn-secondary" onClick={() => setIsEditDrawerOpen(false)}>Cancel</button>
+                        <button
+                            className="btn-premium"
+                            onClick={(e) => handleUpdateProject(e as any)}
+                            disabled={saving}
+                        >
+                            {saving ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
+                            Save Changes
+                        </button>
+                    </>
+                }
+            >
+                {project && (
+                    <div className="drawer-form-content">
+                        <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+                            <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>Project Name</label>
+                            <input
+                                className="form-input"
+                                required
+                                value={editProject.name || ''}
+                                onChange={e => setEditProject({ ...editProject, name: e.target.value })}
+                                placeholder="e.g. Cloud Migration Phase 1"
+                                style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                            />
                         </div>
-                        <form onSubmit={handleUpdateProject}>
+
+                        <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+                            <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>WBS Code</label>
+                            <input
+                                className="form-input"
+                                required
+                                value={editProject.wbs || ''}
+                                onChange={e => setEditProject({ ...editProject, wbs: e.target.value })}
+                                placeholder="WBS.001"
+                                style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                            />
+                        </div>
+
+                        <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
                             <div className="form-group">
-                                <label className="form-label">Project Name</label>
-                                <input className="form-input" required value={editProject.name} onChange={e => setEditProject({ ...editProject, name: e.target.value })} />
+                                <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>Start Date</label>
+                                <input
+                                    type="date"
+                                    className="form-input"
+                                    required
+                                    value={editProject.startDate?.toString().split('T')[0] || ''}
+                                    onChange={e => setEditProject({ ...editProject, startDate: e.target.value })}
+                                    style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                                />
                             </div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                            <div className="form-group">
+                                <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>End Date</label>
+                                <input
+                                    type="date"
+                                    className="form-input"
+                                    required
+                                    value={editProject.endDate?.toString().split('T')[0] || ''}
+                                    onChange={e => setEditProject({ ...editProject, endDate: e.target.value })}
+                                    style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                                />
+                            </div>
+                        </div>
+
+                        <div style={{ borderTop: '1px solid var(--border-color)', margin: '2rem 0', paddingTop: '1rem' }}>
+                            <h4 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Financial Configuration</h4>
+
+                            <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+                                <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>Actual Budget (€)</label>
+                                <input
+                                    type="number"
+                                    className="form-input"
+                                    required
+                                    value={editProject.actualBudget || 0}
+                                    onChange={e => setEditProject({ ...editProject, actualBudget: Number(e.target.value) })}
+                                    style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                                />
+                            </div>
+
+                            <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                                 <div className="form-group">
-                                    <label className="form-label">WBS Code</label>
-                                    <input className="form-input" required value={editProject.wbs} onChange={e => setEditProject({ ...editProject, wbs: e.target.value })} />
+                                    <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>Discount (%)</label>
+                                    <input
+                                        type="number"
+                                        step="0.01"
+                                        className="form-input"
+                                        value={editProject.discount || 0}
+                                        onChange={e => setEditProject({ ...editProject, discount: Number(e.target.value) })}
+                                        style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                                    />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Actual Budget (€)</label>
-                                    <input type="number" className="form-input" required value={editProject.actualBudget} onChange={e => setEditProject({ ...editProject, actualBudget: Number(e.target.value) })} />
+                                    <label className="form-label" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500, color: 'var(--text-secondary)' }}>Target Margin (%)</label>
+                                    <input
+                                        type="number"
+                                        step="0.01"
+                                        className="form-input"
+                                        value={editProject.targetMargin || 0}
+                                        onChange={e => setEditProject({ ...editProject, targetMargin: Number(e.target.value) })}
+                                        style={{ width: '100%', padding: '0.75rem', borderRadius: '6px', border: '1px solid var(--border-color)' }}
+                                    />
                                 </div>
                             </div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                                <div className="form-group">
-                                    <label className="form-label">Discount (%)</label>
-                                    <input type="number" step="0.01" className="form-input" value={editProject.discount} onChange={e => setEditProject({ ...editProject, discount: Number(e.target.value) })} />
-                                </div>
-                                <div className="form-group">
-                                    <label className="form-label">Target Margin (%)</label>
-                                    <input type="number" step="0.01" className="form-input" value={editProject.targetMargin} onChange={e => setEditProject({ ...editProject, targetMargin: Number(e.target.value) })} />
-                                </div>
-                            </div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                                <div className="form-group">
-                                    <label className="form-label">Start Date</label>
-                                    <input type="date" className="form-input" required value={editProject.startDate?.toString().split('T')[0]} onChange={e => setEditProject({ ...editProject, startDate: e.target.value })} />
-                                </div>
-                                <div className="form-group">
-                                    <label className="form-label">End Date</label>
-                                    <input type="date" className="form-input" required value={editProject.endDate?.toString().split('T')[0]} onChange={e => setEditProject({ ...editProject, endDate: e.target.value })} />
-                                </div>
-                            </div>
-                            <div className="modal-actions">
-                                <button type="button" className="btn-secondary" onClick={() => setIsEditModalOpen(false)}>Cancel</button>
-                                <button type="submit" className="btn-premium">Save Changes</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </Drawer>
         </div>
     );
 };
