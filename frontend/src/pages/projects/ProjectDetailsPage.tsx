@@ -166,7 +166,7 @@ const ProjectDetailsPage: React.FC = () => {
                         <Target size={20} color="var(--deloitte-green)" />
                     </div>
                     <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--deloitte-green)' }}>
-                        {(project.targetMargin * 100).toFixed(0)}%
+                        {project.targetMargin > 1 ? project.targetMargin.toFixed(0) : (project.targetMargin * 100).toFixed(0)}%
                     </div>
                     <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Target Efficiency</div>
                 </div>
@@ -212,9 +212,15 @@ const ProjectDetailsPage: React.FC = () => {
                                     <input type="number" className="form-input" required value={editProject.actualBudget} onChange={e => setEditProject({ ...editProject, actualBudget: Number(e.target.value) })} />
                                 </div>
                             </div>
-                            <div className="form-group">
-                                <label className="form-label">Discount (%)</label>
-                                <input type="number" step="0.01" className="form-input" value={editProject.discount} onChange={e => setEditProject({ ...editProject, discount: Number(e.target.value) })} />
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                                <div className="form-group">
+                                    <label className="form-label">Discount (%)</label>
+                                    <input type="number" step="0.01" className="form-input" value={editProject.discount} onChange={e => setEditProject({ ...editProject, discount: Number(e.target.value) })} />
+                                </div>
+                                <div className="form-group">
+                                    <label className="form-label">Target Margin (%)</label>
+                                    <input type="number" step="0.01" className="form-input" value={editProject.targetMargin} onChange={e => setEditProject({ ...editProject, targetMargin: Number(e.target.value) })} />
+                                </div>
                             </div>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                                 <div className="form-group">

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using System.Linq;
 using ResourceManagement.Domain.Entities;
 using ResourceManagement.Domain.Interfaces;
 using Serilog.Context;
@@ -48,16 +49,21 @@ namespace ResourceManagement.Api.Middleware
                 return Task.CompletedTask;
             });
             
-            // Push correlation ID to Serilog context for structured logging
+            // Capture request details early
+            var requestBody = await CaptureRequestBodyAsync(context.Request);
+            var (userId, username, userRole) = ExtractUserInfo(context.User);
+            var endpointName = context.GetEndpoint()?.DisplayName;
+            var safeHeaders = context.Request.Headers.ToDictionary(h => h.Key, h => RedactHeader(h.Key, h.Value.ToString()));
+
+            // Push properties to Serilog Context
             using (LogContext.PushProperty("CorrelationId", correlationId))
+            using (LogContext.PushProperty("RequestBody", requestBody))
+            using (LogContext.PushProperty("RequestHeaders", safeHeaders, destructureObjects: true))
+            using (LogContext.PushProperty("Endpoint", endpointName))
+            using (LogContext.PushProperty("UserId", userId))
+            using (LogContext.PushProperty("Username", username))
             {
-                // Capture request body for POST/PUT/PATCH requests
-                var requestBody = await CaptureRequestBodyAsync(context.Request);
-                
-                // Extract user information from claims
-                var (userId, username, userRole) = ExtractUserInfo(context.User);
-                
-                // Create log entry
+                // Create log entry for DB
                 var logEntry = new ApiRequestLog
                 {
                     CorrelationId = correlationId,
@@ -74,8 +80,8 @@ namespace ResourceManagement.Api.Middleware
                 };
 
                 _logger.LogInformation(
-                    "Request started: {Method} {Path} by {Username} ({Role})",
-                    logEntry.HttpMethod, logEntry.RequestPath, username ?? "anonymous", userRole ?? "none");
+                    "Request started: {Method} {Path} by {Username}",
+                    logEntry.HttpMethod, logEntry.RequestPath, username ?? "anonymous");
 
                 string? responseBody = null;
                 string? exceptionMessage = null;
@@ -104,7 +110,6 @@ namespace ResourceManagement.Api.Middleware
                 finally
                 {
                     stopwatch.Stop();
-                    
                     // Capture response body if it's JSON content
                     try
                     {
@@ -139,13 +144,14 @@ namespace ResourceManagement.Api.Middleware
                     logEntry.ExceptionMessage = exceptionMessage;
                     logEntry.ExceptionStack = exceptionStack;
                     
-                    // Log to database asynchronously - fire and forget
+                    // Log to database asynchronously
                     _ = LogToDatabaseAsync(logRepository, logEntry);
                     
                     _logger.LogInformation(
-                        "Request completed: {Method} {Path} - {StatusCode} in {DurationMs}ms",
+                        "Request completed: {Method} {Path} - {StatusCode} in {DurationMs}ms. Response: {ResponseBody}",
                         logEntry.HttpMethod, logEntry.RequestPath, 
-                        context.Response.StatusCode, stopwatch.ElapsedMilliseconds);
+                        context.Response.StatusCode, stopwatch.ElapsedMilliseconds,
+                        logEntry.ResponseBody);
                 }
             }
         }
@@ -248,6 +254,18 @@ namespace ResourceManagement.Api.Middleware
             }
             
             return body.Substring(0, MaxBodyLength) + "... [truncated]";
+        }
+
+        private static string RedactHeader(string key, string value)
+        {
+            if (string.IsNullOrEmpty(key)) return value;
+            var upperKey = key.ToUpperInvariant();
+            if (upperKey == "AUTHORIZATION" || 
+                upperKey == "COOKIE" || 
+                upperKey == "SET-COOKIE" || 
+                upperKey == "X-API-KEY")
+                return "[REDACTED]";
+            return value;
         }
     }
 }

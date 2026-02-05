@@ -302,8 +302,15 @@
 }
 
 .legend-color.pending {
-    background: rgba(107, 114, 128, 0.2);
-    border: 1px solid rgba(107, 114, 128, 0.4);
+    background-color: rgba(107, 114, 128, 0.05);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(107, 114, 128, 0.1) 3px, rgba(107, 114, 128, 0.1) 6px);
+    border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.theme-light .legend-color.pending {
+    background-color: #f8fafc;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(0, 0, 0, 0.05) 3px, rgba(0, 0, 0, 0.05) 6px);
+    border: 1px solid #e2e8f0;
 }
 
 .legend-color.editable {
@@ -312,8 +319,8 @@
 }
 
 .legend-color.confirmed {
-    background: rgba(37, 99, 235, 0.2);
-    border: 1px solid rgba(37, 99, 235, 0.4);
+    background: transparent;
+    border: 1px solid var(--border-primary);
 }
 
 .legend-color.overridden {

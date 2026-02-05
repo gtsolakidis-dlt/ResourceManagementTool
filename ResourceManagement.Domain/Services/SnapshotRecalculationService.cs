@@ -14,7 +14,8 @@ namespace ResourceManagement.Domain.Services
         /// Preserves overwritten values - only recalculates non-overridden fields.
         /// Opening Balance is propagated from the last confirmed/overridden month.
         /// </summary>
-        Task RecalculateFromMonthAsync(int projectId, int forecastVersionId, DateTime fromMonth);
+        /// <param name="resetOverrides">If true, clears manual overrides for the recalculated months (used when inputs change).</param>
+        Task RecalculateFromMonthAsync(int projectId, int forecastVersionId, DateTime fromMonth, bool resetOverrides = false);
 
         /// <summary>
         /// Recalculate only the editable month.
@@ -64,7 +65,7 @@ namespace ResourceManagement.Domain.Services
             await RecalculateFromMonthAsync(projectId, forecastVersionId, editableSnapshot.Month);
         }
 
-        public async Task RecalculateFromMonthAsync(int projectId, int forecastVersionId, DateTime fromMonth)
+        public async Task RecalculateFromMonthAsync(int projectId, int forecastVersionId, DateTime fromMonth, bool resetOverrides = false)
         {
             // Get all required data
             var project = await _projectRepository.GetByIdAsync(projectId);
@@ -78,74 +79,124 @@ namespace ResourceManagement.Domain.Services
             var overrides = await _overrideRepository.GetByProjectAsync(projectId);
 
             // Calculate fresh financial data using ProjectRates
+            // This returns data for the entire project timeline
             var calculatedData = _calculationService.CalculateMonthlyFinancialsWithProjectRates(
                 project, allocations, rosterMembers, billings, expenses, overrides, projectRates);
 
-            // Get all snapshots for this project/version to determine OB propagation source
+            // Get all snapshots to find the anchor
             var allSnapshots = await _snapshotRepository.GetByProjectAsync(projectId, forecastVersionId);
             
-            // Find the last confirmed or overridden snapshot before the fromMonth to get OB anchor
-            var anchorSnapshot = allSnapshots
-                .Where(s => s.Month < fromMonth && (s.Status == SnapshotStatus.Confirmed || s.IsOverridden))
-                .OrderByDescending(s => s.Month)
-                .FirstOrDefault();
-            
-            decimal propagatedOpeningBalance = anchorSnapshot?.OpeningBalance ?? 0;
-
-            // Get existing snapshots that need to be updated (non-Confirmed from the given month)
+            // Get snapshots to update (All non-confirmed from the requested month)
             var snapshotsToUpdate = await _snapshotRepository.GetNonConfirmedFromMonthAsync(
                 projectId, forecastVersionId, fromMonth);
+            
+            if (!snapshotsToUpdate.Any()) return;
 
-            foreach (var snapshot in snapshotsToUpdate.OrderBy(s => s.Month))
+            var orderedSnapshots = snapshotsToUpdate.OrderBy(s => s.Month).ToList();
+            var firstUpdateMonth = orderedSnapshots.First().Month;
+
+            // Initialize Deltas and OB propagation from Anchor
+            decimal propagatedOpeningBalance = 0;
+            decimal wipDelta = 0;
+            decimal cbDelta = 0;
+            decimal deDelta = 0;
+            decimal ocDelta = 0;
+
+            var anchorSnapshot = allSnapshots
+                .Where(s => s.Month < firstUpdateMonth)
+                .OrderByDescending(s => s.Month)
+                .FirstOrDefault();
+
+            if (anchorSnapshot != null)
             {
-                // Find the calculated data for this month
+                propagatedOpeningBalance = anchorSnapshot.OpeningBalance;
+
+                // Determine Deltas from Anchor (Snapshot Value - Raw Calculated Value)
+                // If Anchor is Confirmed or Overridden, it sets the baseline for the future.
+                var anchorCalc = calculatedData.FirstOrDefault(c => 
+                    c.Month.Year == anchorSnapshot.Month.Year && c.Month.Month == anchorSnapshot.Month.Month);
+                
+                if (anchorCalc != null)
+                {
+                    // Delta = Actual(Stored) - Theoretical(Calculated)
+                    wipDelta = anchorSnapshot.Wip - anchorCalc.Wip;
+                    cbDelta = anchorSnapshot.CumulativeBillings - anchorCalc.Billings;
+                    deDelta = anchorSnapshot.DirectExpenses - anchorCalc.Expenses;
+                    ocDelta = anchorSnapshot.OperationalCost - anchorCalc.Cost;
+                }
+            }
+
+            foreach (var snapshot in orderedSnapshots)
+            {
                 var calcData = calculatedData.FirstOrDefault(c =>
                     c.Month.Year == snapshot.Month.Year && c.Month.Month == snapshot.Month.Month);
 
                 if (calcData == null) continue;
 
-                // Design decision: Preserve overwritten values
-                // Only update fields that haven't been manually overridden
-                if (!snapshot.IsOverridden)
+                if (resetOverrides && snapshot.IsOverridden)
                 {
-                    // Use propagated OB from anchor or previous month with override
-                    snapshot.OpeningBalance = propagatedOpeningBalance;
-                    snapshot.CumulativeBillings = calcData.Billings;
-                    snapshot.Wip = calcData.Wip;
-                    snapshot.DirectExpenses = calcData.Expenses;
-                    snapshot.OperationalCost = calcData.Cost;
+                    snapshot.IsOverridden = false;
+                    snapshot.OverriddenBy = null;
+                    snapshot.OverriddenAt = null;
+                }
+
+                if (snapshot.IsOverridden)
+                {
+                    // Snapshot is overridden - its values are fixed by the user.
+                    // Recalculate Deltas for future propagation.
+                    wipDelta = snapshot.Wip - calcData.Wip;
+                    cbDelta = snapshot.CumulativeBillings - calcData.Billings;
+                    deDelta = snapshot.DirectExpenses - calcData.Expenses;
+                    ocDelta = snapshot.OperationalCost - calcData.Cost;
+                    
+                    // Update OB propagation source
+                    propagatedOpeningBalance = snapshot.OpeningBalance;
+                    
+                    // Update monthly flow values even if overridden (usually these aren't overridden directly in current UI, but if they were...)
+                    // Current UI overrides Wip, CB, DE, OC. 
+                    // MonthlyBillings/MonthlyExpenses are derived or separate.
+                    // We update them from calcData as they are informational ? 
+                    // Existing logic updated them.
                     snapshot.MonthlyBillings = calcData.MonthlyBillings;
                     snapshot.MonthlyExpenses = calcData.MonthlyExpenses;
-                    snapshot.CumulativeExpenses = calcData.Expenses;
-                    
-                    // ALWAYS Recalculate NSR and Margin using the correct formula
-                    // NSR = WIP + Cumulative Billings - Opening Balance - Direct Expenses
-                    snapshot.Nsr = snapshot.Wip + snapshot.CumulativeBillings 
-                                 - snapshot.OpeningBalance - snapshot.DirectExpenses;
-                    
-                    // Margin = (NSR - Operational Cost) / NSR
-                    snapshot.Margin = snapshot.Nsr == 0 ? 0 
-                                    : (snapshot.Nsr - snapshot.OperationalCost) / snapshot.Nsr;
                 }
                 else
                 {
-                    // Snapshot is overridden - only update non-overrideable fields
-                    // Monthly values are always from actual data
+                    // Not overridden: Apply Calculated Values + Deltas
+                    
+                    // Propagate OB
+                    snapshot.OpeningBalance = propagatedOpeningBalance;
+
+                    // Apply Deltas to Cumulative/Stock fields
+                    snapshot.Wip = calcData.Wip + wipDelta;
+                    snapshot.CumulativeBillings = calcData.Billings + cbDelta;
+                    snapshot.DirectExpenses = calcData.Expenses + deDelta;
+                    snapshot.OperationalCost = calcData.Cost + ocDelta;
+                    
                     snapshot.MonthlyBillings = calcData.MonthlyBillings;
                     snapshot.MonthlyExpenses = calcData.MonthlyExpenses;
-                    
-                    // STILL recalculate NSR and Margin based on overridden values
-                    snapshot.Nsr = snapshot.Wip + snapshot.CumulativeBillings 
-                                 - snapshot.OpeningBalance - snapshot.DirectExpenses;
-                    snapshot.Margin = snapshot.Nsr == 0 ? 0 
-                                    : (snapshot.Nsr - snapshot.OperationalCost) / snapshot.Nsr;
-                    
-                    // Update propagated OB from this overridden snapshot for future months
-                    propagatedOpeningBalance = snapshot.OpeningBalance;
+                    snapshot.CumulativeExpenses = calcData.Expenses;
                 }
+
+                // ALWAYS Recalculate NSR and Margin
+                // NSR = WIP + Cumulative Billings - Opening Balance - Direct Expenses
+                snapshot.Nsr = snapshot.Wip + snapshot.CumulativeBillings 
+                             - snapshot.OpeningBalance - snapshot.DirectExpenses;
+                
+                // Margin = (NSR - Operational Cost) / Abs(NSR)
+                // Use Math.Abs for denominator to handle negative NSR correctly (e.g. NSR -100, Cost 50 -> Margin -1.5)
+                snapshot.Margin = snapshot.Nsr == 0 ? 0 
+                                : (snapshot.Nsr - snapshot.OperationalCost) / Math.Abs(snapshot.Nsr);
 
                 snapshot.UpdatedAt = DateTime.UtcNow;
                 await _snapshotRepository.UpdateAsync(snapshot);
+                
+                // Update propagated OB for next iteration (if not overridden, this month passes its OB forward)
+                // (Matches the "Constant OB" logic unless changed)
+                if (!snapshot.IsOverridden)
+                {
+                     propagatedOpeningBalance = snapshot.OpeningBalance;
+                }
             }
         }
     }

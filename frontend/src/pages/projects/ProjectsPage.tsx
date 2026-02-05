@@ -21,7 +21,7 @@ const ProjectsPage: React.FC = () => {
         actualBudget: 0,
         nominalBudget: 0,
         discount: 0,
-        targetMargin: 0.20,
+        targetMargin: 25,
         startDate: new Date().toISOString().split('T')[0],
         endDate: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0]
     });
@@ -148,6 +148,8 @@ const ProjectsPage: React.FC = () => {
                 }
             </header >
 
+
+
             {
                 loading ? (
                     <div className="loading-state" style={{ height: '400px' }} >
@@ -173,7 +175,9 @@ const ProjectsPage: React.FC = () => {
                                         </div>
                                         <div>
                                             <div className="card-metric-label">Target Margin</div>
-                                            <div className="card-metric-value" style={{ color: 'var(--deloitte-green)' }}>{(project.targetMargin * 100).toFixed(0)}%</div>
+                                            <div className="card-metric-value" style={{ color: 'var(--deloitte-green)' }}>
+                                                {project.targetMargin > 1 ? project.targetMargin.toFixed(0) : (project.targetMargin * 100).toFixed(0)}%
+                                            </div>
                                         </div>
                                     </div>
 
@@ -219,9 +223,15 @@ const ProjectsPage: React.FC = () => {
                                         <input type="number" className="form-input" required value={newProject.actualBudget} onChange={e => setNewProject({ ...newProject, actualBudget: Number(e.target.value) })} />
                                     </div>
                                 </div>
-                                <div className="form-group">
-                                    <label className="form-label">Discount (%)</label>
-                                    <input type="number" step="0.01" className="form-input" value={newProject.discount} onChange={e => setNewProject({ ...newProject, discount: Number(e.target.value) })} />
+                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                                    <div className="form-group">
+                                        <label className="form-label">Discount (%)</label>
+                                        <input type="number" step="0.01" className="form-input" value={newProject.discount} onChange={e => setNewProject({ ...newProject, discount: Number(e.target.value) })} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="form-label">Target Margin (%)</label>
+                                        <input type="number" step="0.01" className="form-input" value={newProject.targetMargin} onChange={e => setNewProject({ ...newProject, targetMargin: Number(e.target.value) })} />
+                                    </div>
                                 </div>
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                                     <div className="form-group">

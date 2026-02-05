@@ -6,6 +6,7 @@ using FluentValidation;
 using MediatR;
 using ResourceManagement.Domain.Entities;
 using ResourceManagement.Domain.Interfaces;
+using ResourceManagement.Domain.Services;
 
 namespace ResourceManagement.Application.Financials.Commands.OverwriteSnapshot
 {
@@ -45,10 +46,14 @@ namespace ResourceManagement.Application.Financials.Commands.OverwriteSnapshot
     public class OverwriteSnapshotCommandHandler : IRequestHandler<OverwriteSnapshotCommand, bool>
     {
         private readonly IProjectMonthlySnapshotRepository _snapshotRepository;
+        private readonly ISnapshotRecalculationService _recalculationService;
 
-        public OverwriteSnapshotCommandHandler(IProjectMonthlySnapshotRepository snapshotRepository)
+        public OverwriteSnapshotCommandHandler(
+            IProjectMonthlySnapshotRepository snapshotRepository,
+            ISnapshotRecalculationService recalculationService)
         {
             _snapshotRepository = snapshotRepository;
+            _recalculationService = recalculationService;
         }
 
         public async Task<bool> Handle(OverwriteSnapshotCommand request, CancellationToken cancellationToken)
@@ -73,10 +78,6 @@ namespace ResourceManagement.Application.Financials.Commands.OverwriteSnapshot
                 throw new InvalidOperationException("NSR and Margin are calculated fields and cannot be manually overwritten.");
             }
 
-            // Track if OB changed for propagation
-            bool obChanged = request.OpeningBalance.HasValue && request.OpeningBalance.Value != snapshot.OpeningBalance;
-            decimal newOpeningBalance = request.OpeningBalance ?? snapshot.OpeningBalance;
-
             // Capture original values if this is the first override
             if (!snapshot.IsOverridden)
             {
@@ -94,13 +95,6 @@ namespace ResourceManagement.Application.Financials.Commands.OverwriteSnapshot
             if (request.DirectExpenses.HasValue) snapshot.DirectExpenses = request.DirectExpenses.Value;
             if (request.OperationalCost.HasValue) snapshot.OperationalCost = request.OperationalCost.Value;
 
-            // RECALCULATE NSR and Margin based on updated values
-            // NSR = WIP + Cumulative Billings - Opening Balance - Direct Expenses
-            snapshot.Nsr = snapshot.Wip + snapshot.CumulativeBillings - snapshot.OpeningBalance - snapshot.DirectExpenses;
-            
-            // Margin = (NSR - Operational Cost) / NSR (as a ratio, e.g., 0.35 for 35%)
-            snapshot.Margin = snapshot.Nsr == 0 ? 0 : (snapshot.Nsr - snapshot.OperationalCost) / snapshot.Nsr;
-
             // Mark as overridden
             snapshot.IsOverridden = true;
             snapshot.OverriddenAt = DateTime.UtcNow;
@@ -109,50 +103,15 @@ namespace ResourceManagement.Application.Financials.Commands.OverwriteSnapshot
 
             await _snapshotRepository.UpdateAsync(snapshot);
 
-            // PROPAGATE Opening Balance to subsequent Pending months if OB changed
-            if (obChanged)
-            {
-                await PropagateOpeningBalanceToFutureMonthsAsync(
-                    request.ProjectId, 
-                    request.ForecastVersionId, 
-                    request.Month, 
-                    newOpeningBalance);
-            }
+            // Trigger propagation using Recalculation Service
+            // This will recalculate NSR/Margin for this month AND propagate deltas to all future pending months
+            await _recalculationService.RecalculateFromMonthAsync(
+                request.ProjectId, 
+                request.ForecastVersionId, 
+                request.Month,
+                false);
 
             return true;
-        }
-
-        /// <summary>
-        /// Propagates the Opening Balance value to all subsequent Pending months.
-        /// Also recalculates NSR and Margin for those months.
-        /// </summary>
-        private async Task PropagateOpeningBalanceToFutureMonthsAsync(
-            int projectId, 
-            int forecastVersionId, 
-            DateTime fromMonth, 
-            decimal openingBalance)
-        {
-            // Get all pending months after the current month
-            var pendingSnapshots = await _snapshotRepository.GetNonConfirmedFromMonthAsync(
-                projectId, forecastVersionId, fromMonth.AddMonths(1));
-
-            foreach (var pendingSnapshot in pendingSnapshots.Where(s => s.Status == SnapshotStatus.Pending))
-            {
-                // Only propagate to non-overridden snapshots
-                if (!pendingSnapshot.IsOverridden)
-                {
-                    pendingSnapshot.OpeningBalance = openingBalance;
-                    
-                    // Recalculate NSR and Margin
-                    pendingSnapshot.Nsr = pendingSnapshot.Wip + pendingSnapshot.CumulativeBillings 
-                                        - pendingSnapshot.OpeningBalance - pendingSnapshot.DirectExpenses;
-                    pendingSnapshot.Margin = pendingSnapshot.Nsr == 0 ? 0 
-                                           : (pendingSnapshot.Nsr - pendingSnapshot.OperationalCost) / pendingSnapshot.Nsr;
-                    
-                    pendingSnapshot.UpdatedAt = DateTime.UtcNow;
-                    await _snapshotRepository.UpdateAsync(pendingSnapshot);
-                }
-            }
         }
     }
 }

@@ -35,7 +35,8 @@ namespace ResourceManagement.Application.Financials.Notifications
             await _recalculationService.RecalculateFromMonthAsync(
                 notification.ProjectId,
                 notification.ForecastVersionId,
-                notification.AffectedMonth);
+                new DateTime(notification.AffectedMonth.Year, notification.AffectedMonth.Month, 1),
+                true); // Reset manual overrides as inputs have changed
         }
     }
 }

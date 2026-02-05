@@ -1,0 +1,83 @@
+2026-02-04 03:22:12.742 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-04 03:22:12.920 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 176ms
+2026-02-04 03:22:12.925 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 1527.8775 ms
+2026-02-04 03:22:12.982 +02:00 [INF] Request started: GET /api/auth/me by admin (Admin)
+2026-02-04 03:22:12.987 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 4ms
+2026-02-04 03:22:12.989 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 57.0961 ms
+2026-02-04 03:22:13.087 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-04 03:22:13.142 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 55ms
+2026-02-04 03:22:13.148 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 82.5405 ms
+2026-02-04 03:22:13.151 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-04 03:22:13.159 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 5ms
+2026-02-04 03:22:13.165 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 18.5706 ms
+2026-02-04 03:22:13.195 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-04 03:22:13.227 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 31ms
+2026-02-04 03:22:13.235 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 73.1440 ms
+2026-02-04 03:22:13.258 +02:00 [INF] Request started: GET /api/forecasts/6/versions by admin (Admin)
+2026-02-04 03:22:13.266 +02:00 [INF] Request completed: GET /api/forecasts/6/versions - 200 in 7ms
+2026-02-04 03:22:13.276 +02:00 [INF] HTTP GET /api/forecasts/6/versions responded 200 in 19.1494 ms
+2026-02-04 03:22:13.424 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-04 03:22:13.424 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-04 03:22:13.434 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 9ms
+2026-02-04 03:22:13.437 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 18.9159 ms
+2026-02-04 03:22:13.438 +02:00 [INF] Request started: GET /api/projects/6 by admin (Admin)
+2026-02-04 03:22:13.444 +02:00 [INF] Request completed: GET /api/projects/6 - 200 in 4ms
+2026-02-04 03:22:13.446 +02:00 [INF] HTTP GET /api/projects/6 responded 200 in 8.7117 ms
+2026-02-04 03:22:13.462 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 37ms
+2026-02-04 03:22:13.467 +02:00 [INF] Request started: GET /api/financials/6/snapshots/9 by admin (Admin)
+2026-02-04 03:22:13.468 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 48.2287 ms
+2026-02-04 03:22:13.473 +02:00 [INF] Request completed: GET /api/financials/6/snapshots/9 - 200 in 5ms
+2026-02-04 03:22:13.477 +02:00 [INF] HTTP GET /api/financials/6/snapshots/9 responded 200 in 11.9716 ms
+2026-02-04 17:14:09.865 +02:00 [INF] Now listening on: http://localhost:5212
+2026-02-04 17:14:09.894 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-04 17:14:09.895 +02:00 [INF] Hosting environment: Development
+2026-02-04 17:14:09.895 +02:00 [INF] Content root path: C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api
+2026-02-04 17:14:11.914 +02:00 [INF] Application is shutting down...
+2026-02-04 17:16:20.963 +02:00 [INF] Now listening on: http://localhost:5212
+2026-02-04 17:16:20.993 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-04 17:16:20.994 +02:00 [INF] Hosting environment: Development
+2026-02-04 17:16:20.995 +02:00 [INF] Content root path: C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api
+2026-02-04 17:23:08.299 +02:00 [INF] Application is shutting down...
+2026-02-04 19:20:39.225 +02:00 [INF] Now listening on: http://localhost:5212
+2026-02-04 19:20:39.257 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-04 19:20:39.258 +02:00 [INF] Hosting environment: Development
+2026-02-04 19:20:39.259 +02:00 [INF] Content root path: C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api
+2026-02-04 20:23:18.178 +02:00 [INF] Request started: GET /api/auth/me by admin
+2026-02-04 20:23:18.313 +02:00 [INF] Request started: GET /api/auth/me by admin
+2026-02-04 20:23:18.485 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 120ms. Response: {"id":"0","username":"admin","role":"Admin","rosterId":"0"}
+2026-02-04 20:23:18.484 +02:00 [INF] Request completed: GET /api/auth/me - 200 in 3ms. Response: {"id":"0","username":"admin","role":"Admin","rosterId":"0"}
+2026-02-04 20:23:18.492 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 181.5454 ms
+2026-02-04 20:23:18.492 +02:00 [INF] HTTP GET /api/auth/me responded 200 in 341.9915 ms
+2026-02-04 20:23:18.609 +02:00 [WRN] Failed to log API request to database
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'app_user'.
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1240
+   at ResourceManagement.Infrastructure.Persistence.Repositories.ApiRequestLogRepository.LogAsync(ApiRequestLog log) in C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\Persistence\Repositories\ApiRequestLogRepository.cs:line 37
+   at ResourceManagement.Api.Middleware.AuditLoggingMiddleware.LogToDatabaseAsync(IApiRequestLogRepository logRepository, ApiRequestLog logEntry) in C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\Middleware\AuditLoggingMiddleware.cs:line 163
+ClientConnectionId:770f8d04-42b1-433c-aa14-37b7b441f63c
+Error Number:18456,State:1,Class:14
+2026-02-04 20:23:18.609 +02:00 [WRN] Failed to log API request to database
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'app_user'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1240
+   at ResourceManagement.Infrastructure.Persistence.Repositories.ApiRequestLogRepository.LogAsync(ApiRequestLog log) in C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Infrastructure\Persistence\Repositories\ApiRequestLogRepository.cs:line 37
+   at ResourceManagement.Api.Middleware.AuditLoggingMiddleware.LogToDatabaseAsync(IApiRequestLogRepository logRepository, ApiRequestLog logEntry) in C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\Middleware\AuditLoggingMiddleware.cs:line 163
+ClientConnectionId:770f8d04-42b1-433c-aa14-37b7b441f63c
+Error Number:18456,State:1,Class:14

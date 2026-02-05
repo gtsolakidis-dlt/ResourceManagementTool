@@ -19,23 +19,18 @@ namespace ResourceManagement.Api.Controllers
         [Authorize(AuthenticationSchemes = "Basic")]
         public IActionResult Verify()
         {
-            System.Console.WriteLine($"[Verify] User Authenticated: {User.Identity?.IsAuthenticated}");
-            foreach (var c in User.Claims) 
-            {
-                 System.Console.WriteLine($"[Verify] Claim: {c.Type} = {c.Value}");
-            }
-
             var userId = User.FindFirst("id")?.Value ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var username = User.FindFirst("username")?.Value ?? User.FindFirst(ClaimTypes.Name)?.Value;
             var role = User.FindFirst("role")?.Value ?? User.FindFirst(ClaimTypes.Role)?.Value;
             var rosterId = User.FindFirst("rosterId")?.Value ?? User.FindFirst("RosterId")?.Value;
 
+            System.Console.WriteLine($"[Verify] User: {username}, Role Claim: '{role}'");
+
             return Ok(new { 
                 Id = userId, 
                 Username = username, 
-                Role = role,
-                RosterId = rosterId,
-                DebugClaims = User.Claims.Select(c => $"{c.Type}:{c.Value}")
+                Role = role, // Ensure this sends the Exact string from the claim
+                RosterId = rosterId
             });
         }
 

@@ -9,3 +9,4 @@ C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\Resource
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\refint\ResourceManagement.Contracts.dll
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.pdb
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ref\ResourceManagement.Contracts.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Contracts\obj\Debug\net9.0\ResourceManagement.Contracts.sourcelink.json

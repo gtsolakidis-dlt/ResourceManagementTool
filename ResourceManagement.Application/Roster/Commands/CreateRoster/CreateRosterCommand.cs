@@ -23,6 +23,7 @@ namespace ResourceManagement.Application.Roster.Commands.CreateRoster
         public decimal Metlife { get; init; }
         public string Username { get; init; } = string.Empty;
         public string Password { get; init; } = string.Empty;
+        public string Role { get; init; } = "Employee";
     }
 
     public class CreateRosterCommandValidator : AbstractValidator<CreateRosterCommand>
@@ -70,7 +71,7 @@ namespace ResourceManagement.Application.Roster.Commands.CreateRoster
                 Cars = request.Cars,
                 TicketRestaurant = request.TicketRestaurant,
                 Metlife = request.Metlife,
-                Role = "Employee",
+                Role = request.Role,
                 Username = request.Username,
                 PasswordHash = request.Password // In real app use BCrypt
             };

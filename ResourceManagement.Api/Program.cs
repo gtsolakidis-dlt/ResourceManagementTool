@@ -11,10 +11,19 @@ SqlMapper.AddTypeMap(typeof(DateTime), System.Data.DbType.DateTime2);
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog with console and file logging
+Serilog.Debugging.SelfLog.Enable(msg => 
+{
+    try { File.AppendAllText("serilog-selflog.txt", DateTime.Now.ToString("O") + " " + msg + Environment.NewLine); }
+    catch { } // Best effort
+});
+
+var seqUrl = builder.Configuration["Serilog:SeqServerUrl"] ?? "http://127.0.0.1:5341";
+
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
     .WriteTo.Console()
+    .WriteTo.Seq(seqUrl)
     .WriteTo.File(
         path: "logs/api-.log",
         rollingInterval: Serilog.RollingInterval.Day,
@@ -52,21 +61,21 @@ builder.Services.AddSwaggerGen(c => {
     });
 });
 
-builder.Services.AddAuthentication("Basic")
-    .AddScheme<Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions, ResourceManagement.Api.Security.BasicAuthenticationHandler>("Basic", null);
-
-
 // Register Custom Layers
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddAuthentication("Basic")
+    .AddScheme<Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions, ResourceManagement.Api.Security.BasicAuthenticationHandler>("Basic", null);
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "http://127.0.0.1:5173")
+        policy.SetIsOriginAllowed(origin => true) // allow any origin
               .AllowAnyHeader()
               .AllowAnyMethod()
+              .AllowCredentials()
               .WithExposedHeaders("Content-Disposition", "X-Correlation-ID");
     });
 });

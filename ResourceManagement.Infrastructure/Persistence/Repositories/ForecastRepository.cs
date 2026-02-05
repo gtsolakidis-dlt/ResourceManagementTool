@@ -28,7 +28,7 @@ namespace ResourceManagement.Infrastructure.Persistence.Repositories
         public async Task<List<ForecastVersion>> GetByProjectAsync(int projectId)
         {
             using var connection = _context.CreateConnection();
-            const string sql = "SELECT * FROM ForecastVersion WHERE ProjectId = @ProjectId ORDER BY VersionNumber";
+            const string sql = "SELECT * FROM ForecastVersion WHERE ProjectId = @ProjectId ORDER BY VersionNumber DESC";
             var result = await connection.QueryAsync<ForecastVersion>(sql, new { ProjectId = projectId });
             return result.ToList();
         }

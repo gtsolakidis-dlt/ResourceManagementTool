@@ -1,10 +1,20 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
+// DYNAMIC CONFIG FOR SANDBOX VM
+// If we are in production (not using Vite Proxy), point to Port 8080 on the same host
+if (!import.meta.env.DEV) {
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    axios.defaults.baseURL = `${protocol}//${hostname}:8080`;
+    console.log('Production API Base URL set to:', axios.defaults.baseURL);
+}
+
 interface User {
     id: string; // RosterId
     username: string;
     role: 'Employee' | 'Manager' | 'Partner' | 'Admin';
+    raw?: any; // DEBUG: Capture full response
 }
 
 interface AuthContextType {
@@ -33,7 +43,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 setUser({
                     id: d.rosterId || d.RosterId || d.id || d.Id,
                     username: d.username || d.Username,
-                    role: d.role || d.Role
+                    role: d.role || d.Role,
+                    raw: d
                 });
             } catch (err) {
                 console.error('Auth verification failed', err);
@@ -65,7 +76,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             setUser({
                 id: d.rosterId || d.RosterId || d.id || d.Id,
                 username: d.username || d.Username,
-                role: d.role || d.Role
+                role: d.role || d.Role,
+                raw: d
             });
 
             return Promise.resolve();

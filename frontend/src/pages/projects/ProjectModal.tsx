@@ -20,7 +20,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, onSave })
         actualBudget: 0,
         discount: 0,
         recoverability: 0.95,
-        targetMargin: 0.25,
+        targetMargin: 25, // Percentage 0-100
     });
     const [loading, setLoading] = useState(false);
 

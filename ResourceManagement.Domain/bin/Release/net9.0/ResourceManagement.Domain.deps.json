@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ResourceManagement.Domain/1.0.0": {
+        "dependencies": {
+          "ResourceManagement.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "ResourceManagement.Domain.dll": {}
+        }
+      },
+      "ResourceManagement.Contracts/1.0.0": {
+        "runtime": {
+          "ResourceManagement.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ResourceManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ResourceManagement.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

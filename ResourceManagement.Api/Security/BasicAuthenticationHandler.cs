@@ -30,10 +30,33 @@ namespace ResourceManagement.Api.Security
             try
             {
                 var authHeader = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
+                if (string.IsNullOrEmpty(authHeader.Parameter))
+                    return AuthenticateResult.Fail("Invalid Authorization Header");
+
                 var credentialBytes = Convert.FromBase64String(authHeader.Parameter);
                 var credentials = Encoding.UTF8.GetString(credentialBytes).Split(':', 2);
                 var username = credentials[0];
                 var password = credentials[1];
+
+                // FAST-PATH: Fallback for bootstrap Admin (checked BEFORE DB to avoid schema errors)
+                if (username == "admin" && password == "Deloitte2026!")
+                {
+                    var claims = new[] {
+                        new Claim(ClaimTypes.NameIdentifier, "0"), 
+                        new Claim("id", "0"),
+                        new Claim(ClaimTypes.Name, "admin"),
+                        new Claim("username", "admin"), 
+                        new Claim(ClaimTypes.Role, "Admin"),
+                        new Claim("role", "Admin"),
+                        new Claim("RosterId", "0"),
+                        new Claim("rosterId", "0") 
+                    };
+                    var identity = new ClaimsIdentity(claims, Scheme.Name);
+                    var principal = new ClaimsPrincipal(identity);
+                    var ticket = new AuthenticationTicket(principal, Scheme.Name);
+
+                    return AuthenticateResult.Success(ticket);
+                }
 
                 var user = await _repository.GetByUsernameAsync(username);
 
@@ -56,24 +79,6 @@ namespace ResourceManagement.Api.Security
 
                     return AuthenticateResult.Success(ticket);
                 }
-
-                // Fallback for bootstrap Admin (since DB might be empty of users with creds)
-                if (username == "admin" && password == "Deloitte2026!")
-                {
-                    var claims = new[] {
-                        new Claim(ClaimTypes.NameIdentifier, "0"), // Keep standard for Authorize attributes
-                        new Claim("id", "0"),
-                        new Claim("username", "admin"), // Use login username
-                        new Claim("role", "Admin"),
-                        new Claim("rosterId", "0") 
-                    };
-                    var identity = new ClaimsIdentity(claims, Scheme.Name);
-                    var principal = new ClaimsPrincipal(identity);
-                    var ticket = new AuthenticationTicket(principal, Scheme.Name);
-
-                    return AuthenticateResult.Success(ticket);
-                }
-                
                 return AuthenticateResult.Fail("Invalid Username or Password");
             }
             catch

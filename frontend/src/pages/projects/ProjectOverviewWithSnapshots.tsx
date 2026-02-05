@@ -339,7 +339,7 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
 
                                         if (metric.key === 'margin' && project) {
                                             const marginVal = snapshot.margin;
-                                            const targetVal = project.targetMargin / 100;
+                                            const targetVal = project.targetMargin > 1 ? project.targetMargin / 100 : project.targetMargin;
                                             if (marginVal < targetVal) {
                                                 cellClass += ' negative-margin';
                                             }

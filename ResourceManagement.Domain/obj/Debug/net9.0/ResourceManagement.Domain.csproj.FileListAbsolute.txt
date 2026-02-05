@@ -13,3 +13,4 @@ C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\Resource
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\refint\ResourceManagement.Domain.dll
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.pdb
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ref\ResourceManagement.Domain.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Domain\obj\Debug\net9.0\ResourceManagement.Domain.sourcelink.json
