@@ -22,6 +22,10 @@ var seqUrl = builder.Configuration["Serilog:SeqServerUrl"] ?? "http://127.0.0.1:
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
+    .Enrich.WithMachineName()
+    .Enrich.WithEnvironmentName()
+    .Enrich.WithProcessId()
+    .Enrich.WithThreadId()
     .WriteTo.Console()
     .WriteTo.Seq(seqUrl)
     .WriteTo.File(

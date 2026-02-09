@@ -186,14 +186,14 @@ const ProjectsPage: React.FC = () => {
                                             <Calendar size={16} />
                                             <span>{(() => {
                                                 const [y, m, d] = project.startDate.toString().split('T')[0].split('-').map(Number);
-                                                return new Date(y, m - 1, d).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                                                return new Date(y, m - 1, d).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                                            })()}</span>
+                                            <ChevronRight size={16} style={{ color: 'var(--text-muted)' }} />
+                                            <span>{(() => {
+                                                const [y, m, d] = project.endDate.toString().split('T')[0].split('-').map(Number);
+                                                return new Date(y, m - 1, d).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
                                             })()}</span>
                                         </div>
-                                        <ChevronRight size={16} style={{ color: 'var(--text-muted)' }} />
-                                        <span>{(() => {
-                                            const [y, m, d] = project.endDate.toString().split('T')[0].split('-').map(Number);
-                                            return new Date(y, m - 1, d).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
-                                        })()}</span>
                                     </div>
                                 </div>
                             </div>

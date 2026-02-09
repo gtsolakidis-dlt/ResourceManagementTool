@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResourceManagement.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f88e24d90389961592b1e66dc9f2b68e0c8ad22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cf62a9f9a70f98b1c4b25b521c13bc73fda2386")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResourceManagement.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResourceManagement.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

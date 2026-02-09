@@ -134,3 +134,9 @@ C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\Resource
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\ResourceManagement.Api.deps.json
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\ResourceManagement.Api.runtimeconfig.json
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\ResourceManagement.Api.staticwebassets.endpoints.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\publish\web.config
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\publish\appsettings.Development.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\publish\appsettings.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\publish\ResourceManagement.Api.deps.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\publish\ResourceManagement.Api.runtimeconfig.json
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.Api\bin\Release\net9.0\publish\publish\ResourceManagement.Api.staticwebassets.endpoints.json
