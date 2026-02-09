@@ -31,7 +31,7 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({ onClose }) => {
         if (diff < 60000) return 'Just now';
         if (diff < 3600000) return `${Math.floor(diff / 60000)}m ago`;
         if (diff < 86400000) return `${Math.floor(diff / 3600000)}h ago`;
-        return new Date(timestamp).toLocaleDateString();
+        return new Date(timestamp).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
     };
 
     const getIcon = (type: string) => {

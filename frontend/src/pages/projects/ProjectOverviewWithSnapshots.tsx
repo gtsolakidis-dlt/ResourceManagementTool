@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { snapshotService, projectService } from '../../api/services';
+import ProjectFinancialSummary from './ProjectFinancialSummary';
 import type { ProjectMonthlySnapshot, Project } from '../../types';
 import { Lock, Check, Loader2, Save, RotateCcw, Edit2, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
@@ -271,6 +272,8 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
                 <h2>Monthly Financial Overview</h2>
             </div>
 
+            {project && <ProjectFinancialSummary project={project} snapshots={snapshots} />}
+
             <div className="snapshot-table-container">
                 <table className="premium-table snapshot-table">
                     <thead>
@@ -290,7 +293,10 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
                                                 {isEditMode ? <X size={14} /> : <Edit2 size={14} />}
                                             </button>
                                         )}
-                                        {new Date(snapshot.month).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }).toUpperCase()}
+                                        {(() => {
+                                            const [y, m] = snapshot.month.split('-').map(Number);
+                                            return new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }).toUpperCase();
+                                        })()}
                                         {snapshot.status === 'Editable' && <span style={{ fontSize: '0.65rem', fontWeight: 'normal' }}>(EDITABLE)</span>}
                                     </div>
                                 </th>
@@ -383,7 +389,7 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
                                                                                     By <span className="tooltip-highlight">{snapshot.overriddenBy || 'User'}</span>
                                                                                 </div>
                                                                                 <div className="tooltip-date">
-                                                                                    {snapshot.overriddenAt ? new Date(snapshot.overriddenAt).toLocaleDateString() : 'Unknown Date'}
+                                                                                    {snapshot.overriddenAt ? new Date(snapshot.overriddenAt).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'Unknown Date'}
                                                                                 </div>
                                                                                 <div className="tooltip-detail" style={{ marginTop: '5px', fontSize: '0.75rem' }}>
                                                                                     Original: {formatCurrency(snapshot[originalKey!] as number)}
@@ -497,7 +503,10 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
                     <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '500px' }}>
                         <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Lock Month Permanently?</h3>
                         <p style={{ marginBottom: '1rem', color: 'var(--text-secondary)' }}>
-                            Confirming <strong>{new Date(editableMonth.month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</strong> will:
+                            Confirming <strong>{(() => {
+                                const [y, m] = editableMonth.month.split('-').map(Number);
+                                return new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                            })()}</strong> will:
                         </p>
                         <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem', color: 'var(--text-secondary)' }}>
                             <li style={{ marginBottom: '0.5rem' }}>Lock all values permanently</li>
@@ -522,7 +531,10 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
                     <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '500px' }}>
                         <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>⚠️ Clear Manual Overrides?</h3>
                         <p style={{ marginBottom: '1rem', color: 'var(--text-secondary)' }}>
-                            This will clear all manual overrides for <strong>{new Date(editableMonth.month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</strong> and restore calculated values.
+                            This will clear all manual overrides for <strong>{(() => {
+                                const [y, m] = editableMonth.month.split('-').map(Number);
+                                return new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                            })()}</strong> and restore calculated values.
                         </p>
                         <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem', color: 'var(--text-secondary)' }}>
                             <li style={{ marginBottom: '0.5rem' }}>All manually entered values will be removed</li>

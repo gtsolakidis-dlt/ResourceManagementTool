@@ -47,7 +47,10 @@ const TrendCharts: React.FC<Props> = ({ projects, snapshotsMap }) => {
             const avgMargin = revenueForMargin > 0 ? (weightedMarginSum / revenueForMargin) : 0;
 
             return {
-                month: new Date(month).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }),
+                month: (() => {
+                    const [y, m] = month.split('-').map(Number);
+                    return new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
+                })(),
                 nsr: totalNsr,
                 cost: totalCost,
                 margin: avgMargin * 100 // Convert to percentage

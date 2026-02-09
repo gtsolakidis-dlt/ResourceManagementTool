@@ -109,10 +109,16 @@ const DashboardPage: React.FC = () => {
             actionText = 'updated resource allocations';
         } else if (lowerEntity.includes('confirmmonth')) {
             actionText = 'confirmed monthly forecast';
-            if (values.Month) details = new Date(values.Month).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+            if (values.Month) {
+                const [y, m] = values.Month.split('-').map(Number);
+                details = new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            }
         } else if (lowerEntity.includes('overwritesnapshot')) {
             actionText = 'overwrote financial snapshot';
-             if (values.Month) details = new Date(values.Month).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+            if (values.Month) {
+                const [y, m] = values.Month.split('-').map(Number);
+                details = new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            }
         } else if (lowerEntity.includes('clearoverride')) {
             actionText = 'cleared financial override';
         } else if (lowerEntity.includes('cloneversion')) {

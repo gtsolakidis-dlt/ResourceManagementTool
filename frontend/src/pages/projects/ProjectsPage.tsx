@@ -184,10 +184,16 @@ const ProjectsPage: React.FC = () => {
                                     <div className="card-footer">
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                             <Calendar size={16} />
-                                            <span>{new Date(project.startDate).toLocaleDateString()}</span>
+                                            <span>{(() => {
+                                                const [y, m, d] = project.startDate.toString().split('T')[0].split('-').map(Number);
+                                                return new Date(y, m - 1, d).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                                            })()}</span>
                                         </div>
                                         <ChevronRight size={16} style={{ color: 'var(--text-muted)' }} />
-                                        <span>{new Date(project.endDate).toLocaleDateString()}</span>
+                                        <span>{(() => {
+                                            const [y, m, d] = project.endDate.toString().split('T')[0].split('-').map(Number);
+                                            return new Date(y, m - 1, d).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                                        })()}</span>
                                     </div>
                                 </div>
                             </div>

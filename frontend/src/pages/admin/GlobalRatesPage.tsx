@@ -176,9 +176,9 @@ const GlobalRatesPage: React.FC = () => {
                                     </td>
                                     <td>
                                         <span className="updated-date">
-                                            {new Date(rate.updatedAt).toLocaleDateString('en-GB', {
+                                            {new Date(rate.updatedAt).toLocaleDateString('en-US', {
                                                 day: '2-digit',
-                                                month: 'short',
+                                                month: '2-digit',
                                                 year: 'numeric'
                                             })}
                                         </span>

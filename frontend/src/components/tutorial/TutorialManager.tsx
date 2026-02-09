@@ -18,15 +18,17 @@ export const TutorialManager: React.FC = () => {
 
         driverObj.current = driver({
             showProgress: true,
+            progressText: '{{current}} / {{total}}',
+            nextBtnText: 'Next \u203a',
+            prevBtnText: '\u2039 Previous',
             steps: steps,
             popoverClass: 'driverjs-theme',
             animate: true,
             allowClose: true,
             onDestroyStarted: () => {
-                if (!driverObj.current?.hasNextStep() || confirm("Are you sure you want to stop the tour?")) {
-                    driverObj.current?.destroy();
-                    localStorage.setItem(`tutorial_seen_${user.username}`, 'true');
-                }
+                // Remove the confirm dialog as users find it annoying/non-functional
+                localStorage.setItem(`tutorial_seen_${user.username}`, 'true');
+                driverObj.current?.destroy();
             }
         });
 

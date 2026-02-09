@@ -51,7 +51,8 @@ const OverwriteModal: React.FC<Props> = ({ snapshot, onClose, onSave }) => {
     };
 
     const formatMonth = (dateStr: string) => {
-        return new Date(dateStr).toLocaleDateString('en-US', {
+        const [y, m] = dateStr.split('-').map(Number);
+        return new Date(y, m - 1, 1).toLocaleDateString('en-US', {
             month: 'long',
             year: 'numeric'
         });

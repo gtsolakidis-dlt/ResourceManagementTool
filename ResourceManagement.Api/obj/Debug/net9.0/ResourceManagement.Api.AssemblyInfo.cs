@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ResourceManagement.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c094cee0a00096dadb4579fa98e4a1a54ae4171")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f88e24d90389961592b1e66dc9f2b68e0c8ad22")]
 [assembly: System.Reflection.AssemblyProductAttribute("ResourceManagement.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ResourceManagement.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

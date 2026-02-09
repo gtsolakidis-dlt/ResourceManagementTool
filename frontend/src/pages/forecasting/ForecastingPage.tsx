@@ -171,15 +171,23 @@ const ForecastingPage: React.FC = () => {
     const generateProjectMonths = () => {
         if (!project) return [];
         const months: string[] = [];
-        const start = new Date(project.startDate);
-        const end = new Date(project.endDate);
 
-        let current = new Date(start.getFullYear(), start.getMonth(), 1);
-        const last = new Date(end.getFullYear(), end.getMonth(), 1);
+        // Parse date strings directly to avoid timezone-induced month rollback.
+        // e.g. "2024-03-01" parsed as UTC midnight shifts to Feb 28 in UTC-5.
+        const [startYear, startMonth] = project.startDate.split('-').map(Number);
+        const [endYear, endMonth] = project.endDate.split('-').map(Number);
 
-        while (current <= last) {
-            months.push(current.toISOString().split('T')[0]);
-            current.setMonth(current.getMonth() + 1);
+        let curYear = startYear;
+        let curMonth = startMonth;
+
+        while (curYear < endYear || (curYear === endYear && curMonth <= endMonth)) {
+            const mm = String(curMonth).padStart(2, '0');
+            months.push(`${curYear}-${mm}-01`);
+            curMonth++;
+            if (curMonth > 12) {
+                curMonth = 1;
+                curYear++;
+            }
         }
 
         if (months.length === 0) {
@@ -253,7 +261,7 @@ const ForecastingPage: React.FC = () => {
                                 onChange={(val) => setSelectedVersionId(Number(val))}
                                 options={versions.map(v => ({
                                     value: String(v.id),
-                                    label: `Version ${v.versionNumber} (${new Date(v.createdAt).toLocaleDateString()})`
+                                    label: `Version ${v.versionNumber} (${new Date(v.createdAt).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' })})`
                                 }))}
                             />
                         </div>
@@ -308,9 +316,11 @@ const ForecastingPage: React.FC = () => {
                     <thead>
                         <tr>
                             <th className="sticky-col-header">Talent / Seniority</th>
-                            {months.length > 0 ? months.map(month => (
-                                <th key={month} style={{ minWidth: '120px' }}>{new Date(month).toLocaleDateString('en-US', { month: 'short', year: '2-digit' })}</th>
-                            )) : <th style={{ textAlign: 'center' }}>No timeline data (Check Project Dates)</th>}
+                            {months.length > 0 ? months.map(month => {
+                                const [y, m] = month.split('-').map(Number);
+                                const label = new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
+                                return <th key={month} style={{ minWidth: '120px' }}>{label}</th>;
+                            }) : <th style={{ textAlign: 'center' }}>No timeline data (Check Project Dates)</th>}
                             <th style={{ width: '80px', textAlign: 'right' }}></th>
                         </tr>
                     </thead>

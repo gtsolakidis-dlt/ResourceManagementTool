@@ -1,0 +1,129 @@
+.financial-summary-strip {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.summary-divider {
+    width: 1px;
+    height: 80%;
+    background: var(--border-color);
+    opacity: 0.5;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.summary-header-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    background: rgba(134, 188, 37, 0.1);
+    color: var(--deloitte-green);
+    border: 1px solid rgba(134, 188, 37, 0.2);
+}
+
+.summary-main-metrics {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    align-items: flex-end;
+}
+
+.metric-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.metric-value-lg {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.metric-value-sub {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.variance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 100px;
+    vertical-align: middle;
+}
+
+.variance-badge.positive {
+    color: var(--deloitte-green);
+    background: rgba(134, 188, 37, 0.1);
+}
+
+.variance-badge.negative {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.variance-badge.neutral {
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.summary-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.detail-item .label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.detail-item .value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}

@@ -131,11 +131,15 @@ const FinancialInputPage: React.FC<Props> = ({ type }) => {
                         <thead>
                             <tr>
                                 <th style={{ minWidth: '150px', position: 'sticky', left: 0, zIndex: 10, background: 'var(--card-bg)' }}>Measure</th>
-                                {financials.map(f => (
-                                    <th key={f.month} style={{ minWidth: '140px', textAlign: 'center' }}>
-                                        {new Date(f.month).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
-                                    </th>
-                                ))}
+                                {financials.map(f => {
+                                    const [y, m] = f.month.split('-').map(Number);
+                                    const label = new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                                    return (
+                                        <th key={f.month} style={{ minWidth: '140px', textAlign: 'center' }}>
+                                            {label}
+                                        </th>
+                                    );
+                                })}
                             </tr>
                         </thead>
                         <tbody>
