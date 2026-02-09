@@ -7,7 +7,8 @@ import type {
     ProjectMonthlySnapshot,
     ConfirmMonthRequest,
     OverwriteSnapshotRequest,
-    AuditLog
+    AuditLog,
+    ResourceSuggestion
 } from '../types';
 
 export const rosterService = {
@@ -64,4 +65,11 @@ export const globalRateService = {
 
 export const auditService = {
     getRecent: (count: number = 10) => api.get<AuditLog[]>('/audits/recent', { params: { count } }),
+};
+
+export const suggestionService = {
+    getResourceSuggestions: (projectId: number, forecastVersionId: number) =>
+        api.get<ResourceSuggestion[]>('/suggestions/resources', {
+            params: { projectId, forecastVersionId }
+        }),
 };

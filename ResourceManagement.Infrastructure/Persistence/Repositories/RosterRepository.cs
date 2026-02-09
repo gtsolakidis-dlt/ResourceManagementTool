@@ -89,12 +89,12 @@ namespace ResourceManagement.Infrastructure.Persistence.Repositories
             using var connection = _context.CreateConnection();
             const string sql = @"
                 INSERT INTO Roster (
-                    SapCode, FullNameEn, LegalEntity, FunctionBusinessUnit, CostCenterCode, Level,
+                    SapCode, FullNameEn, LegalEntity, FunctionBusinessUnit, CostCenterCode, Level, TechnicalRole,
                     MonthlySalary, MonthlyEmployerContributions, Cars, TicketRestaurant, Metlife,
                     Role, Username, PasswordHash
                 )
                 VALUES (
-                    @SapCode, @FullNameEn, @LegalEntity, @FunctionBusinessUnit, @CostCenterCode, @Level,
+                    @SapCode, @FullNameEn, @LegalEntity, @FunctionBusinessUnit, @CostCenterCode, @Level, @TechnicalRole,
                     @MonthlySalary, @MonthlyEmployerContributions, @Cars, @TicketRestaurant, @Metlife,
                     @Role, @Username, @PasswordHash
                 );
@@ -114,6 +114,7 @@ namespace ResourceManagement.Infrastructure.Persistence.Repositories
                     FunctionBusinessUnit = @FunctionBusinessUnit,
                     CostCenterCode = @CostCenterCode,
                     Level = @Level,
+                    TechnicalRole = @TechnicalRole,
                     MonthlySalary = @MonthlySalary,
                     MonthlyEmployerContributions = @MonthlyEmployerContributions,
                     Cars = @Cars,

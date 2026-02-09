@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X, Loader2 } from 'lucide-react';
 import type { RosterMember } from '../../types';
-import { SENIORITY_LEVELS } from '../../constants/seniorityLevels';
+import { SENIORITY_LEVELS, TECHNICAL_ROLES } from '../../constants/seniorityLevels';
 import PremiumSelect from '../../components/common/PremiumSelect';
 import { useAuth } from '../../context/AuthContext';
 import './RosterModal.css';
@@ -23,6 +23,7 @@ const RosterModal: React.FC<RosterModalProps> = ({ member, onClose, onSave }) =>
         functionBusinessUnit: '',
         costCenterCode: '',
         level: '',
+        technicalRole: '',
         monthlySalary: 0,
         monthlyEmployerContributions: 0,
         cars: 0,
@@ -119,6 +120,18 @@ const RosterModal: React.FC<RosterModalProps> = ({ member, onClose, onSave }) =>
                                     placeholder="Select Level"
                                     options={[
                                         ...SENIORITY_LEVELS.map(l => ({ value: l.code, label: l.displayName }))
+                                    ]}
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>Technical Role</label>
+                                <PremiumSelect
+                                    value={formData.technicalRole || ''}
+                                    onChange={(val) => setFormData(prev => ({ ...prev, technicalRole: val }))}
+                                    placeholder="Select Technical Role"
+                                    options={[
+                                        { value: '', label: 'None' },
+                                        ...TECHNICAL_ROLES.map(r => ({ value: r, label: r }))
                                     ]}
                                 />
                             </div>

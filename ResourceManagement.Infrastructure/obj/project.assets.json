@@ -2303,8 +2303,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj": {
-              "projectPath": "C:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj"
+            "c:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj": {
+              "projectPath": "c:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj"
             }
           }
         }

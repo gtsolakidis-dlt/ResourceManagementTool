@@ -125,3 +125,4 @@ C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\Resource
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.UnitTests\obj\Debug\net9.0\ResourceManagement.UnitTests.pdb
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.UnitTests\obj\Debug\net9.0\ResourceManagement.UnitTests.genruntimeconfig.cache
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.UnitTests\obj\Debug\net9.0\ref\ResourceManagement.UnitTests.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.UnitTests\obj\Debug\net9.0\ResourceManagement.UnitTests.sourcelink.json

@@ -1,0 +1,470 @@
+/* ResourceSuggestionDrawer.css - Adaptive Theme */
+
+.suggestion-search-bar {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.suggestion-search-bar input {
+    width: 100%;
+    padding: 0.625rem 0.875rem 0.625rem 2.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.suggestion-search-bar input::placeholder {
+    color: var(--text-muted);
+}
+
+.suggestion-search-bar input:focus {
+    border-color: var(--deloitte-green);
+}
+
+.suggestion-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+/* Filters Row */
+.suggestion-filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.suggestion-filter-select {
+    min-width: 130px;
+    flex-shrink: 0;
+}
+
+.suggestion-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.suggestion-toggle:hover {
+    border-color: var(--deloitte-green);
+    color: var(--deloitte-green);
+}
+
+.suggestion-toggle.active {
+    background: rgba(134, 188, 37, 0.1);
+    border-color: var(--deloitte-green);
+    color: var(--deloitte-green);
+}
+
+/* Results Count */
+.suggestion-results-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Resource Card */
+.suggestion-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.suggestion-card:hover {
+    border-color: var(--deloitte-green);
+    box-shadow: 0 0 0 1px rgba(134, 188, 37, 0.15);
+}
+
+.suggestion-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.suggestion-card-name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.suggestion-card-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.125rem;
+}
+
+.suggestion-card-role {
+    display: inline-block;
+    margin-top: 0.375rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    background: rgba(134, 188, 37, 0.1);
+    color: var(--deloitte-green);
+    border: 1px solid rgba(134, 188, 37, 0.2);
+}
+
+:global(.theme-light) .suggestion-card-role {
+    background: rgba(134, 188, 37, 0.08);
+    border-color: rgba(134, 188, 37, 0.25);
+}
+
+.suggestion-card-badges {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Seniority Tier Badge */
+.seniority-tier-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.seniority-tier-badge.tier-junior {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.seniority-tier-badge.tier-mid {
+    background: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.seniority-tier-badge.tier-senior {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.seniority-tier-badge.tier-principal {
+    background: rgba(168, 85, 247, 0.12);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+/* Light theme overrides for tier badges */
+:global(.theme-light) .seniority-tier-badge.tier-junior {
+    background: rgba(59, 130, 246, 0.08);
+    color: #2563eb;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+:global(.theme-light) .seniority-tier-badge.tier-mid {
+    background: rgba(34, 197, 94, 0.08);
+    color: #16a34a;
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+:global(.theme-light) .seniority-tier-badge.tier-senior {
+    background: rgba(245, 158, 11, 0.08);
+    color: #d97706;
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+:global(.theme-light) .seniority-tier-badge.tier-principal {
+    background: rgba(168, 85, 247, 0.08);
+    color: #7c3aed;
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* Availability Bar */
+.suggestion-availability-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.625rem;
+}
+
+.suggestion-availability-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    min-width: 70px;
+    flex-shrink: 0;
+}
+
+.suggestion-availability-bar-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+:global(.theme-light) .suggestion-availability-bar-track {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.suggestion-availability-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+.suggestion-availability-bar-fill.green {
+    background: linear-gradient(90deg, #22c55e, #86bc25);
+}
+
+.suggestion-availability-bar-fill.yellow {
+    background: linear-gradient(90deg, #f59e0b, #eab308);
+}
+
+.suggestion-availability-bar-fill.red {
+    background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.suggestion-availability-pct {
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 36px;
+    text-align: right;
+}
+
+.suggestion-availability-pct.green { color: #4ade80; }
+.suggestion-availability-pct.yellow { color: #fbbf24; }
+.suggestion-availability-pct.red { color: #f87171; }
+
+:global(.theme-light) .suggestion-availability-pct.green { color: #16a34a; }
+:global(.theme-light) .suggestion-availability-pct.yellow { color: #d97706; }
+:global(.theme-light) .suggestion-availability-pct.red { color: #dc2626; }
+
+/* Cost & Budget Row */
+.suggestion-cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+}
+
+.suggestion-cost-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.suggestion-cost-label {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.suggestion-cost-value {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Budget Fit Badge */
+.suggestion-budget-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.suggestion-budget-badge.within {
+    background: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.suggestion-budget-badge.tight {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.suggestion-budget-badge.over {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+:global(.theme-light) .suggestion-budget-badge.within {
+    background: rgba(34, 197, 94, 0.08);
+    color: #16a34a;
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+:global(.theme-light) .suggestion-budget-badge.tight {
+    background: rgba(245, 158, 11, 0.08);
+    color: #d97706;
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+:global(.theme-light) .suggestion-budget-badge.over {
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Card Footer */
+.suggestion-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.625rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.suggestion-assign-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.4rem 0.875rem;
+    border: 1px solid var(--deloitte-green);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--deloitte-green);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.suggestion-assign-btn:hover {
+    background: var(--deloitte-green);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(134, 188, 37, 0.4);
+}
+
+/* Monthly Availability Mini Chart */
+.suggestion-monthly-chart {
+    display: flex;
+    gap: 2px;
+    align-items: flex-end;
+    height: 24px;
+    margin-bottom: 0.625rem;
+}
+
+.suggestion-monthly-bar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+    min-width: 4px;
+    transition: opacity 0.2s;
+    position: relative;
+}
+
+.suggestion-monthly-bar:hover {
+    opacity: 0.8;
+}
+
+.suggestion-monthly-bar.green { background: #4ade80; }
+.suggestion-monthly-bar.yellow { background: #fbbf24; }
+.suggestion-monthly-bar.red { background: #f87171; }
+
+/* Tooltip for monthly bars */
+.suggestion-monthly-bar[title] {
+    cursor: default;
+}
+
+/* Loading Skeleton */
+.suggestion-skeleton {
+    margin-bottom: 0.75rem;
+}
+
+.suggestion-skeleton-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.suggestion-skeleton-line {
+    height: 12px;
+    border-radius: 4px;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.04) 100%);
+    background-size: 200% 100%;
+    animation: skeletonShimmer 1.5s infinite;
+    margin-bottom: 0.5rem;
+}
+
+:global(.theme-light) .suggestion-skeleton-line {
+    background: linear-gradient(90deg,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0.08) 50%,
+        rgba(0, 0, 0, 0.04) 100%);
+    background-size: 200% 100%;
+}
+
+.suggestion-skeleton-line.short { width: 40%; }
+.suggestion-skeleton-line.medium { width: 65%; }
+.suggestion-skeleton-line.long { width: 85%; }
+
+@keyframes skeletonShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Empty State */
+.suggestion-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--text-muted);
+}
+
+.suggestion-empty-icon {
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.suggestion-empty h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0 0 0.5rem;
+}
+
+.suggestion-empty p {
+    font-size: 0.8125rem;
+    margin: 0;
+    line-height: 1.5;
+}

@@ -11,6 +11,7 @@ namespace ResourceManagement.Contracts.Roster
         public string? FunctionBusinessUnit { get; set; }
         public string? CostCenterCode { get; set; }
         public string? Level { get; set; }
+        public string? TechnicalRole { get; set; }
 
         public decimal MonthlySalary { get; set; }
         public decimal MonthlyEmployerContributions { get; set; } // Renamed from EmployerContributions

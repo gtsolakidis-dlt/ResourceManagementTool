@@ -9,7 +9,8 @@ BEGIN
         FunctionBusinessUnit NVARCHAR(100),
         CostCenterCode NVARCHAR(50),
         Level NVARCHAR(50),
-        
+        TechnicalRole NVARCHAR(100),
+
         NewAmendedSalary DECIMAL(18,2) NOT NULL DEFAULT 0,
         EmployerContributions DECIMAL(18,2) NOT NULL DEFAULT 0,
         Cars DECIMAL(18,2) NOT NULL DEFAULT 0,

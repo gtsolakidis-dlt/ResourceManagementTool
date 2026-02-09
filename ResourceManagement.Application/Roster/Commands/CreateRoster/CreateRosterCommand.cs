@@ -16,6 +16,7 @@ namespace ResourceManagement.Application.Roster.Commands.CreateRoster
         public string? FunctionBusinessUnit { get; init; }
         public string? CostCenterCode { get; init; }
         public string? Level { get; init; }
+        public string? TechnicalRole { get; init; }
         public decimal MonthlySalary { get; init; }
         public decimal MonthlyEmployerContributions { get; init; }
         public decimal Cars { get; init; }
@@ -66,6 +67,7 @@ namespace ResourceManagement.Application.Roster.Commands.CreateRoster
                 FunctionBusinessUnit = request.FunctionBusinessUnit,
                 CostCenterCode = request.CostCenterCode,
                 Level = request.Level,
+                TechnicalRole = request.TechnicalRole,
                 MonthlySalary = request.MonthlySalary,
                 MonthlyEmployerContributions = request.MonthlyEmployerContributions,
                 Cars = request.Cars,

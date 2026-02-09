@@ -6,6 +6,7 @@ export interface RosterMember {
     functionBusinessUnit?: string;
     costCenterCode?: string;
     level?: string;
+    technicalRole?: string;
     monthlySalary: number;
     monthlyEmployerContributions: number; // Renamed from employerContributions
     cars: number;
@@ -152,4 +153,30 @@ export interface AuditLog {
     newValues?: string;
     changedBy: string;
     changedAt: string;
+}
+
+// Resource Suggestion System
+export interface ResourceSuggestion {
+    rosterId: number;
+    fullNameEn: string;
+    level?: string;
+    functionBusinessUnit?: string;
+    technicalRole?: string;
+    seniorityTier?: string;
+    dailyCost: number;
+    totalAvailableDays: number;
+    totalCapacityDays: number;
+    availabilityPercentage: number;
+    monthlyAvailability: MonthlyAvailability[];
+    projectedCost: number;
+    remainingBudget: number;
+    budgetImpactPercentage: number;
+    budgetFit: 'within' | 'tight' | 'over';
+}
+
+export interface MonthlyAvailability {
+    month: string;
+    allocatedDays: number;
+    availableDays: number;
+    capacityDays: number;
 }

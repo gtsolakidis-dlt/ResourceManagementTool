@@ -5,6 +5,7 @@ import type { ResourceAllocation, RosterMember, Project } from '../../types';
 import { Plus, Save, Loader2, ChevronLeft, Layers, UserPlus, Trash2 } from 'lucide-react';
 import PremiumSelect from '../../components/common/PremiumSelect';
 import PremiumNumericInput from '../../components/common/PremiumNumericInput';
+import ResourceSuggestionDrawer from './ResourceSuggestionDrawer';
 import { getSeniorityBadgeClass } from '../../constants/seniorityLevels';
 import './ForecastingPage.css';
 import { useNotification } from '../../context/NotificationContext';
@@ -280,36 +281,14 @@ const ForecastingPage: React.FC = () => {
                 )}
             </div>
 
-            {isAssignModalOpen && (
-                <div className="modal-overlay" onClick={() => setIsAssignModalOpen(false)}>
-                    <div className="modal-content animate-scale-up" onClick={e => e.stopPropagation()}>
-                        <header style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <h2 style={{ fontSize: '1.25rem', fontWeight: 600, margin: 0 }}>Select Talent</h2>
-                            <button className="btn-icon-premium" onClick={() => setIsAssignModalOpen(false)}>×</button>
-                        </header>
-                        <div style={{ display: 'grid', gap: '0.75rem', maxHeight: '60vh', overflowY: 'auto', paddingRight: '0.5rem' }}>
-                            {roster.filter(r => !resources.includes(r.id)).map(member => (
-                                <div
-                                    key={member.id}
-                                    className="roster-item-selectable"
-                                    onClick={() => handleAssignResource(member.id)}
-                                >
-                                    <div className="roster-info">
-                                        <h4>{member.fullNameEn}</h4>
-                                        <div className="roster-sub">{member.level} • {member.functionBusinessUnit}</div>
-                                    </div>
-                                    <Plus size={16} color="var(--deloitte-green)" />
-                                </div>
-                            ))}
-                            {roster.filter(r => !resources.includes(r.id)).length === 0 && (
-                                <div style={{ textAlign: 'center', padding: '3rem 1rem', color: 'var(--text-muted)' }}>
-                                    <p>All available talent has been assigned to this project.</p>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            )}
+            <ResourceSuggestionDrawer
+                isOpen={isAssignModalOpen}
+                onClose={() => setIsAssignModalOpen(false)}
+                onAssign={handleAssignResource}
+                projectId={projectId}
+                forecastVersionId={selectedVersionId}
+                assignedRosterIds={resources}
+            />
 
             <div className="forecast-matrix-wrapper animate-fade-in" style={{ overflowX: 'auto' }}>
                 <table className="premium-table">

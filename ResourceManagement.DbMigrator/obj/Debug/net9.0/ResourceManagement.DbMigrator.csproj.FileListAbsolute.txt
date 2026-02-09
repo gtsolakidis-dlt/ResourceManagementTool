@@ -74,3 +74,4 @@ C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\Resource
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.DbMigrator\obj\Debug\net9.0\ResourceManagement.DbMigrator.pdb
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.DbMigrator\obj\Debug\net9.0\ResourceManagement.DbMigrator.genruntimeconfig.cache
 C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.DbMigrator\obj\Debug\net9.0\ref\ResourceManagement.DbMigrator.dll
+C:\Users\gtsolakidis\.gemini\antigravity\scratch\ResourceManagementTool\ResourceManagement.DbMigrator\obj\Debug\net9.0\ResourceManagement.DbMigrator.sourcelink.json

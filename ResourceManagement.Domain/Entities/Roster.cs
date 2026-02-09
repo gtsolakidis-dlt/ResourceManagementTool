@@ -11,6 +11,7 @@ namespace ResourceManagement.Domain.Entities
         public string? FunctionBusinessUnit { get; set; }
         public string? CostCenterCode { get; set; }
         public string? Level { get; set; }
+        public string? TechnicalRole { get; set; }
 
         // Cost fields (EUR)
         public decimal MonthlySalary { get; set; } // Renamed from NewAmendedSalary

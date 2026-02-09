@@ -17,6 +17,7 @@ namespace ResourceManagement.Application.Roster.Commands.UpdateRoster
         public string? FunctionBusinessUnit { get; init; }
         public string? CostCenterCode { get; init; }
         public string? Level { get; init; }
+        public string? TechnicalRole { get; init; }
         public decimal MonthlySalary { get; init; }
         public decimal MonthlyEmployerContributions { get; init; }
         public decimal Cars { get; init; }
@@ -93,6 +94,7 @@ namespace ResourceManagement.Application.Roster.Commands.UpdateRoster
             roster.FunctionBusinessUnit = request.FunctionBusinessUnit;
             roster.CostCenterCode = request.CostCenterCode;
             roster.Level = request.Level;
+            roster.TechnicalRole = request.TechnicalRole;
             roster.MonthlySalary = request.MonthlySalary;
             roster.MonthlyEmployerContributions = request.MonthlyEmployerContributions;
             roster.Cars = request.Cars;

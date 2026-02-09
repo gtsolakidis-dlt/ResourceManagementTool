@@ -78,3 +78,41 @@ export function getSeniorityBadgeClass(code: string): string {
         default: return 'consultant';
     }
 }
+
+/**
+ * Technical Role options for resource classification
+ */
+export const TECHNICAL_ROLES: string[] = [
+    'Frontend Developer',
+    'Backend Developer',
+    'Full Stack Developer',
+    'DevOps Engineer',
+    'QA Engineer',
+    'Project Manager',
+    'Business Analyst',
+    'Data Engineer',
+    'UI/UX Designer',
+    'Solution Architect',
+];
+
+/**
+ * Seniority Tier - maps Deloitte grade codes to universal tiers
+ */
+export type SeniorityTier = 'Junior' | 'Mid' | 'Senior' | 'Principal';
+
+export const SENIORITY_TIER_MAP: Record<string, SeniorityTier> = {
+    'BA': 'Junior',
+    'C': 'Mid',
+    'SC': 'Mid',
+    'AM': 'Senior',
+    'M': 'Senior',
+    'SM': 'Principal',
+    'D': 'Principal',
+    'P': 'Principal',
+};
+
+export const SENIORITY_TIERS: SeniorityTier[] = ['Junior', 'Mid', 'Senior', 'Principal'];
+
+export function getSeniorityTier(code: string): SeniorityTier | undefined {
+    return SENIORITY_TIER_MAP[code?.toUpperCase()];
+}
