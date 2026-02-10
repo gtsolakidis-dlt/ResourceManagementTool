@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ifr2cbxFYW4=",
+  "dgSpecHash": "AQA20H/3vPw=",
   "success": true,
-  "projectFilePath": "c:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Application\\ResourceManagement.Application.csproj",
+  "projectFilePath": "C:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Application\\ResourceManagement.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gtsolakidis\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gtsolakidis\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

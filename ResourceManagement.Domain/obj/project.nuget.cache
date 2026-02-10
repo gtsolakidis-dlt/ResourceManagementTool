@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rCsBVw39zkw=",
+  "dgSpecHash": "jPtZVprnSJc=",
   "success": true,
-  "projectFilePath": "c:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj",
+  "projectFilePath": "C:\\Users\\gtsolakidis\\.gemini\\antigravity\\scratch\\ResourceManagementTool\\ResourceManagement.Domain\\ResourceManagement.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gtsolakidis\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.10\\microsoft.netcore.app.ref.9.0.10.nupkg.sha512"
   ],

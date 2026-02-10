@@ -5,7 +5,7 @@ import { rosterService } from '../../api/services';
 import type { RosterMember } from '../../types';
 import { Loader2, ArrowLeft, CreditCard, UserCheck } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
-import { getSeniorityBadgeClass } from '../../constants/seniorityLevels';
+import { getSeniorityBadgeClass, getSeniorityFullName, getSeniorityTier } from '../../constants/seniorityLevels';
 import './ResourceProfilePage.css';
 
 const ResourceProfilePage: React.FC = () => {
@@ -61,9 +61,15 @@ const ResourceProfilePage: React.FC = () => {
                     <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '0.5rem' }}>{member.fullNameEn}</h1>
                     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                         <span className={`level-badge ${getSeniorityBadgeClass(member.level || '')}`} style={{ fontSize: '1rem', padding: '0.25rem 0.75rem' }}>
-                            {member.level || 'N/A'}
+                            {getSeniorityFullName(member.level || '')}
                         </span>
                         <span style={{ color: 'var(--text-muted)' }}>•</span>
+                        {member.technicalRole && (
+                            <>
+                                <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{member.technicalRole}</span>
+                                <span style={{ color: 'var(--text-muted)' }}> • </span>
+                            </>
+                        )}
                         <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{member.functionBusinessUnit}</span>
                     </div>
                 </div>
@@ -104,8 +110,18 @@ const ResourceProfilePage: React.FC = () => {
                             <span className="info-data">{member.costCenterCode || '-'}</span>
                         </div>
                         <div className="info-row">
+                            <span className="info-label">Technical Role</span>
+                            <span className="info-data">{member.technicalRole || '-'}</span>
+                        </div>
+                        <div className="info-row">
                             <span className="info-label">Seniority Level</span>
-                            <span className="info-data">{member.level || '-'}</span>
+                            <span className="info-data">
+                                {member.level ? (
+                                    <>
+                                        {getSeniorityTier(member.level) || 'Unknown Tier'} <span style={{ color: 'var(--text-muted)' }}>({member.level})</span>
+                                    </>
+                                ) : '-'}
+                            </span>
                         </div>
                         <div className="info-row">
                             <span className="info-label">System Role</span>

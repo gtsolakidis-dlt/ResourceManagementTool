@@ -21,6 +21,7 @@ import { useNotification } from '../../context/NotificationContext';
 import CommandPalette from '../common/CommandPalette';
 import { useAuth } from '../../context/AuthContext';
 import { TutorialManager } from '../tutorial/TutorialManager';
+import { NavLogo } from '../common/Logo';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -88,8 +89,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Sidebar */}
             <aside className="sidebar-premium">
                 <div className="sidebar-header">
-                    <div className="brand-dot"></div>
-                    <span className="brand-name">Resourcely</span>
+                    <NavLogo className="h-9 w-12 text-white" />
+                    <div className="brand-text-container" style={{ marginLeft: '0.25rem' }}>
+                        <span className="brand-text-line">Resource</span>
+                        <span className="brand-text-line">Management</span>
+                        <span className="brand-text-line tool">Tool</span>
+                    </div>
                 </div>
 
                 <div className="nav-section">

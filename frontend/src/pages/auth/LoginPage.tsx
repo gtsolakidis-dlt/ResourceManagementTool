@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
+import { MainLogoIcon } from '../../components/common/Logo';
 import './LoginPage.css';
 
 const LoginPage: React.FC = () => {
@@ -30,7 +31,8 @@ const LoginPage: React.FC = () => {
         <div className="login-page">
             <div className="login-card glass-panel animate-fade-in">
                 <div className="login-header">
-                    <h1>Resource Platform</h1>
+                    <MainLogoIcon className="w-20 h-16 mb-4 text-primary" />
+                    <h1><strong>Resource Management</strong> <span style={{ fontWeight: 400 }}>Tool</span></h1>
                     <p>Enter your credentials to access the system</p>
                 </div>
 
