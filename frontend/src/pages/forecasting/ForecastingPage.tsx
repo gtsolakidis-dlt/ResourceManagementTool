@@ -96,11 +96,13 @@ const ForecastingPage: React.FC = () => {
         setLoading(true);
         try {
             const res = await forecastService.getAllocations(selectedVersionId);
-            // Normalize date strings to YYYY-MM-DD to match generated months
-            setAllocations(res.data.map(a => ({
-                ...a,
-                month: a.month.toString().split('T')[0]
-            })));
+            // Normalize date strings to YYYY-MM-01 to match generated month columns.
+            // Backend may return end-of-month dates (e.g. 2026-01-31); force day to 01.
+            setAllocations(res.data.map(a => {
+                const dateOnly = a.month.toString().split('T')[0];
+                const [y, m] = dateOnly.split('-');
+                return { ...a, month: `${y}-${m}-01` };
+            }));
         } catch (err) {
             console.error('Allocations load failed', err);
         } finally {
@@ -358,10 +360,20 @@ const ForecastingPage: React.FC = () => {
                                                     step={1}
                                                     value={alloc?.allocatedDays || 0}
                                                     onChange={(val) => {
-                                                        if (alloc && project?.canEdit) {
+                                                        if (!project?.canEdit) return;
+                                                        if (alloc) {
                                                             setAllocations(prev => prev.map(p =>
                                                                 (p.rosterId === rosterId && p.month === month) ? { ...p, allocatedDays: val } : p
                                                             ));
+                                                        } else {
+                                                            // Upsert: create a new allocation for this cell
+                                                            setAllocations(prev => [...prev, {
+                                                                id: 0,
+                                                                forecastVersionId: selectedVersionId!,
+                                                                rosterId,
+                                                                month,
+                                                                allocatedDays: val
+                                                            }]);
                                                         }
                                                     }}
                                                     disabled={!project?.canEdit}

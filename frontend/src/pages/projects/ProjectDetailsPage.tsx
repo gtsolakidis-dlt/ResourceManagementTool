@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectService, forecastService } from '../../api/services';
 import type { Project } from '../../types';
-import { DollarSign, Calculator, Loader2, CreditCard, Receipt, Target, Settings, Save } from 'lucide-react';
+import { Calculator, Loader2, CreditCard, Receipt, Settings, Save } from 'lucide-react';
 import Drawer from '../../components/common/Drawer';
 
 import { useNavigation } from '../../context/NavigationContext';
@@ -148,42 +148,14 @@ const ProjectDetailsPage: React.FC = () => {
                 </div>
             </header>
 
-            <div className="metrics-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem' }}>
-                <div className="glass-panel" style={{ padding: '2rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Total Actual Budget</span>
-                        <DollarSign size={20} color="var(--deloitte-green)" />
-                    </div>
-                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>€{project.actualBudget.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-                    <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Nominal: €{project.nominalBudget.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} (Disc: {project.discount}%)</div>
-                </div>
 
-                <div className="glass-panel" style={{ padding: '2rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Recoverability</span>
-                        <Target size={20} color="var(--deloitte-green)" />
-                    </div>
-                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>{((1 - (project.discount > 1 ? project.discount / 100 : project.discount)) * 100).toFixed(0)}%</div>
-                    <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Budget recovery rate</div>
-                </div>
-
-                <div className="glass-panel" style={{ padding: '2rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                        <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Target Margin</span>
-                        <Target size={20} color="var(--deloitte-green)" />
-                    </div>
-                    <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--deloitte-green)' }}>
-                        {project.targetMargin > 1 ? project.targetMargin.toFixed(0) : (project.targetMargin * 100).toFixed(0)}%
-                    </div>
-                    <div style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'var(--text-muted)' }}>Target Efficiency</div>
-                </div>
-            </div>
 
             {/* Monthly Snapshots with Overwrite/Confirm functionality */}
             {forecastVersionId ? (
                 <ProjectOverviewWithSnapshots
                     projectId={projectId}
                     forecastVersionId={forecastVersionId}
+                    projectData={project}
                 />
             ) : (
                 <div className="glass-panel" style={{ padding: '4rem 2rem', textAlign: 'center', color: 'var(--text-muted)' }}>

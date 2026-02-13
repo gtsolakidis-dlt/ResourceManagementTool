@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { snapshotService, projectService } from '../../api/services';
 import ProjectFinancialSummary from './ProjectFinancialSummary';
+import ProjectContextStrip from './ProjectContextStrip';
 import type { ProjectMonthlySnapshot, Project } from '../../types';
 import { Lock, Check, Loader2, Save, RotateCcw, Edit2, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
@@ -11,6 +12,7 @@ import './ProjectOverviewWithSnapshots.css';
 interface Props {
     projectId: number;
     forecastVersionId: number;
+    projectData?: Project;
 }
 
 const formatCurrency = (value: number): string => {
@@ -21,11 +23,11 @@ const formatPercent = (value: number): string => {
     return (value * 100).toFixed(1) + '%';
 };
 
-const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVersionId }) => {
+const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVersionId, projectData }) => {
     const { user } = useAuth();
     const { notify } = useNotification();
     const [snapshots, setSnapshots] = useState<ProjectMonthlySnapshot[]>([]);
-    const [project, setProject] = useState<Project | null>(null);
+    const [project, setProject] = useState<Project | null>(projectData || null);
     const [editableMonth, setEditableMonth] = useState<ProjectMonthlySnapshot | null>(null);
     const [editedValues, setEditedValues] = useState<Partial<ProjectMonthlySnapshot>>({});
     const [loading, setLoading] = useState(true);
@@ -47,17 +49,25 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
         try {
             setLoading(true);
             setIsEditMode(false);
-            const [snapshotsRes, projectRes] = await Promise.all([
-                snapshotService.getSnapshots(projectId, forecastVersionId),
-                projectService.getProject(projectId)
-            ]);
+
+            const promises: Promise<any>[] = [snapshotService.getSnapshots(projectId, forecastVersionId)];
+            if (!projectData && !project) {
+                promises.push(projectService.getProject(projectId));
+            }
+
+            const [snapshotsRes, projectRes] = await Promise.all(promises);
 
             // Sort by date to ensure correct order
-            const sorted = (snapshotsRes.data || []).sort((a, b) => new Date(a.month).getTime() - new Date(b.month).getTime());
+            const sorted = (snapshotsRes.data || []).sort((a: ProjectMonthlySnapshot, b: ProjectMonthlySnapshot) => new Date(a.month).getTime() - new Date(b.month).getTime());
             setSnapshots(sorted);
-            setProject(projectRes.data);
 
-            const editable = sorted.find(s => s.status === 'Editable') || null;
+            if (projectRes) {
+                setProject(projectRes.data);
+            } else if (projectData) {
+                setProject(projectData);
+            }
+
+            const editable = sorted.find((s: ProjectMonthlySnapshot) => s.status === 'Editable') || null;
             setEditableMonth(editable);
             if (editable) {
                 setEditedValues({
@@ -268,6 +278,8 @@ const ProjectOverviewWithSnapshots: React.FC<Props> = ({ projectId, forecastVers
 
     return (
         <div className="snapshot-overview">
+            {project && <ProjectContextStrip project={project} />}
+
             <div className="snapshot-header">
                 <h2>Monthly Financial Overview</h2>
             </div>
